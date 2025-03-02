@@ -1,0 +1,173 @@
+#game-container {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 50px auto;
+  background-image: url('background.png');
+  background-size: auto 100%; /* Ajuste pour couvrir verticalement */
+  background-repeat: repeat-y;
+  background-position: center 0; /* Position initiale */
+  border: 2px solid white;
+  overflow: hidden;
+}
+
+#game-container.scrolling-background {
+  animation: scrollBackground 50s linear infinite;
+}
+
+#game-container.paused {
+  animation-play-state: paused; /* Met l'animation en pause */
+}
+
+@keyframes scrollBackground {
+  0% {
+    background-position: center 0; /* Position initiale */
+  }
+  100% {
+    background-position: center 400px; /* Position finale */
+  }
+}
+
+.spaceship {
+  position: absolute;
+  top: 350px;
+  left: 275px;
+  width: 50px;
+  height: 50px;
+  background-image: url('spaceship.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.enemy {
+  width: 40px;
+  height: 40px;
+  background-image: url('enemy_1.png'); /* Default image for testing */
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black; /* Pour plus de lisibilité */
+  
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  padding: 10px;
+  
+  line-height: 1.2;
+  box-sizing: border-box;
+}
+
+.enemy.male {
+  border: 2px solid blue;
+}
+
+.enemy.female {
+  border: 2px solid pink;
+}
+
+
+.bullet {
+  position: absolute;
+  width: 5px;
+  height: 10px;
+}
+
+.bullet.blue {
+  background-color: blue;
+}
+
+.bullet.pink {
+  background-color: pink;
+}
+
+#score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  color: white;
+}
+
+#level {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: white;
+}
+
+#controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#controls button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#controls button:hover {
+  background-color: #666;
+}
+
+#pause-overlay {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1000;
+}
+
+
+#controls-config {
+  display: none;
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.controls button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.controls button:focus {
+  outline: 2px solid yellow;
+}
+
+#error-message {
+  color: pink;
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head> 
+        <title> TQuelGenre - Tableau de bord </title>
+        <meta charset="utf-8">
+        <link href="_styleboard.css" rel="stylesheet">
+        <link href="styleboard_.css" rel="stylesheet">
+        
+    </head>
+
+    <body>
+        <div class="wrapper">
+        <header>
+            <div id="tdb_header1_all">
+                <div class="tdb_header1">
+                    <a href="index.html"> <img src="ressources/logo.png" alt="Logo TQG" title="Logo" class="tdb_logo"> </a>
+                    <div>
+                        <a href="LIENPARAMETTRES"> Mon profil </a>
+                        <a href="LIENDECONNEXION"> Déconnexion </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tdb_header_anderson_all">
+                <div id="tdb_header_anderson">
+                    <div class="tdb_header2">
+                        <nav>
+                            <a href="tableau_de_bord.html"> 📊Tableau de bord </a>
+                            <a href="categorie.html"> 🧮Catégories </a>
+                            <a href="jeux.html"> 🕹️Jeux </a>
+                            <a href="regles.html"> 📚Ressources </a>
+                        </nav>
+
+                        <div class="tdb_header2-B">
+                            <div class="tdb_chercheur-container">
+                                <input type="text" id="tdb_chercheur" placeholder="🔍 Rechercher..." oninput="tdb_functionne_recherche()"> <!-- Quand on clique dessus la fonctionne s'active -->
+                                <ul id="tdb_resultats_chercheur">
+                                    <li> Santé </li>
+                                    <li> Amour </li>
+                                    <li> Le corps </li>
+                                    <li> Les vêtements </li>
+                                    <li> La famille </li>
+                                    <li> Le tourisme     </li>
+                                    <li> Les repas </li>
+                                    <li> La météo </li>
+                                </ul>
+                            </div>
+
+                            <!-- 
+                            <button type="submit" value="Chercher" class="tdb_boutton_chercher"> Chercher </button>
+                            <button type="submit" value="Ajouter mot à une catégorie" class="tdb_boutton_categorie"> + Catégories </button>  
+                            -->
+
+                            <h1> Les catégories </h1>
+                            <!-- <img src="ressources/avatar_women/athena.png" alt="Avatar apprenant" title="avatar"> -->
+                        </div>
+                    </div>
+
+                    <div id="tdb_container_avatar"> 
+                        <img src="ressources/avatars_edit/woman_7.png" alt="Avatar apprenant" title="avatar">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+
+        <main>
+            
+            <div id="body_regles">
+        <div class="titre">
+        <p><strong> 🔎Explore des ressources claires et complètes pour comprendre les règles des genres grammaticaux, leurs exceptions et leurs usages.</strong></p>
+        </div>
+         
+        <div class="faq-container">
+            <div class="faq-item">
+                <p class="faq-question" onclick="toggleAnswer(this)"> Qu'est-ce qu'un nom ?</p>
+                <div class="faq-answer">
+                    <p>Un nom est un mot qui désigne une personne, un animal, une chose ou une idée.</p>
+                    <p>Il y a deux types de noms:</p>
+                <ol>
+                    <li>Les noms communs: Ils désignent des êtres ou des choses de la même catégorie (comme « chat », « maison »).</li>
+                    <li>Les noms propres: Ils désignent des individus uniques, des lieux ou des choses spécifiques (comme « Marie », « Paris »).</li>
+                </ol>
+                <div class="imgrescontainer"><img src="ressources/cat.png" alt="chat"></div>
+                <div id="btn_regles">
+                    <button class="bouton"><strong>Jouer</strong></button>
+                </div>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question" onclick="toggleAnswer(this)"> Qu’est-ce que le genre ?</p>
+                <div class="faq-answer">
+                    <p><strong>Le genre</strong> indique si un mot est masculin ou féminin. En français, il y a deux genres : </p>
+                <ol>
+                    <li>Masculin : exemple - « le chat ».</li>
+                    <li>Féminin : exemple - « la maison ».</li>
+                    <div class="imgrescontainer"><img src="ressources/maison.png" alt="maison"></div>
+                </ol>
+                <div id="btn_regles">
+                    <button class="bouton"><strong>Jouer</strong></button>
+                </div>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question" onclick="toggleAnswer(this)"> Les déterminants et les genres, quelles relations ?</p>
+                <div class="faq-answer">
+                    <p>Les déterminants sont des mots qui accompagnent les noms et aident à préciser de quoi ou de qui on parle. Ils montrent aussi si le nom est masculin ou féminin, comme les articles définis et indéfinis expliqués dans la question précédente. Il existe aussi les adjectifs possessifs pour exprimer la possession (mon vélo, ma voiture), les adjectifs démonstratifs pour montrer un objet (ce vélo, cette voiture), et les articles partitifs pour exprimer une quantité que l’on ne peut pas compter (du fromage, de la sauce tomate).</p>
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>MASC.</th>
+                                <th>FÉM.</th>
+                                <th>PLURIEL</th>
+                            </tr>
+                            <tr>
+                                <td class="category">INDÉFINIS</td>
+                                <td><span class="highlight">un</span> <span class="phonetic">[œ̃]</span></td>
+                                <td><span class="highlight">une</span> <span class="phonetic">[yn]</span></td>
+                                <td><span class="highlight">des</span> <span class="phonetic">[de]</span></td>
+                            </tr>
+                            <tr>
+                                <td class="category">DÉFINIS</td>
+                                <td><span class="highlight">le</span> ( <span class="highlight">l'</span> ) <span class="phonetic">[lə]</span></td>
+                                <td><span class="highlight">la</span> ( <span class="highlight">l'</span> ) <span class="phonetic">[la]</span></td>
+                                <td><span class="highlight">les</span> <span class="phonetic">[le]</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="imgrescontainer"><img src="ressources/velo.png" alt="velo"></div>
+                <div id="btn_regles">
+                    <button class="bouton"><strong>Jouer</strong></button>
+                </div>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question" onclick="toggleAnswer(this)"> Les terminaisons des noms, ça aide ?</p>
+                <div class="faq-answer">
+                    <div class="imgrescontainer"><img src="ressources/poule.png" alt="une poule et un coq"></div>
+                    <p><strong>Pour les personnes et les animaux, il est plus facile de savoir si un nom est masculin ou féminin.</strong></p>
+                    <p>En effet, en général, le genre des mots suit tout simplement le genre naturel :</p>
+                    <ul>
+                        <li>Un père et une mère.</li>
+                        <li>Un homme et une femme.</li>
+                        <li>Un coq et une poule.</li>
+                    </ul>
+                    <p><strong>En général, un mot masculin représentant une personne est transformé au féminin en ajoutant un -e à la fin.</strong></p>
+                    <ul>
+                        <li>un apprenti => une apprentie</li>
+                        <li>un marchand => une marchande</li>
+                        <li>un ami => une amie</li>
+                        <li>un employé => une employée</li>
+                    </ul>
+                
+                    <p><strong>Si le nom se termine par un "e", l'orthographe du nom reste pareille.</strong></p>
+                    <ul>
+                        <li>un artiste => une artiste</li>
+                        <li>un journaliste => une journaliste</li>
+                        <li>un élève => une élève</li>
+                        <li>un secrétaire => une secrétaire</li>
+                    </ul>
+                
+                    <p><strong>Si le nom se termine par "el", il devient "elle" au féminin.</strong></p>
+                    <ul>
+                        <li>un naturel => une naturelle</li>
+                        <li>un professionnel => une professionnelle</li>
+                    </ul>
+                
+                    <p><strong>Si le nom se termine par "eur", il devient "euse" au féminin.</strong></p>
+                    <ul>
+                        <li>un serveur => une serveuse</li>
+                        <li>un chanteur => une chanteuse</li>
+                    </ul>
+                
+                    <p><strong>Si le nom se termine par "ien", il devient "ienne" au féminin.</strong></p>
+                    <ul>
+                        <li>un mécanicien => une mécanicienne</li>
+                        <li>un pharmacien => une pharmacienne</li>
+                    </ul>
+                
+                    <p><strong>Si le nom se termine par "er", il devient "ère" au féminin.</strong></p>
+                    <ul>
+                        <li>un boulanger => une boulangère</li>
+                        <li>un infirmier => une infirmière</li>
+                    </ul>
+                
+                    <p><strong>Si le nom se termine par un "teur", il devient "trice" au féminin.</strong></p>
+                    <ul>
+                        <li>un acteur => une actrice</li>
+                        <li>un directeur => une directrice</li>
+                    </ul>
+                
+                    <p><strong>Si le nom se termine par "eau", il devient "elle" au féminin.</strong></p>
+                    <ul>
+                        <li>un jumeau => une jumelle</li>
+                    </ul>
+                
+                    <p><strong>Si le nom se termine par "f", il devient "ve" au féminin.</strong></p>
+                    <ul>
+                        <li>un veuf => une veuve</li>
+                        <li>un neuf => une neuve</li>
+                    </ul>
+                
+                    <p><strong>Si le nom se termine par "x", il devient "se" au féminin.</strong></p>
+                    <ul>
+                        <li>un époux => une épouse</li>
+                        <li>un roux => une rousse</li>
+                    </ul>
+                    <div id="btn_regles">
+                        <button class="bouton"><strong>Jouer</strong></button>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th>Suffixes de noms masculins</th>
+                                <th>Exemples</th>
+                                <th>Suffixes de noms féminins</th>
+                                <th>Exemples</th>
+                            </tr>
+                            <tr>
+                                <td class="category">-age</td>
+                                <td>le nettoyage</td>
+                                <td class="category">-ade</td>
+                                <td>une baignade</td>
+                            </tr>
+                            <tr>
+                                <td class="category">-ail</td>
+                                <td>le travail</td>
+                                <td class="category">-aie</td>
+                                <td>une cerisaie</td>
+                            </tr>
+                            <tr>
+                                <td class="category">-ain</td>
+                                <td>un Romain</td>
+                                <td class="category">-aille</td>
+                                <td>une canaille</td>
+                            </tr>
+                            <tr>
+                                <td class="category">-ament</td>
+                                <td>le firmament</td>
+                                <td class="category">-aine</td>
+                                <td>une quinzaine</td>
+                            </tr>
+                            <tr>
+                                <td class="category">-eau</td>
+                                <td>un bordereau</td>
+                                <td class="category">-aison</td>
+                                <td>la salaison</td>
+                            </tr>
+                            <tr>
+                                <td class="category">-ement</td>
+                                <td>l'étonnement</td>
+                                <td class="category">-ance</td>
+                                <td>la croyance</td>
+                            </tr>
+                            <tr>
+                                <td class="category">-er</td>
+                                <td>un boucher</td>
+                                <td class="category">-ande</td>
+                                <td>une réprimande</td>
+                            </tr>
+                            <tr>
+                                <td class="category">-ier</td>
+                                <td>un prunier</td>
+                                <td class="category">-ée</td>
+                                <td>une visée</td>
+                            </tr>
+                            <tr>
+                                <td class="category">-illon</td>
+                                <td>un raidillon</td>
+                                <td class="category">-ie</td>
+                                <td>de la charcuterie</td>
+                            </tr>
+                            <tr>
+                                <td class="category">-in</td>
+                                <td>un ravin</td>
+                                <td class="category">-ille</td>
+                                <td>une brindille</td>
+                            </tr>
+                            <tr>
+                                <td class="category">-is</td>
+                                <td>du hachis</td>
+                                <td class="category">-ise</td>
+                                <td>la franchise</td>
+                            </tr>
+                            <tr>
+                                <td class="category">-isme</td>
+                                <td>le racisme</td>
+                                <td class="category">-ison</td>
+                                <td>une garnison</td>
+                            </tr>
+                            <tr>
+                                <td class="category">-oir</td>
+                                <td>le terroir</td>
+                                <td class="category">-itude</td>
+                                <td>la solitude</td>
+                            </tr>
+                            <tr>
+                                <td class="category">teur</td>
+                                <td>un alternateur</td>
+                                <td class="category">-oire</td>
+                                <td>une écumoire</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="category">-sion</td>
+                                <td>la passion</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="category">-té</td>
+                                <td>la beauté</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="category">-tion</td>
+                                <td>une attention</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="category">-trice</td>
+                                <td>une motrice</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="category">-ure</td>
+                                <td>la culture</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="btn_regles">
+                        <button class="bouton"><strong>Jouer</strong></button>
+                    </div>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question" onclick="toggleAnswer(this)"> Quelles exceptions existent ?</p>
+                <div class="faq-answer">
+                    <p>En français, la plupart des noms suivent des règles spécifiques 
+                        pour déterminer leur genre, mais il existe des exceptions pour lesquelles 
+                        aucune explication grammaticale claire ne peut être donnée. Ces mots, souvent 
+                        hérités de l'histoire de la langue ou influencés par d'autres langues, défient 
+                        les normes habituelles et doivent être mémorisés individuellement. Voici quelques 
+                        exemples de noms masculins malgré leur terminaison généralement féminine.</p>
+                    <p><strong>Masculins malgré la terminaison féminine</strong></p>
+                    <ul>
+                        <li>Le lycée</li>
+                        <li>Le musée</li>
+                        <li>Le parapluie</li>
+                        <li>Le silence</li>
+                        <li>Le génie</li>
+                        <li>Le fromage</li>
+                        <li>Le livre</li>
+                        <li>Le téléphone</li>
+                    </ul>
+                    <p><strong>Féminins malgré la terminaison masculine (même si la terminaison "-age" est souvent masculine)</strong></p>
+                    <ul>
+                        <li>La nage</li>
+                        <li>La cage</li>
+                        <li>La page</li>
+                        <li>La plage</li>
+                        <li>La rage</li>
+                        <li>La foudre</li>
+                    </ul>
+                    <p>Certains mots n'ont pas de forme différente pour le masculin et le féminin. On les appelle « noms épicènes ».</p>
+                    <ul>
+                        <li><strong>Noms terminés par un "e" au masculin :</strong> Ces mots ont la même forme pour les deux genres, mais l'article change.
+                            <br><em>Exemples :</em> un/une camarade, un/une pianiste. <strong>(Exception :</strong> un/une enfant<strong>)</strong>.
+                        </li>
+                        <li><strong>Noms d'animaux :</strong> Certains noms d'animaux ne changent pas de forme selon le sexe de l'animal. L'article reste le même.
+                            <br><em>Exemples :</em> un papillon, une araignée, un hibou.
+                        </li>
+                    </ul>
+                    <p><strong>Certains noms ont un féminin complètement irrégulier et la fin est totalement modifiée :</strong></p>
+                    <ul>
+                        <li>Un loup → une louve</li>
+                        <li>Un époux → une épouse</li>
+                        <li>Un héros → une héroïne</li>
+                        <li>Un dieu → une déesse</li>
+                        <li>Un roi → une reine</li>
+                        <li>Un veuf → une veuve</li>
+                        <li>Un prince → une princesse</li>
+                        <li>Un comte → une comtesse</li>
+                        <li>Un maître → une maîtresse</li>
+                    </ul>
+                    <p><strong>On peut également avoir un mot féminin complètement différent de celui du mot masculin :</strong></p>
+                    <ul>
+                        <li>Un oncle → une tante</li>
+                        <li>Un taureau → une vache</li>
+                        <li>Un coq → une poule</li>
+                        <li>Un garçon → une fille</li>
+                        <li>Un frère → une sœur</li>
+                    </ul>
+                    <p>Et enfin, pour faire simple, il existe encore des mots désignant des êtres vivants qui n'ont pas de féminin : un témoin, un bourreau, un bandit, un assassin…</p>
+                <div class="imgrescontainer"><img src="ressources/foudre.png" alt="foudre"></div>  
+                <div id="btn_regles">
+                    <button class="bouton"><strong>Jouer</strong></button>
+                </div>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question" onclick="toggleAnswer(this)"> Quelles catégories de noms appartiennent à un genre spécifique ?</p>
+                <div class="faq-answer">
+                    <p><strong>Sont ordinairement masculins :</strong></p>
+                <ul>
+                    <li>Les noms d’arbres : un chêne, un pin, un hêtre.</li>
+                    <li>Les noms de métaux : le fer, le zinc, le cuivre.</li>
+                    <li>Les noms de langues : le français, le chinois, le turc.</li>
+                    <li>Les noms de jours, mois et saisons : le lundi, le janvier, le printemps. 
+                        <strong>Exception :</strong> la Pentecôte (un jour de fête).
+                    </li>
+                    <li>Les noms de couleurs (employés seuls) : le bleu, le rouge, le vert.</li>
+                </ul>
+
+                <p><strong>Sont habituellement féminins :</strong></p>
+                <ul>
+                    <li>Les noms de sciences : la physique, la chimie. 
+                        <strong>Exception :</strong> le droit.
+                    </li>
+                    <li>Les unités de mesure : la tonne, la livre, la once. 
+                        <strong>Exception :</strong> le kilogramme.
+                    </li>
+                    <li>Les noms de voitures et marques : la Renault, la Peugeot, la Ferrari, la Porsche.</li>
+                    <li>Les noms de fruits terminés par -e : la pomme, la poire, la cerise, la banane, la prune. 
+                        <strong>Exception :</strong> le pamplemousse.
+                    </li>
+                </ul>
+                <div class="imgrescontainer"><img src="ressources/banana.png" alt="banana"></div>  
+            </div>
+            <div class="faq-item">
+                <p class="faq-question" onclick="toggleAnswer(this)"> Quand un mot change-t-il de genre… et de sens ?</p>
+                    <div class="faq-answer">
+                        <p><strong>Certains noms changent de genre en passant du singulier au pluriel :</strong></p>
+                    <ul>
+                        <li><strong>amour</strong> est masculin au singulier et souvent féminin au pluriel :
+                            <i>un grand amour ; de folles amours</i></li>
+                        <li><strong>délice</strong> est masculin au singulier, féminin au pluriel :
+                            <i>ce gâteau est un pur délice ; c'étaient sans cesse de nouvelles délices</i></li>
+                        <li><strong>orgue</strong> est masculin au singulier et féminin au pluriel (désignant un seul instrument) :
+                            <i>un orgue excellent ; jouer aux grandes orgues.</i></li>
+                        <div class="imgrescontainer"><img src="ressources/heart.png" alt="amour"></div>
+                    </ul>
+                    <p><strong>Certains noms ont un sens différent au masculin et au féminin</strong><p>
+                    <ul>
+                        <li><strong>Un manœuvre</strong> est un ouvrier non spécialisé ; <strong>une manœuvre</strong> est un exercice ou un mouvement.</li>
+                        <li><strong>Un aigle</strong> est un oiseau de proie ; <strong>une aigle</strong> est la femelle de l'aigle, mais peut aussi désigner un étendard ou un motif d'armoiries.</li>
+                        <li><strong>Un livre</strong> : un objet pour lire (ex. : un livre de recettes) ; <strong>une livre</strong> : une unité de mesure (ex. : une livre de pommes).</li>
+                        <li><strong>Un critique</strong> : une personne qui évalue des œuvres (ex. : un critique de cinéma) ; <strong>une critique</strong> : un jugement ou un avis (ex. : une critique constructive).</li>
+                        <li><strong>Un mémoire</strong> : un document écrit, souvent académique (ex. : un mémoire de maîtrise) ; <strong>la mémoire</strong> : la faculté de se souvenir (ex. : la mémoire humaine est fascinante).</li>
+                        <li><strong>Un voile</strong> : un tissu qui cache quelque chose (ex. : un voile de mariée) ; <strong>une voile</strong> : une pièce de tissu utilisée pour la navigation (ex. : une voile de bateau).</li>
+                        <li><strong>Un mode</strong> : une manière de faire ou un procédé (ex. : le mode d’emploi) ; <strong>la mode</strong> : une tendance ou un style (ex. : la mode des années 80).</li>
+                        <li><strong>Un tour</strong> : une promenade ou un trajet (ex. : faire un tour à vélo) ; <strong>une tour</strong> : un bâtiment élevé (ex. : la tour Eiffel).</li>
+                        <li><strong>Un poste</strong> : un emploi ou un lieu de travail (ex. : un poste de professeur) ; <strong>la poste</strong> : le service postal (ex. : j’ai envoyé la lettre par la poste).</li>
+                        <li><strong>Un manche</strong> : une partie d’un outil ou d’un instrument (ex. : le manche d’une pelle) ; <strong>une manche</strong> : la partie d’un vêtement qui couvre le bras (ex. : une manche de chemise).</li>
+                    </ul>
+                    <div id="btn_regles">
+                        <button class="bouton"><strong>Jouer</strong></button>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question" onclick="toggleAnswer(this)"> Et pour les mots d'origine étrangère ?</p>
+                    <div class="faq-answer">
+                        <p>La plupart des mots étrangers importés dans la langue française sont adoptés au genre masculin. 
+                        C'est souvent parce que le genre par défaut en français pour les mots étrangers est le masculin.</p>
+                        <p>Exemples :</p>
+                        <ul>
+                            <li>Un jazz (style de musique)</li>
+                            <li>Un sport (activité physique)</li>
+                            <li>Un film (œuvre cinématographique)</li>
+                            <li>Un hamburger (plat)</li>
+                            <li>Un week-end (période de repos)</li>
+                        </ul>
+                        <p><strong>Exceptions notables :</strong></p>
+                        <p>Cependant, il existe des exceptions où les mots étrangers sont adoptés au genre
+                             féminin. Ces exceptions peuvent être dues à divers facteurs tels que la phonétique, 
+                             l'usage commun, ou l'influence d'un mot français existant avec le même genre.
+                        </p>
+                        <p>Exemples :</p>
+                        <ul>
+                            <li>Une pizza (plat italien)</li>
+                            <li>Une interview (entretien)</li>
+                            <li>Une discothèque (club de danse)</li>
+                            <li>Une tomate (fruit, d'origine aztèque)</li>
+                        </ul>
+                        <p><strong>Points à noter :</strong></p>
+                        <ul>
+                            <li><strong>Contexte et usage : </strong> Le genre de certains mots peut également varier selon
+                                 l'usage et le contexte spécifique. Par exemple, "un after" (événement après une soirée)
+                                  peut coexister avec "une after" dans certains contextes.</li>
+                            <li><strong>Évolution de la langue : </strong> Avec l'évolution de la langue et l'adoption de nouveaux mots,
+                                des variations peuvent apparaître. Parfois, l'usage courant finit par stabiliser le genre
+                                 d'un mot.</li>
+                        </ul>
+
+                    <div class="imgrescontainer"><img src="ressources/pizza.png" alt="pizza"></div>
+                    <div id="btn_regles">
+                        <button class="bouton"><strong>Jouer</strong></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <script>
+            function toggleAnswer(questionElement) {
+                const answerElement = questionElement.nextElementSibling;
+                if (answerElement.style.display === "none" || answerElement.style.display === "") {
+                    answerElement.style.display = "block";
+                } else {
+                    answerElement.style.display = "none";
+                }
+            }
+        </script>         
+    </div>
+        
+        </main>
+
+
+        <footer>
+            <div id="footer_all">
+                <a href="" class="footer_page1"> Mentions légales </a>
+                <a href="" class="footer_page2"> Contacts </a>
+                <a href="" class="footer_page3"> Plan du site </a>
+                <a href="" class="footer_page4"> Crédits et sources </a>
+            </div>
+        </footer>
+    </div>
+
+
+        <script src="scriptboard.js"></script>
+    </body>
+</html>

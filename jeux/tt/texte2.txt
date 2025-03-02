@@ -1,0 +1,33 @@
+Category : les loisirs, les voyages
+CategoryId : 2
+
+Text 1 : À l’agence de voyages
+Au centre-ville de Grenoble, le soleil éclaire l'agence de voyages à travers les grandes fenêtres. Les brochures colorées montrent des destinations intéressantes. Un jeune homme heureux entre avec un sourire.
+Client : Bonjour, je voudrais organiser *un/une* voyage en Italie.
+Agent : Bien sûr ! Vous souhaitez plutôt *un/une* séjour à *la/le* montagne ou près de *la/le* mer ?
+Client : Je préfère *la/le* plage, mais j’aimerais aussi visiter des monuments historiques.
+Agent : Très bien ! On vous propose visiter des villes historiques comme Rome et Florence. Il y a beaucoup d’hôtel près de *la/le* mer. Vous pouvez aussi profiter *du/de la* soleil.
+Client : Bonne idée ! En fait, j'ai toujours rêvé de voir Florence. Est-ce que je dois prévoir *mon/ma* passeport et *un/une* visa ?
+Agent : Oui, et on va acheter *le/la* billet d’avion pour vous. Pensez à prendre *une/un* petite valise.
+Client : Merci ! Je vais aussi emporter *mon/ma* appareil photo pour garder des souvenirs.
+
+Text 2 : Une journée à la montagne
+Paul et Marie, deux passionnés de ski, se retrouvent pour une journée pleine d'aventures sur les pistes enneigées. Ils ont choisi Chamrousse, une station de ski réputée pour ses magnifiques paysages.
+Paul : J’adore faire *du/de la* ski en hiver !
+Marie : Oui, surtout quand on atteint *le/la* sommet et qu’on voit toute *la/le* montagne enneigée.
+Paul : On peut descendre par *la/le* piste rouge aujourd’hui ?
+Marie : D’accord, mais faisons attention à *la/le* remontée mécanique. Les skis et les bâtons peuvent se prendre dans les machines.
+Paul : Oui, j’ai mis *une/un* trousse de secours dans *mon/ma* sac à dos au cas où.
+Marie : Bonne idée ! D’ailleurs, pour ce soir, on va aller dans *le/la* club de l’hôtel.
+Paul : Oui, et demain, on peut faire *une/un* promenade en raquettes.
+
+Text 3 : Vacances au camping
+Léa et Julie, deux amies inséparables, planifient leurs vacances d'été avec impatience. Après avoir discuté des différentes destinations, elles décident de partir en camping près de la mer, un lieu idéal pour se détendre et profiter de la nature.
+Léa : Cette année, nous partons en camping près *de la/du* mer !
+Julie : Génial ! Tu as préparé *la/le* tente et *le/la* sac de couchage ?
+Léa : Oui, tout est dans *la/le* caravane. J’ai aussi pris *un/une* parasol pour *la/le* plage.
+Julie : Super ! On doit aussi lire *le/la* guide pour se renseigner sur les activités.
+Léa : Bonne idée ! J’aimerais visiter *le/la* musée du village pour découvrir un peu d’histoire locale.
+Julie : Moi, je préfère faire *un/une* sport nautique, comme le paddle ou le kayak, et prendre des photos du coucher *du/de la* soleil.
+Léa : Alors, prépare *ton/mon* appareil photo et profitons de nos vacances !
+

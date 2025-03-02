@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head> 
+        <title> TQuelGenre - Tableau de bord </title>
+        <meta charset="utf-8">
+        <link href="_styleboard.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+
+    <body>
+        <div class="wrapper">
+        <header>
+            <div id="tdb_header1_all">
+                <div class="tdb_header1">
+                    <a href="index.html"> <img src="ressources/logo.png" alt="Logo TQG" title="Logo" class="tdb_logo"> </a>
+                    <div>
+                        <a href="LIENPARAMETTRES"> Mon profil </a>
+                        <a href="LIENDECONNEXION"> Déconnexion </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tdb_header_anderson_all">
+                <div id="tdb_header_anderson">
+                    <div class="tdb_header2">
+                        <nav>
+                            <a href="tableau_de_bord.html"> 📊Tableau de bord </a>
+                            <a href="categorie.html"> 🧮Catégories </a>
+                            <a href="jeux.html"> 🕹️Jeux </a>
+                            <a href="regles.html"> 📚Ressources </a>
+                        </nav>
+
+                        <div class="tdb_header2-B">
+                            <div class="tdb_chercheur-container">
+                                <input type="text" id="tdb_chercheur" placeholder="🔍 Rechercher..." oninput="tdb_functionne_recherche()"> <!-- Quand on clique dessus la fonctionne s'active -->
+                                <ul id="tdb_resultats_chercheur">
+                                    <li> Santé </li>
+                                    <li> Amour </li>
+                                    <li> Le corps </li>
+                                    <li> Les vêtements </li>
+                                    <li> La famille </li>
+                                    <li> Le tourisme     </li>
+                                    <li> Les repas </li>
+                                    <li> La météo </li>
+                                </ul>
+                            </div>
+
+                            <!-- 
+                            <button type="submit" value="Chercher" class="tdb_boutton_chercher"> Chercher </button>
+                            <button type="submit" value="Ajouter mot à une catégorie" class="tdb_boutton_categorie"> + Catégories </button>  
+                            -->
+
+                            <h1> Les catégories </h1>
+                            <!-- <img src="ressources/avatar_women/athena.png" alt="Avatar apprenant" title="avatar"> -->
+                        </div>
+                    </div>
+
+                    <div id="tdb_container_avatar"> 
+                        <img src="ressources/avatars_edit/woman_7.png" alt="Avatar apprenant" title="avatar">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+
+        <main>
+            
+            <h1 class="accueil-jeux">Mentions légales</h1>
+    
+    <div>
+        <h2>1. Présentation du site</h2>
+        <p>Nom du site : tquelgenre.org<br/>
+          Responsable de la publication : David Subileau<br/>
+          Contact : contact@tquelgenre.org<br/>
+          Hébergeur : GitHub Pages</p>
+          
+        <h2>2. Conditions générales d'utilisation</h2>
+          <p><b>Public cible</b> : Le site s'adresse principalement aux élèves souhaitant améliorer leur maîtrise du genre grammatical en français.<br/>
+          <u>Inscription et accès</u> :<br/>
+          
+          L'inscription est obligatoire mais gratuite pour accéder à l'ensemble des fonctionnalités du site.<br/>
+          L'utilisateur s'engage à fournir des informations exactes lors de l'inscription et à ne pas créer de comptes multiples.<br/>
+          <u>Comportement interdit</u> :<br/>
+          
+          Utilisation abusive des services (spam, surcharge du serveur).<br/>
+          Contenus injurieux, diffamatoires, racistes, ou contraires aux lois françaises.<br/>
+          Tentative de piratage, accès non autorisé ou extraction automatisée de données.<br/>
+          Toute activité portant atteinte aux droits des autres utilisateurs.<br/>
+          En cas de non-respect, le compte utilisateur pourra être suspendu ou supprimé sans préavis.</p>
+          
+          <h2>3. Description des services fournis</h2>
+          <u>Le site tquelgenre.org propose</u> :
+          
+          <p>Trois jeux interactifs pour apprendre le genre grammatical des mots de la langue française.<br/>
+          Un suivi de progression personnalisé permettant d'adapter les exercices.<br/>
+          Des fonctionnalités de personnalisation pour un apprentissage optimisé.<br/>
+          Une page dédiée aux feedbacks pour améliorer continuellement les services.</p>
+          
+          <h2>4. Limitations contractuelles sur les données techniques</h2>
+          <p><u>Technologies utilisées</u> :<br/>
+          
+          Frontend : HTML, CSS, JavaScript.<br/>
+          Backend : PHP et MySQL.<br/>
+          Compatibilité :<br/>
+          Le site est optimisé pour les navigateurs récents tels que Chrome, Firefox, Edge et Safari.<br/>
+          L'utilisation de versions obsolètes peut entraîner des dysfonctionnements partiels ou complets.</p>
+          
+          <h2>5. Propriété intellectuelle et contrefaçons</h2>
+          <p><u>Contenus protégés</u> :<br/>
+          Tous les textes, images, logos, et ressources disponibles sur le site sont protégés par le droit d'auteur. Les références et crédits des ressources externes sont listés sur la page "Crédits et sources".<br/>
+          
+          Licence du site :<br/>
+          Le contenu du site n'est pas encore sous licence libre. Toute reproduction ou exploitation non autorisée est interdite.</p>
+          
+          <h2>6. Limitations de responsabilité</h2>
+          <p><u>Services tiers</u> :<br/>
+          Le site n'inclut aucun lien vers des services tiers externes susceptibles d'influencer les données ou le contenu affiché.<br/>
+          
+          <u>Utilisation pédagogique</u> :<br/>
+          Les services proposés sont exclusivement destinés à une utilisation éducative. Le responsable de publication décline toute responsabilité en cas d'utilisation détournée du site.<br/>
+          
+          <u>Interruption du service</u> :<br/>
+          Le site peut être temporairement inaccessible pour des raisons de maintenance technique. L'administrateur s'efforcera de communiquer à l'avance les périodes d'indisponibilité.</p>
+          
+          <h2>7. Gestion des données personnelles</h2>
+          <p><u>Données collectées</u> :<br/>
+          
+          Prénom<br/>
+          Adresse e-mail<br/>
+          Progression d'apprentissage (statistiques des jeux et niveaux atteints).<br/>
+          Ces données sont strictement réservées à l'usage du site et ne seront ni vendues ni partagées avec des tiers.<br/>
+          
+          Outils d'analyse :<br/>
+          Le site n'utilise aucun outil d'analyse ou de suivi externe (Google Analytics, etc.).<br/>
+          
+          Stockage des données :<br/>
+          Les données sont hébergées sur des serveurs situés en France, conformément à la réglementation européenne (RGPD).<br/>
+          
+          Droit d'accès et de rectification :<br/>
+          Conformément à la loi “Informatique et Libertés”, tout utilisateur peut exercer son droit d'accès, de rectification ou de suppression de ses données en envoyant une demande à l'adresse e-mail indiquée ci-dessus.</p>
+          
+          <h2>8. Liens hypertextes et cookies</h2>
+          <p><u>Liens externes</u> :<br/>
+          Le site peut contenir des liens vers des ressources pédagogiques externes pertinentes. Cependant, tquelgenre.org ne saurait être tenu responsable du contenu de ces sites tiers.<br/>
+          
+          Cookies :<br/>
+          
+          Le site n'utilise pas de cookies à des fins de suivi de progression.<br/>
+          Uniquement des sessions PHP et JavaScript temporaires sont créées pour le bon fonctionnement des jeux et pour maintenir la connexion des utilisateurs durant leur session.<br/>
+          Ces sessions sont supprimées automatiquement à la fermeture du navigateur.</p>
+          
+          <h2>9. Droit applicable et attribution de juridiction</h2>
+          <p>Les présentes mentions légales sont régies par le droit français.<br/>
+          En cas de litige, et à défaut de résolution amiable, les tribunaux compétents de Grenoble seront seuls habilités à juger.</p>
+          
+          <h2>10. Lexique</h2>
+          <p>Frontend : Ensemble des technologies utilisées pour afficher les pages web (HTML, CSS, JavaScript).<br/>
+          Backend : Partie du site qui traite les données sur le serveur (PHP, MySQL).<br/>
+          Session : Fichier temporaire stocké sur le serveur permettant de conserver des informations sur l'utilisateur durant sa visite.<br/>
+          RGPD (Règlement Général sur la Protection des Données) : Règlement européen visant à protéger les données personnelles des utilisateurs.</p>
+    </div>
+        
+        </main>
+
+
+        <footer>
+            <div id="footer_all">
+                <a href="" class="footer_page1"> Mentions légales </a>
+                <a href="" class="footer_page2"> Contacts </a>
+                <a href="" class="footer_page3"> Plan du site </a>
+                <a href="" class="footer_page4"> Crédits et sources </a>
+            </div>
+        </footer>
+    </div>
+
+
+        <script src="scriptboard.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+

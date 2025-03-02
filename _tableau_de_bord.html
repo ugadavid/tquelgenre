@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head> 
+        <title> TQuelGenre - Tableau de bord </title>
+        <meta charset="utf-8">
+        <link href="styleboard.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <!-- Oswald -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- Roboto Condensed -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <!-- Nunito -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Maiden+Orange&display=swap" rel="stylesheet">
+        <!-- Maiden Orange -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <!-- Lilita One -->
+
+    </head>
+
+    <body>
+        <header>
+            <div class="tdb_header1">
+                <a href="index.html"> <img src="ressources/logo.png" alt="Logo TQG" title="Logo" class="tdb_logo"> </a>
+                <div>
+                    <a href="LIENPARAMETTRES"> Mon profil </a>
+                    <a href="LIENDECONNEXION"> Déconnexion </a>
+                </div>
+            </div>
+            
+            <div class="tdb_header2"> <br><br><br><br><br>
+                <nav>
+                    <a href="tableau_de_bord.html"> 📊Tableau de bord </a>
+                    <a href="cathegorie.html"> 🧮Catégories </a>
+                    <a href="jeux.html"> 🕹️Jeux </a>
+                    <a href="regles.html"> 📚Ressources </a>
+                </nav>
+
+                <div class="tdb_header2-B">
+                    <div class="tdb_chercheur-container">
+                        <input type="text" id="tdb_chercheur" placeholder="🔍 Rechercher..." oninput="tdb_functionne_recherche()"> <!-- Quand on clique dessus la fonctionne s'active -->
+                        <ul id="tdb_resultats_chercheur">
+                            <li> Santé </li>
+                            <li> Amour </li>
+                            <li> Le corps </li>
+                            <li> Les vêtements </li>
+                            <li> La famille </li>
+                            <li> Le tourisme     </li>
+                            <li> Les repas </li>
+                            <li> La météo </li>
+                        </ul>
+                    </div>
+
+                    <!-- 
+                    <button type="submit" value="Chercher" class="tdb_boutton_chercher"> Chercher </button>
+                    <button type="submit" value="Ajouter mot à une catégorie" class="tdb_boutton_categorie"> + Catégories </button>  
+                    -->
+
+                    <h1> Bienvenue sur ton tableau de bord ! </h1>
+                    <img src="ressources/simple_avatar_modi.png" alt="Avatar apprenant" title="avatar">
+                </div>
+            </div>
+        </header>
+
+
+
+
+        <main>
+            <section class="tdb_section_scores">
+                <h3> Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit <br> odio eu enim. Pellentesque 
+                sed dui ut augue blandit sodales. </h3>
+
+                <h2> Scores </h2>
+
+                <div class="tdb_graphique_scores"> <img src="ressources/Exemples_scores.png" alt="Voici la graphique de vos résultats" title="Scores"> </div>
+            </section>
+
+
+
+            <section class="tdb_section_badges">
+                <h2> Tes badges obtenus ! </h2>
+                <div class="tdb_badges_container">
+                    <img src="image/badges/debutant_curieux_off.png" alt="Badge 'name'" title="Badge 1">
+                    <img src="image/badges/debutant_curieux_off.png" alt="Badge 'name'" title="Badge 2">
+                    <img src="image/badges/debutant_curieux_off.png" alt="Badge 'name'" title="Badge 3">
+                    <img src="image/badges/debutant_curieux_off.png" alt="Badge 'name'" title="Badge 4">
+                    <img src="image/badges/debutant_curieux_on.png" alt="Badge 'name'" title="Badge 5">
+                    <img src="image/badges/debutant_curieux_off.png" alt="Badge 'name'" title="Badge 6">
+                    <img src="image/badges/debutant_curieux_off.png" alt="Badge 'name'" title="Badge 7">
+                </div>
+            </section>
+
+
+
+            <section class="tdb_section_erreurs">
+                <div class="tdb_erreurs_container">
+                    <h3> Vos ennemis jurés </h3>
+
+                    <div>
+                        <img src="ressources/ej1.png" alt="Image 'personnage" title="Personnage 1">
+                        <p class="tdb_ej_feminin"> Erreur </p>
+                    </div>
+
+                    <div>
+                        <img src="ressources/ej2.png" alt="Image 'personnage" title="Personnage 2">
+                        <p class="tdb_ej_masculin"> Doute </p>
+                    </div>
+
+                    <div>
+                        <img src="ressources/ej3.png" alt="Image 'personnage" title="Personnage 3">
+                        <p class="tdb_ej_masculin"> Mexique </p>
+                    </div>
+
+                    <div>
+                        <img src="ressources/ej4.png" alt="Image 'personnage" title="Personnage 4">
+                        <p class="tdb_ej_feminin"> Horloge </p>
+                    </div>
+
+                    <div>
+                        <img src="ressources/ej5.png" alt="Image 'personnage" title="Personnage 5">
+                        <p class="tdb_ej_masculin"> Ecran </p>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="tdb_section_astuces">
+                <h2> Astuces pour vous </h2>
+
+                <div>
+                    <img src="ressources/attention.png" alt="Image danger" title="Attention" id="tdb_astuces_img_danger">
+
+                    <p id="tdb_astuces_texte"> 
+                        Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, 
+                        enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper.
+                    </p>
+
+                    <img src="ressources/declic.png" alt="Image déclic" title="Idée pour vous" id="tdb_astuces_img_declic">
+                </div>
+            </section>
+
+
+
+            <section class="tdb_section_jouer">
+                <div id="tdb_boutton_continuer_container">
+                    <button id="tdb_boutton_continuer" type="submit" value="Continuer progrès"> <p> Continuer progrès </p> </button>
+                </div>
+
+                <div id="tdb_boutton_secondaires">
+                    <button id="tdb_boutton_categories" type="submit" value="Choisir une catégorie"> <p> Choisir catégorie </p> </button>
+                    
+                    <button id="tdb_boutton_redemarrer" type="submit" value="Redémarrer"> <p> Redémarrer </p> </button>
+                </div>
+            </section>
+        </main>
+
+        
+
+
+
+        <footer>
+            <a href="" class="footer_page1"> Mentions légales </a>
+            <a href="" class="footer_page2"> Contacts </a>
+            <a href="" class="footer_page3"> Plan du site </a>
+            <a href="" class="footer_page4"> Crédits et sources </a>
+        </footer>
+
+
+        <script src="scriptboard.js"></script>
+    </body>
+</html>

@@ -1,0 +1,560 @@
+body {
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+
+/* HEADER 1  */
+
+.tdb_header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eeeeee;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #3d458f; 
+}
+
+    .tdb_logo {
+        height: 60px;
+        margin-left: 40px; 
+    }
+
+    .tdb_header1 div {
+        display: flex;
+        gap: 20px;
+        left: -60px;
+        position: relative;
+    }
+
+    .tdb_header1 div a {
+        color: #3d458f;
+        text-decoration: none;
+        padding: 10px 15px; /* agrandir le rectangle  */
+        border: 2px solid #3d458f; 
+        border-radius: 20px;   
+    }
+
+/* .tdb_header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: ;
+    top: 0;
+    width: 100%;
+    border-bottom: 0.1em solid #3d458f; 
+} */
+    /* .tdb_logo {
+        height: 4em;
+        margin-left: 3em;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    } */
+    /* .tdb_header1 div {
+        display: flex;
+        gap: 1.5em;
+        right: 3em;
+        position: relative;
+    } */
+        /*.tdb_header1 div a {
+            color: #3d458f;
+            text-decoration: none;
+            padding: 0.45em 0.9em; *//* agrandir le rectangle  *//*
+            border: 2px solid #3d458f; 
+            border-radius: 20px;
+            *//*font-family: "Lilita One";
+            font-weight: 500;*//*
+        }*/
+        
+        .tdb_header1 div a:hover {
+            background-color: #8f51a2; 
+            color: #eeeeee; 
+        }
+
+
+
+/*
+.tdb_header2 nav a,
+.tdb_header1 div a {
+    font-family: "Lilita One"; 
+}
+*/
+
+
+
+
+/*HEADER 2*/
+.tdb_header2 {
+    background-color: #3d458f;
+    padding: 0.5em 10em 0em 10em;
+}
+
+    .tdb_header2 nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0 4em 0 2em;
+        background-color: ;
+    }
+
+        .tdb_header2 nav a {
+            text-decoration: none;
+            font-weight: ;
+            color : white;
+            /*font-size: 1.3em;*/
+
+            font-size: 1.2em;
+
+            /*border-bottom: #3e8ec7 solid 0.1em;
+            display: block;
+            width: 9em;
+            max-block-size: 2em; 
+            position: relative;
+            text-align: center;*/
+
+            /*box-shadow: rgba(62, 142, 199, 0.5) 0px 30px 60px -12px inset, rgba(62, 142, 199, 0.5) 0px 18px 36px -18px inset;*/
+
+            /*rgba(62, 142, 199, 1)*/
+       }
+
+
+
+/*HEADER 2.B */
+
+.tdb_header2-B {
+    display: grid;
+    grid-template-columns:  1fr 1fr 3.5fr 1fr 0.5fr 0.8fr;
+    grid-template-rows: 0.25fr 1fr 0.15fr 0.4fr 0.6fr 0.05fr 0.5fr 0.5fr;
+    /*height: auto; Pas besoin si c'est bien fait le reste*/
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0em;
+}
+
+.tdb_header2-B * {
+    background-color: ;
+}
+
+    .tdb_chercheur-container {
+        grid-column: 2/5;
+        grid-row: 2/3;
+        height: 2.5em;
+        margin: 0;
+        border: 0em;
+        padding: 0em;
+    }
+
+        .tdb_chercheur-container input {
+            width: 100%;
+            height: 100%;
+            color: #3d458f;
+            border: 2px solid #3d458f; 
+            border-radius: 20px;
+        }
+
+        #tdb_resultats_chercheur {
+            display: none;
+            position: relative;
+            left: 8em;
+        }
+
+    .tdb_boutton_chercher {
+        width: 10em;
+        height: 3em;
+        grid-column: 1/2;
+        grid-row: 4/6;
+        font-family: "Lilita One";
+        font-weight: 500;
+        color: #3d458f;
+        border: 2px solid #3d458f; 
+        border-radius: 20px;
+    }
+
+    .tdb_boutton_categorie {
+        width: 10em;
+        height: 3em;
+        grid-column: 1/2;
+        grid-row: 7/9;
+        font-family: "Lilita One";
+        font-weight: 500;
+        color: #3d458f;
+        border: 2px solid #3d458f; 
+        border-radius: 20px;
+    }
+
+    .tdb_header2-B h1 {
+        grid-column: 3/4;
+        grid-row: 5/7;
+        font-size: 1em;
+        margin-bottom: 0;
+        margin-top: 0;
+        font-size: 1.7em;
+        color: white;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        /*font-family: "Lilita One";
+        font-weight: 500;*/
+        background-color: ;
+    }
+
+    .tdb_header2-B img {
+        height: 10em;
+        width: 100%; /* El bloque no toma todo el espacio porque no lo necesita para mostrar bien l'imag, hay que decirselo al hp*/
+        object-fit: contain; 
+        grid-column: 6/7;
+        grid-row: 1/9;
+        /*/grid-column: span 2; Fuerza a que ocupe sus dos columnas */
+    }
+
+
+
+
+
+/* SCORES */
+
+.tdb_section_scores {
+    padding: 2.5em 10em 2.5em 10em;
+}
+
+    .tdb_section_scores h3 {
+        /*font-family: "Lilita One";
+        font-weight: 500;*/
+        color: #3d458f;
+        text-align: center;
+
+        font-size: 1.5em;
+    }
+
+    .tdb_section_scores h2 {
+        /*font-family: "Lilita One";
+        font-weight: 500;*/
+        color: #3d458f;
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .tdb_section_scores div {
+
+    }
+
+        .tdb_graphique_scores img{
+            display: flex;
+            margin: auto;
+            height: 30em;
+        }
+
+
+
+
+/*BADGES*/
+
+.tdb_section_badges {
+    padding: 2.5em 10em 2.5em 10em;
+}
+
+    .tdb_section_badges h2 {
+        /*font-family: "Lilita One";
+        font-weight: 500;*/
+        color: #3d458f;
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .tdb_badges_container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+        .tdb_badges_container img {
+            height: 10em;
+            margin: auto;
+        } 
+
+
+
+
+/*ERREURS*/
+
+.tdb_erreurs_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 7em 10em 2.5em 10em;
+    justify-content: center;
+}
+
+    .tdb_erreurs_container h3 {
+        /*font-family: "Lilita One";
+        font-weight: 500;*/
+        color: #3d458f;
+        text-align: center;
+        font-size: 2.4em;
+        width: 7em;
+        background-color:  ;
+    }
+
+    .tdb_erreurs_container div {
+
+    }
+
+        .tdb_erreurs_container div img {
+            height: 7em;
+            border: 0.3em solid #3d458f;
+        }
+
+        .tdb_ej_feminin {
+            font-weight: 700;
+            color : #8f51a2;
+            font-size: 1.7em;
+            /*font-family: "Lilita One";*/
+            margin: 0;
+            padding: 0;
+        }
+
+        .tdb_ej_masculin {
+            font-weight: 700;
+            color : #3e8ec7;
+            font-size: 1.7em;
+            /*font-family: "Lilita One"; */
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+
+/* ASTUCES */
+
+.tdb_section_astuces {
+    padding: 4em 14em 3em 17em;
+}
+
+    .tdb_section_astuces h2 {
+        /*font-family: "Lilita One";
+        font-weight: 500;*/
+        color: #3d458f;
+        text-align: center;
+        font-size: 2.2em;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 0.5em;
+        position: relative;
+        text-align: left;
+        left: 2em;
+    }
+
+    .tdb_section_astuces div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+        border: black solid;
+    }
+
+        #tdb_astuces_img_danger {
+            height: 8em;
+        }
+
+        #tdb_astuces_texte {
+            font-size: 1.5em;
+            font-style: italic;
+            width: 30em;
+        }
+
+        #tdb_astuces_img_declic {
+            height: 6em;
+            padding-bottom: ;
+        }
+
+
+    
+    
+/*JOUER*/
+
+.tdb_section_jouer {
+    padding: 2.5em 20em 2.5em 20em; /*<br> en html*/
+    background-color: ;
+}
+
+
+    /* BOUTTON CONTINUER */
+
+    #tdb_boutton_continuer_container {
+        padding-bottom: 2em;
+        background-color: ;
+    }
+
+        #tdb_boutton_continuer {
+            height: 7em;
+            width: 30em;
+            /*width: 200px;
+            height: 40px;*/
+            position: relative;
+            background: #3d458f;
+            border: 0 #f4f4f4;
+
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+        }
+        
+        #tdb_boutton_continuer:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-left: 0em solid #f4f4f4;
+            border-top: 3.5em solid transparent;
+            border-bottom: 3.5em solid transparent;
+        }
+
+        #tdb_boutton_continuer:before {
+            content: "";
+            position: absolute;
+            right: -4.2em;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-left: 4.2em solid #3d458f;
+            border-top: 3.5em solid transparent;
+            border-bottom: 3.5em solid transparent;
+        }
+
+            #tdb_boutton_continuer_container p{
+                font-size: 2em;
+                color: white;
+                font-weight: 600;
+                font-style: italic;
+            }
+
+
+
+    /*BOUTTONS SECONDAIRES*/
+    #tdb_boutton_secondaires {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 1em 0 17em;
+        gap: 4em;
+        background-color: ;
+    }
+
+        /* BOUTTON CATEGORIES */
+        #tdb_boutton_categories {
+            height: 7em;
+            width: 17em;
+            position: relative;
+            background: #3d458f;
+            border: 0 #f4f4f4;
+
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+        }
+        
+        #tdb_boutton_categories:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-left: 4em solid #f4f4f4;
+            border-top: 3.5em solid transparent;
+            border-bottom: 3.5em solid transparent;
+        }
+
+        #tdb_boutton_categories:before {
+            content: "";
+            position: absolute;
+            right: -4.2em;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-left: 4.2em solid #3d458f;
+            border-top: 3.5em solid transparent;
+            border-bottom: 3.5em solid transparent;
+        }
+
+            #tdb_boutton_categories p{
+                font-size: 1.5em;
+                color: white;
+                font-weight: 600;
+                font-style: italic;
+                position: relative;
+                left: 1.5em;
+            }
+
+
+        /* BOUTTON REDEMARRER */
+
+        #tdb_boutton_redemarrer {
+            height: 7em;
+            width: 17em;
+            position: relative;
+            background: #3d458f;
+            border: 0 #f4f4f4;
+
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+        }
+        
+        #tdb_boutton_redemarrer:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-left: 4em solid #f4f4f4;
+            border-top: 3.5em solid transparent;
+            border-bottom: 3.5em solid transparent;
+        }
+
+        #tdb_boutton_redemarrer:before {
+            content: "";
+            position: absolute;
+            right: -4.2em;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-left: 4.2em solid #3d458f;
+            border-top: 3.5em solid transparent;
+            border-bottom: 3.5em solid transparent;
+        }
+
+            #tdb_boutton_redemarrer p {
+                font-size: 1.5em;
+                color: white;
+                font-weight: 600;
+                font-style: italic;
+                position: relative;
+                left: 1em;
+            }
+
+
+        
+        
+/*FOOTER*/         
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #3d458f;
+    justify-content: space-around;
+    padding: 0.6em 2.6em 0.6em 2.6em;
+    margin-top: 3em ;
+}
+
+    footer a {
+        color: white;
+        font-size: 1.3em;
+        text-decoration: none;
+    }

@@ -1,0 +1,94 @@
+/* Styles spécifiques à la page feedback */
+.feedback-page {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3D458F; /* Couleur principale du texte */
+    padding: 20px;
+    background-color: #eeee; /* Fond légèrement gris */
+    border-radius: 8px;
+    max-width: 100%; /* Largeur maximale à 100% */
+    
+    box-sizing: border-box; /* Inclure le padding et la bordure dans la hauteur et la largeur */
+    margin: 0 auto;
+}
+
+.feedback-page h1 {
+    color: #3D458F; /* Bleu pour le titre */
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.feedback-page p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.centered-texte {
+    text-align: center;
+}
+
+.centered-text1 {
+    color: #3D458F;
+    text-align: center;
+    font-size: 20px!important;
+    margin-top: 80px
+}
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    gap: 40px; /* Espace entre les mots */
+}
+
+.feedback-word {
+    color: #F4A633; /* Orange pour le texte des mots */
+    margin-bottom: 20px;
+    flex: 1 1 calc(33.333% - 20px); /* 3 éléments par ligne avec un espace */
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.feedback-word strong {
+    color: #3D458F; /* Bleu pour les mots en gras */
+    font-size: 18px;
+}
+
+.feedback-example {
+    display: block;
+    font-style: italic;
+    color: #3D458F; /* Bleu pour les exemples */
+    margin-top: 10px; /* Espacement supérieur */
+    margin-bottom: 10px; /* Espacement inférieur */
+    line-height: 1.5; /* Hauteur de ligne pour espacer les lignes de texte */
+}
+
+.bouton {
+    background-color: #F4A633; /* Orange pour le bouton */
+    color: white; /* Texte blanc */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.feedback-more-examples:hover {
+    background-color: #F4A633; /* Orange au survol (identique) */
+    opacity: 0.9; /* Légère transparence au survol pour un effet visuel */
+}
+
+.feedback-additional-examples {
+    margin-top: 10px;
+}
+
+.feedback-additional-examples em {
+    display: block;
+    font-style: italic;
+    color: #3D458F; 
+    margin-top: 5px;
+}
+
+.feedback-word strong {
+    color: #F4A633; /* Orange pour les mots en gras */
+    font-size: 18px;
+}

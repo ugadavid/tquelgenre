@@ -1,0 +1,37 @@
+Category : les vêtements, la mode
+CategoryId : 1
+
+Text 1 : Une matinée de shopping
+Sophie et Emma, deux amies de longue date, ont décidé de passer une matinée de shopping dans leur centre commercial préféré. Le mariage de la sœur de Sophie approche et elle souhaite trouver la robe parfaite.
+Sophie : J’aimerais acheter *une/un* _robe_ pour le mariage de ma sœur.
+Emma : Bonne idée ! Regarde celle dans *la/le* _vitrine_, elle est magnifique !
+Sophie : Oui, et je vais essayer aussi *la/le* _veste_ assortie.
+Emma : Moi, j’ai besoin d’*un/une* _sac_ et d’*une/un* _chaîne_ en or.
+Sophie : Allons dans *la/le* _cabine_ d’essayage pour voir si cela me va.
+Emma : Je vais aussi prendre *une/un* _chemise_ et *une/un* _jupe_ pour mon entretien d’embauche.
+Sophie : N’oublie pas *la/le* _ceinture_ pour compléter ta tenue !
+Emma : Oui, et pourquoi pas *une/un* _montre_ élégante ?
+…
+
+Text 2 : Préparation avant de sortir
+Lucas et Paul se préparent pour une sortie en ville. Le temps est frais, et ils veulent s'assurer d'être bien habillés pour affronter le climat mais ils veulent rester stylés.
+Lucas : Il fait froid aujourd’hui, je vais mettre *un/une* _manteau_ et *une/un* _écharpe_ bien chaude.
+Paul : Bonne idée ! Moi, je vais porter *un/une* _blouson_ en cuir.
+Lucas : Je vais aussi mettre *un/une* _pull_ sous *mon/ma* _imperméable_ pour ne pas avoir froid.
+Paul : Prends-tu aussi *ton/ta* _parapluie_ ? On annonce de la pluie.
+Lucas : Oui ! D’ailleurs, j’hésite entre *un/une* _jean_ et *un/une* _pantalon_.
+Paul : Porte plutôt *ce/cette* _pantalon_, il est plus élégant.
+Lucas : Je vais mettre mes chaussures en cuir et *un/une* _mouchoir_ dans ma poche.
+Paul : Bonne idée ! Je vais aussi prendre *un/une* _bracelet_ en argent.
+
+Text 3 : Valise pour les vacances
+Clara et Léa sont impatientes de partir en vacances au bord de la mer. Clara est en train de préparer sa valise, pour s’assurer de ne rien oublier.
+Clara : Je prépare ma valise. J’ai pris *un/une* _maillot de bain_, *un/une* _short_ et *un/une* _T-shirt_.
+Léa : N’oublie pas *le/la* _chapeau_ pour te protéger du soleil !
+Clara : Oui, et aussi des sous-vêtements, *un/une* _soutien-gorge_ et *une/un* _culotte_.
+Léa : Haha, bien sûr ! D’ailleurs, tu as pensé à *un/une* _pyjama_ et des chaussettes pour la nuit ?
+Clara : Oui, tout est prêt. J’ajoute *un/une* _bijou_ et *une/un* _bague_ pour les soirées.
+Léa : Tu devrais aussi prendre *une/un* _tenue_ plus élégante, au cas où.
+Clara : Tu as raison ! J’ajoute *un/une* _tailleur_ et *une/un* _cravate_ pour une sortie chic.
+
+

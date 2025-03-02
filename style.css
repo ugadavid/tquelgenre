@@ -1,0 +1,268 @@
+body {
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.header {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #eeeeee;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    border-bottom: 1px solid #3d458f;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1366px;
+    margin: 0 auto; /* Centre horizontalement dans le parent */
+}
+.content-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1366px;
+    margin: 0 auto; /* Centre horizontalement dans le parent */
+}
+.header-inner img {
+    height: 60px;
+    margin-left: 40px; 
+}
+.header-inner .menu {
+    display: flex;
+    gap: 20px;
+    left: -60px;
+    position: relative;
+}
+.header-inner .menu a {
+    color: #3d458f;
+    text-decoration: none;
+    padding: 10px 15px; /* agrandir le rectangle  */
+    border: 2px solid #3d458f; 
+    border-radius: 20px; 
+}
+.header-inner .menu a:hover {
+    background-color: #8f51a2; 
+    color: #eeeeee; 
+}
+
+
+.main {
+    padding: 70px 0 10px 0;
+    margin-top: 70px; 
+    display: flex;
+    justify-content: space-between;
+    background: #3d458f; 
+    color: #eeeeee; 
+}
+.main .content {
+    width: 60%; 
+    margin-top: -40px;
+}
+.main .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 100px;
+}
+.main .image img {
+    max-width: 85%;
+    height: auto;
+    position: relative;
+    margin-top: -70px;
+}
+
+h1 {
+    font-size: 2em; 
+    margin-top: 10px; 
+}
+.accueil_paragraphe {
+    line-height: 1.5; 
+}
+.accueil_boton {
+    display: inline-block;
+    margin: 30px 0; 
+    padding: 10px 20px;
+    color: #eeeeee; 
+    background-color: transparent; 
+    border: 2px solid #eeeeee; 
+    border-radius: 20px; 
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+.accueil_boton:hover {
+    background-color: #8f51a2; 
+    color: #eeeeee; 
+}
+
+.accueil_button_bas {
+    padding: 10px 20px; 
+    background-color: transparent; 
+    color: #3d458f; 
+    text-decoration: none; 
+    border: 2px solid #3d458f; 
+    border-radius: 20px; 
+}
+
+.accueil_button_bas:hover {
+    background-color: #8f51a2; 
+    color: #eeeeee; 
+}
+
+ /* Pourquoi apprendre les genres avec TQuelGenre ? */
+.accueil-container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #eeeeee;
+}
+h2{
+    text-align: center; 
+    margin-bottom: 40px;
+    color: #3d458f;
+}
+h3{
+    text-align: center; 
+    margin-bottom: 40px;
+    color: #3d458f;
+}
+
+.accueil-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    /*border: 1px solid #3d458f;*/
+}
+
+.accueil-image {
+    flex: 1;
+    max-width: none; 
+    margin: 10px;
+    object-fit: cover;
+}
+.accueil-text {
+    flex: 1;
+    margin: 20px;
+}
+
+.accueil-text h2 {
+    margin-top: 0;
+}
+
+.accueil-text p {
+    margin: 10px 0 0;
+}
+
+
+.accueil_containerboton {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 10vh; 
+}
+
+
+/* page cathégorie */
+.containercatthegorie {
+    margin-top: 40px;
+    max-width: calc(100% - 40px); 
+    position: relative; 
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0px;
+}
+
+.column {
+    flex: 0 0 calc(12.5% - 4px);
+    margin: 0 -5px; 
+    text-align: center;
+    box-sizing: border-box;   
+    position: relative; 
+}
+
+.column img {
+    width: 60%; 
+    height: auto; 
+    transition: transform 1s ease;
+    border-radius: 50%; 
+    object-fit: cover; 
+    background: transparent; 
+}
+
+.row .column:first-child {
+    margin-left: 50px; 
+}
+
+.row .column:last-child {
+    margin-right: 10px;
+}
+
+.five-row{
+    position: relative;
+    left: calc(33.7% + 2px); 
+}
+
+.special-paragraph {
+    margin-top: 5px; 
+}
+
+.hover-zoom:hover {
+    transform: scale(1.2); 
+    box-shadow: 0 0 20px rgba(6, 141, 237, 0.8); 
+    background: transparent; 
+}
+
+
+
+/* Página juegos */
+.accueil-jeux {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #3d458f;
+}
+
+.sous-titre-jeux {
+    text-align: center;
+    margin-top: -20px;
+    color: #3d458f;
+    font-size: 18px;
+}
+
+.container-jeux {
+    display: flex;
+    justify-content: space-around; 
+    margin-top: 40px;
+}
+
+.image-boxjeux {
+    width: 300px; 
+    text-align: center;
+}
+
+.seconde-titre-jeux {
+    color: #f6a239;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.image-boxjeux img {
+    width: 100%; 
+    height: auto;
+    display: block; 
+    margin-bottom: 10px;
+}
+
+.descriptionjeux {
+    text-align: center;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head> 
+        <title> TQuelGenre - Tableau de bord </title>
+        <meta charset="utf-8">
+        <link href="_styleboard.css" rel="stylesheet">
+        
+        
+    </head>
+
+    <body>
+        <div class="wrapper">
+        <header>
+            <div id="tdb_header1_all">
+                <div class="tdb_header1">
+                    <a href="index.html"> <img src="ressources/logo.png" alt="Logo TQG" title="Logo" class="tdb_logo"> </a>
+                    <div>
+                        <a href="LIENPARAMETTRES"> Mon profil </a>
+                        <a href="LIENDECONNEXION"> Déconnexion </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tdb_header_anderson_all">
+                <div id="tdb_header_anderson">
+                    <div class="tdb_header2">
+                        <nav>
+                            <a href="tableau_de_bord.html"> 📊Tableau de bord </a>
+                            <a href="categorie.html"> 🧮Catégories </a>
+                            <a href="jeux.html"> 🕹️Jeux </a>
+                            <a href="regles.html"> 📚Ressources </a>
+                        </nav>
+
+                        <div class="tdb_header2-B">
+                            <div class="tdb_chercheur-container">
+                                <input type="text" id="tdb_chercheur" placeholder="🔍 Rechercher..." oninput="tdb_functionne_recherche()"> <!-- Quand on clique dessus la fonctionne s'active -->
+                                <ul id="tdb_resultats_chercheur">
+                                    <li> Santé </li>
+                                    <li> Amour </li>
+                                    <li> Le corps </li>
+                                    <li> Les vêtements </li>
+                                    <li> La famille </li>
+                                    <li> Le tourisme     </li>
+                                    <li> Les repas </li>
+                                    <li> La météo </li>
+                                </ul>
+                            </div>
+                            <h1> Les catégories </h1>
+                        </div>
+                    </div>
+
+                    <div id="tdb_container_avatar"> 
+                        <img src="ressources/avatars_edit/woman_1.png" alt="Avatar apprenant" title="avatar">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+
+        <main>
+            <!-- Première file -->
+    <div class="containercatthegorie">
+        <div class="row">
+            <div class="catcolumn">
+                <a href="image/logo.png"><img src="image/imagecathegories/amour.png" alt="Título 1" class="hover-zoom"></a>
+                <p class="special-paragraph">L'amour</p>
+            </div>
+            <div class="catcolumn">
+                <a href="image/logo.png"><img src="image/imagecathegories/corps.png" alt="Título 1" class="hover-zoom"></a>
+                <p class="special-paragraph">Le corps</p>
+            </div>
+            <div class="catcolumn">
+                <a href="image/logo.png"><img src="image/imagecathegories/cuisine.png" alt="Título 1" class="hover-zoom"></a>
+                <p class="special-paragraph">La cuisine</p>
+            </div>
+            <div class="catcolumn">
+                <a href="image/logo.png"><img src="image/imagecathegories/famille.png" alt="Título 1" class="hover-zoom"></a>
+                <p class="special-paragraph">La famille</p>
+            </div>
+            <div class="catcolumn">
+                <a href="image/logo.png"><img src="image/imagecathegories/meteo.png" alt="Título 1" class="hover-zoom"></a>
+                <p class="special-paragraph">La météo</p>
+            </div>
+            <div class="catcolumn">
+                <a href="image/logo.png"><img src="image/imagecathegories/sante.png" alt="Título 1" class="hover-zoom"></a>
+                <p class="special-paragraph">La santé</p>
+            </div>
+            <div class="catcolumn">
+                <a href="image/logo.png"><img src="image/imagecathegories/tourisme.png" alt="Título 1" class="hover-zoom"></a>
+                <p class="special-paragraph">Le tourisme</p>
+            </div>
+            <div class="catcolumn">
+                <a href="image/logo.png"><img src="image/imagecathegories/vetement.png" alt="Título 1" class="hover-zoom"></a>
+                <p class="special-paragraph">Les vêtements</p>
+            </div>
+        </div>
+     
+            
+            <div class="row">
+                <div class="catcolumn">
+                    <a href="image/logo.png"><img src="image/imagecathegories/activite.png" alt="Les activités quotidiennes"></a>
+                    <p class="special-paragraph">Les activités quotidiennes</p>
+                </div>
+                <div class="catcolumn">
+                    <a href="image/logo.png"><img src="image/imagecathegories/administration.png" alt="L'administration"></a>
+                    <p class="special-paragraph">L'administration</p>
+                </div>
+                <div class="catcolumn">
+                    <a href="image/logo.png"><img src="image/imagecathegories/argent.png" alt="L'argent"></a>
+                    <p class="special-paragraph">L'argent</p>
+                </div>
+                <div class="catcolumn">
+                    <a href="image/logo.png"><img src="image/imagecathegories/arts.png" alt="Les arts"></a>
+                    <p class="special-paragraph">Les arts</p>
+                </div>
+                <div class="catcolumn">
+                    <a href="image/logo.png"><img src="image/imagecathegories/caracte.png" alt="Le caractère"></a>
+                    <p class="special-paragraph">Le caractère</p>
+                </div>
+                <div class="catcolumn">
+                    <a href="image/logo.png"><img src="image/imagecathegories/communication.png" alt="La comunication"></a>
+                    <p class="special-paragraph">La comunication</p>
+                </div>
+                <div class="catcolumn">
+                    <a href="image/logo.png"><img src="image/imagecathegories/ecole.png" alt="L'école"></a>
+                    <p class="special-paragraph">L'école</p>
+                </div>
+                <div class="catcolumn">
+                    <a href="image/logo.png"><img src="image/imagecathegories/loisirs.png" alt="Les loisirs"></a>
+                    <p class="special-paragraph">Les loisirs</p>
+                </div>
+            </div>
+        
+          
+           <div class="row">
+                <div class="catcolumn">
+                    <a href="image/logo.png"><img src="image/imagecathegories/surprends.png" alt="Surprends-moi" class="hover-zoom"></a>
+                    <p class="special-paragraph">Surprends-moi</p>
+                </div>
+                <div class="catcolumn">
+                    <a href="image/logo.png"><img src="image/imagecathegories/toutlescategories.png" alt="Je veux créer ma liste de mots" class="hover-zoom"></a>
+                    <p class="special-paragraph">Liste de mots</p>
+                </div>
+            </div>
+            
+        </div>
+        </main>
+
+
+        <footer>
+            <div id="footer_all">
+                <a href="" class="footer_page1"> Mentions légales </a>
+                <a href="" class="footer_page2"> Contacts </a>
+                <a href="" class="footer_page3"> Plan du site </a>
+                <a href="" class="footer_page4"> Crédits et sources </a>
+            </div>
+        </footer>
+    </div>
+
+
+        <script src="scriptboard.js"></script>
+    </body>
+</html>

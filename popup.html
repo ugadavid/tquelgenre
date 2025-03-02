@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pop-up Instructions </title>
+    <style>
+        body {
+            font-family: Helvetica;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        main {
+            background: #eeeeee;
+            width: 455px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+            border: #3d458f solid;
+        }
+        #main_header{
+            display: flex; 
+            justify-content: space-between;
+            background-color: #3d458f;
+            padding: 0 10px 0 10px;
+        }
+        .popup-header {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.2em 0 0.2em 0;
+            color: #eeeeee;
+        }
+        #main_pop_up {
+            padding: 0.3em 3em 0.3em 3em;
+        }
+        main p{
+            color: #3d458f;
+            margin: 0 0 20px 0;
+        }
+        #horn {
+            font-size: 1.4em;
+            margin: 0;
+            padding-top: 0;
+        }
+        button {
+            top: 0px;
+            cursor: pointer;
+            font-size: 36px;
+            border: none;
+            background: none;
+            color: white;
+        }
+        main img {
+            border: 2px solid orange;
+            border-radius: 5px;
+            width: 227px;
+            height: 128px;
+            margin: 20px;
+            
+            /*object-fit: contain;*/           /*METTRE POUR QUE LES IMG NE S'ETIRENT PAS*/
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <div id="main_header">
+            <div id="horn">
+                📢
+            </div>
+            <div class="popup-header">
+                Une petite instruction
+            </div>
+            <button class="close-btn"> &times; </button>
+        </div>
+        <div id="main_pop_up">
+            <img src="http://tqg.skys.fr/images/logo.png" alt="Illustration du jeu" title="Jeu">
+            <p> Associe chaque mot à son genre en le glissant à gauche (si c'est masculin) ou à droite (si c'est féminin). </p>
+        </div>
+    </main>
+</body>
+</html>
