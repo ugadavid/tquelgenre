@@ -65,10 +65,6 @@
 #main_pop_up {
   padding: 0.3em 3em 0.3em 3em;
 }
-main p{
-  color: #3d458f;
-  margin: 0 0 20px 0;
-}
 #horn {
   font-size: 1.4em;
   margin: 0;
@@ -82,7 +78,28 @@ button {
   background: none;
   color: white;
 }
-main img {
+.body2 {
+  font-family: Helvetica;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.main2 {
+  background: #eeeeee;
+  width: 455px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  border: #3d458f solid;
+}
+.main2 p{
+  color: #3d458f;
+  margin: 0 0 20px 0;
+}
+.main2 img {
   border: 2px solid orange;
   border-radius: 5px;
   width: 227px;
@@ -90,15 +107,37 @@ main img {
   margin: 20px;
   /*object-fit: contain;*/           /*METTRE POUR QUE LES IMG NE S'ETIRENT PAS*/
 }
+form {
+  color: #3d458f;
+}
+.input_modal {
+  width: 80%;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #3d458f;
+  border-radius: 5px;
+}
 </style>
 <!-- modal.html -->
+
+
+
+
 <div class="modal-overlay" id="modal-overlay" style="display:none;">
   <div class="modal">
+
+    <div class="body2">
+      <div class="main2">
+    
       <div id="form-container">
         Chargement...
       </div>
-      <button class="close-btn" onclick="closeModal()">Fermer</button>
+
+
+    </div>
+  </div>
   </div>
 </div>
 
+  
 

@@ -1,22 +1,32 @@
-<!-- inscription.html -->
-<div class="auth-container">
-  <h2>InscriptionTOTO</h2>
-  <form action="#" method="POST">
-      <input type="text" name="prenom" placeholder="Prénom" required>
-      <input type="text" name="nom" placeholder="Nom" required>
-      <input type="text" name="pseudo" placeholder="Pseudo" required>
-      <input type="email" name="mail" placeholder="Adresse e-mail" required>
-      <input type="password" name="pwd" placeholder="Mot de passe" required>
-      <!--select name="niveau">
-          <option value="00">Niveau de langue (optionnel)</option>
-          <option value="A1">A1 - Débutant</option>
-          <option value="A2">A2 - Élémentaire</option>
-          <option value="B1">B1 - Intermédiaire</option>
-          <option value="B2">B2 - Avancé</option>
-          <option value="C1">C1 - Autonome</option>
-          <option value="C2">C2 - Maîtrise</option>
-      </select-->
-      <button type="submit">Créer mon compte</button>
-  </form>
-  <p>Déjà un compte ? <a href="#" onclick="openModal('popup_connexion.html')">Se connecter</a></p>
+<div id="main_header">
+  <div id="horn">
+      📢
+  </div>
+  <div class="popup-header">
+      Inscription
+  </div>
+  <button onclick="closeModal()"> &times; </button>
 </div>
+<div id="main_pop_up">
+  
+  <form action="#" method="POST">
+    <input class="input_modal" type="text" name="prenom" placeholder="Prénom" required autocomplete="given-name">
+    <input class="input_modal" type="text" name="nom" placeholder="Nom" required autocomplete="family-name">
+    <input class="input_modal" type="email" name="mail" placeholder="Adresse e-mail" required autocomplete="email">
+    <input class="input_modal" type="password" name="pwd" placeholder="Mot de passe" required autocomplete="new-password">
+
+    <!--select name="niveau">
+        <option value="00">Niveau de langue (optionnel)</option>
+        <option value="A1">A1 - Débutant</option>
+        <option value="A2">A2 - Élémentaire</option>
+        <option value="B1">B1 - Intermédiaire</option>
+        <option value="B2">B2 - Avancé</option>
+        <option value="C1">C1 - Autonome</option>
+        <option value="C2">C2 - Maîtrise</option>
+    </select-->
+    <button type="submit" class="submit-btn">Créer mon compte</button>
+</form>
+<p>Déjà un compte ? <a href="#" onclick="openModal('popup_connexion.html')">Se connecter</a></p>
+
+</div>
+

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Pop-up Instructions </title>
     <style>
-        body {
+        .body {
             font-family: Helvetica;
             background-color: rgba(0, 0, 0, 0.5);
             display: flex;
@@ -14,7 +14,7 @@
             height: 100vh;
             margin: 0;
         }
-        main {
+        .main {
             background: #eeeeee;
             width: 455px;
             border-radius: 10px;
@@ -23,6 +23,20 @@
             position: relative;
             border: #3d458f solid;
         }
+        .main p{
+            color: #3d458f;
+            margin: 0 0 20px 0;
+        }
+        .main img {
+            border: 2px solid orange;
+            border-radius: 5px;
+            width: 227px;
+            height: 128px;
+            margin: 20px;
+            
+            /*object-fit: contain;*/           /*METTRE POUR QUE LES IMG NE S'ETIRENT PAS*/
+        }
+
         #main_header{
             display: flex; 
             justify-content: space-between;
@@ -41,10 +55,6 @@
         #main_pop_up {
             padding: 0.3em 3em 0.3em 3em;
         }
-        main p{
-            color: #3d458f;
-            margin: 0 0 20px 0;
-        }
         #horn {
             font-size: 1.4em;
             margin: 0;
@@ -58,20 +68,13 @@
             background: none;
             color: white;
         }
-        main img {
-            border: 2px solid orange;
-            border-radius: 5px;
-            width: 227px;
-            height: 128px;
-            margin: 20px;
-            
-            /*object-fit: contain;*/           /*METTRE POUR QUE LES IMG NE S'ETIRENT PAS*/
-        }
+        
         
     </style>
 </head>
 <body>
-    <main>
+    <div class="body">
+    <div class="main">
         <div id="main_header">
             <div id="horn">
                 📢
@@ -85,6 +88,7 @@
             <img src="http://tqg.skys.fr/images/logo.png" alt="Illustration du jeu" title="Jeu">
             <p> Associe chaque mot à son genre en le glissant à gauche (si c'est masculin) ou à droite (si c'est féminin). </p>
         </div>
-    </main>
+    </div>
+</div>
 </body>
 </html>

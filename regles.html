@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head> 
-        <title> TQuelGenre - Tableau de bord </title>
+        <title> TQuelGenre - Règles du genre grammatical </title>
         <meta charset="utf-8">
         <link href="_styleboard.css" rel="stylesheet">
         <link href="styleboard_.css" rel="stylesheet">
+        <script src="debug.js" defer></script>
+        <script src="user.js" defer></script>
+
         
     </head>
 
@@ -45,14 +48,7 @@
                                     <li> La météo </li>
                                 </ul>
                             </div>
-
-                            <!-- 
-                            <button type="submit" value="Chercher" class="tdb_boutton_chercher"> Chercher </button>
-                            <button type="submit" value="Ajouter mot à une catégorie" class="tdb_boutton_categorie"> + Catégories </button>  
-                            -->
-
-                            <h1> Les catégories </h1>
-                            <!-- <img src="ressources/avatar_women/athena.png" alt="Avatar apprenant" title="avatar"> -->
+                            <h1> Règles du genre grammatical </h1>
                         </div>
                     </div>
 
@@ -529,5 +525,10 @@
 
 
         <script src="scriptboard.js"></script>
+        <script>
+            window.addEventListener('DOMContentLoaded', function() {                
+                showUser();            // Affiche l'utilisateur dans la fenêtre de debug
+            });
+        </script>
     </body>
 </html>

@@ -127,6 +127,11 @@ h2{
     margin-bottom: 40px;
     color: #3d458f;
 }
+.h2-left {
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 40px;
+}
 h3{
     text-align: center; 
     margin-bottom: 40px;

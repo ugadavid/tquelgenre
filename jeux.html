@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head> 
-        <title> TQuelGenre - Tableau de bord </title>
+        <title> TQuelGenre - Jeux </title>
         <meta charset="utf-8">
         <link href="_styleboard.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+        <script src="debug.js" defer></script>
+        <script src="user.js" defer></script>
+
         
     </head>
 
@@ -45,14 +48,7 @@
                                     <li> La météo </li>
                                 </ul>
                             </div>
-
-                            <!-- 
-                            <button type="submit" value="Chercher" class="tdb_boutton_chercher"> Chercher </button>
-                            <button type="submit" value="Ajouter mot à une catégorie" class="tdb_boutton_categorie"> + Catégories </button>  
-                            -->
-
-                            <h1> Les catégories </h1>
-                            <!-- <img src="ressources/avatar_women/athena.png" alt="Avatar apprenant" title="avatar"> -->
+                            <h1>Nos choix de jeux</h1>
                         </div>
                     </div>
 
@@ -68,27 +64,27 @@
 
         <main>
             
-            <h1 class="accueil-jeux">Nos choix des jeux</h1>
+            
     <p class="sous-titre-jeux">Maintenant, choisis le jeu qui t’intéresse le plus !</p>
     <div class="container-jeux">
         <div class="image-boxjeux">
             <p class="seconde-titre-jeux">Drag and drop</p>
-            <a href="image/logo.png">
-                <img src="image/aperçusdesjeux/draganddrop.gif"  alt="Descripción de la imagen 1">
+            <a href="javascript:void(0);" onclick="userLink('dd', null)">
+                <img src="image/apercusdesjeux/draganddrop.gif"  alt="Accès au drag and drop">
             </a>
             <p class="descriptionjeux">Plonge dans un univers interactif où chaque mot trouve sa place ! Avec notre jeu Drag & Drop, tu devrais associer des mots à leurs images correspondantes tout en maîtrisant leur genre grammatical.</p>
         </div>
         <div class="image-boxjeux">
             <p class="seconde-titre-jeux">Space invader</p>
-            <a href="image/logo.png">
-                <img src="image/aperçusdesjeux/spaceinvader.gif" alt="Descripción de la imagen 2">
+            <a href="javascript:void(0);" onclick="userLink('si', null)">
+                <img src="image/apercusdesjeux/spaceinvader.gif" alt="Accès au Space Invader">
             </a>
             <p class="descriptionjeux">Inspiré du célèbre jeu d'arcade, Space Invader vous propulse dans une aventure spatiale. Ta mission : détruire tous les mots avant qu'ils n'atteignent le bas de l'écran ! Utilise votre vaisseau pour tirer sur les mots selon leur genre.</p>
         </div>
         <div class="image-boxjeux">
             <p class="seconde-titre-jeux">Texte à trous</p>
-            <a href="image/imagecathegories/cuisine.png">
-                <img src="image/aperçusdesjeux/texteatrous.gif" alt="Descripción de la imagen 3">
+            <a href="javascript:void(0);" onclick="userLink('tt', null)">
+                <img src="image/apercusdesjeux/texteatrous.gif" alt="Accès au textes à trous">
             </a>
             <p class="descriptionjeux">Plonge dans des histoires captivantes où chaque mot manquant est une opportunité d'apprendre. Ton rôle : compléter l’histoire en choisissant le bon genre pour chaque mot. Ce jeu te permet de pratiquer la grammaire en contexte, idéal pour ceux qui veulent améliorer leur compréhension et leur expression écrite.</p>
         </div>
@@ -109,6 +105,11 @@
 
 
         <script src="scriptboard.js"></script>
+        <script>
+            window.addEventListener('DOMContentLoaded', function() {                
+                showUser();            // Affiche l'utilisateur dans la fenêtre de debug
+            });
+        </script>
     </body>
 </html>
 

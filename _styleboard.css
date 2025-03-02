@@ -35,12 +35,11 @@ main {
     align-items: center;
 }
 .modal {
-    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     max-width: 500px;
     width: 90%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    
     text-align: center;
 }
 .close-btn {
@@ -50,6 +49,16 @@ main {
     cursor: pointer;
     margin-top: 10px;
     border-radius: 5px;
+}
+.submit-btn {
+    background: #f5a623;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 20px;
 }
 
 
@@ -750,5 +759,5 @@ footer {
 
 a {
     text-decoration: underline;
-    color: #111;
+    color: #3d458f;
 }

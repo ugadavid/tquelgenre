@@ -1,11 +1,24 @@
-<div class="auth-container">
+<div id="main_header">
+  <div id="horn">
+      📢
+  </div>
+  <div class="popup-header">
+      Connexion
+  </div>
+  <button onclick="closeModal()"> &times; </button>
+</div>
+<div id="main_pop_up">
+
+
   <div><img src="image/logo.png" alt="Logo TQuelGenre"></div>
   <h2>Connexion</h2>
   <form action="index.php" method="POST">
-      <input type="email" name="mail" placeholder="Adresse e-mail" required>
-      <input type="password" name="pwd" placeholder="Mot de passe" required>
-      <button type="submit">Se connecter</button>
+      <input class="input_modal" type="email" name="mail" placeholder="Adresse e-mail" required autocomplete="email">
+      <input class="input_modal" type="password" name="pwd" placeholder="Mot de passe" required autocomplete="new-password">
+      <button type="submit" class="submit-btn">Se connecter</button>
   </form>
   <p>Pas encore de compte ? <a href="#" onclick="closeOpenModal('popup_inscription.html')">Créer un compte</a></p>
-  <p><a href="#" onclick="closeOpenModal('popup_password.html')">Mot de passe oublié ?</a></p>
+  <p><a href="#" onclick="closeOpenModal('popup_password.html')">Mot de passe oublié</a> ?</p>
+
+
 </div>

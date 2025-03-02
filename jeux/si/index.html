@@ -6,6 +6,8 @@
         <link href="../../_styleboard.css" rel="stylesheet">
         <link href="../../scores.css" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
+        <script src="../../debug.js" defer></script>
+        <script src="../../user.js" defer></script>
     </head>
 
     <body>
@@ -44,7 +46,7 @@
                                     <li> La météo </li>
                                 </ul>
                             </div>
-                            <h1>Space Invader</h1>
+                            <h1 id="affichage-categorie">Space Invader : Non définie</h1>
                         </div>
                     </div>
 
@@ -112,5 +114,13 @@
 
 
         <script src="../../scriptboard.js"></script>
+        <script>
+            window.addEventListener('DOMContentLoaded', function() {                
+                showUser();            // Affiche l'utilisateur dans la fenêtre de debug
+            });
+
+            // 🔄 Appeler cette fonction automatiquement au chargement de la page
+            document.addEventListener('DOMContentLoaded', afficherCategorie);
+        </script>
     </body>
 </html>

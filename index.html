@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <link href="_styleboard.css" rel="stylesheet">
     <script src="modal.js" defer></script>
+    <script src="debug.js" defer></script>
+    <script src="user.js" defer></script>
+
 </head>
 <body>
 
@@ -16,6 +19,7 @@
             <div class="menu">
                 <a href="#" onclick="openModal('popup_inscription.html')">S'inscrire</a>
                 <a href="#" onclick="openModal('popup_connexion.html')">S'identifier</a>
+                <a href="#" onclick="openModal('popupup.html')">Toto</a>
             </div>
         </div>
     </div>
@@ -126,6 +130,12 @@
         <a href="" class="footer_page4"> Crédits et sources </a>
     </div>
 </footer>
+
+<script>
+    window.addEventListener('DOMContentLoaded', function() {                
+        showUser();            // Affiche l'utilisateur dans la fenêtre de debug
+    });
+</script>
 </body>
 </html>
 

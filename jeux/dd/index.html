@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="style.css">
         <link href="../../_styleboard.css" rel="stylesheet">
         <link href="../../scores.css" rel="stylesheet">
+        <script src="../../debug.js" defer></script>
+        <script src="../../user.js" defer></script>
         
     </head>
 
@@ -99,5 +101,10 @@
 
 
         <script src="scriptboard.js"></script>
+        <script>
+            window.addEventListener('DOMContentLoaded', function() {                
+                showUser();            // Affiche l'utilisateur dans la fenêtre de debug
+            });
+        </script>
     </body>
 </html>
