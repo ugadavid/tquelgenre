@@ -3,10 +3,11 @@
     <head> 
         <title> TQuelGenre - Tableau de bord </title>
         <meta charset="utf-8">
-        <link href="_styleboard.css" rel="stylesheet">
+        <link href="styleboard_ok.css" rel="stylesheet">
         <link href="styleboard_.css" rel="stylesheet">
         <script src="debug.js" defer></script>
         <script src="user.js" defer></script>
+        <script src="modal.js" defer></script>
     </head>
 
     <body>
@@ -16,8 +17,8 @@
                 <div class="tdb_header1">
                     <a href="index.html"> <img src="ressources/logo.png" alt="Logo TQG" title="Logo" class="tdb_logo"> </a>
                     <div>
-                        <a href="LIENPARAMETTRES"> Mon profil </a>
-                        <a href="LIENDECONNEXION"> Déconnexion </a>
+                        <a href="javascript:void(0);" onclick="openModal('popup_profile.html')">Mon profil</a>
+                        <a href="javascript:void(0);" onclick="resetUser()"> Déconnexion </a>
                     </div>
                 </div>
             </div>
@@ -62,66 +63,36 @@
 
         <main>
             
-            <div id="body_mots">
+            <form id="body_mots">
                 <div class="wordlist-container">
                     <p class="description">Sélectionne une catégorie et coche les mots pour ta liste personalisée. Choisis au moins 10 mots.</p>
             
                     <!-- Liste déroulante -->
                     <div class="select-container">
-                        <select>
-                            <option value="amour">L'amour</option>
-                            <option value="cuisine">La cuisine</option>
-                            <option value="sante">La santé</option>
-                            <option value="meteo">La météo</option>
-                            <option value="famille">La famille</option>
-                            <option value="tourisme">Le tourisme</option>
-                            <option value="corps">Le corps</option>
-                            <option value="vetements">Les vêtements</option>
+                        <select name="categorie" id="categorie" onchange="loadWordsByCategory()">
+                            <option value="3">L'amour</option>
+                            <option value="14">La cuisine</option>
+                            <option value="7">La santé</option>
+                            <option value="22">La météo</option>
+                            <option value="2">La famille</option>
+                            <option value="26">Le tourisme</option>
+                            <option value="6">Le corps</option>
+                            <option value="9">Les vêtements</option>
                         </select>
                     </div>
             
                     <div class="word-list">
-                        <div class="column">
-                            <label><input type="checkbox"> un accessoire</label>
-                            <label><input type="checkbox"> un anorak</label>
-                            <label><input type="checkbox"> un bijou</label>
-                            <label><input type="checkbox"> un blouson</label>
-                            <label><input type="checkbox"> un bouton</label>
-                            <label><input type="checkbox"> une broche</label>
-                            <label><input type="checkbox"> une ceinture</label>
-                        </div>
-                        <div class="column">
-                            <label><input type="checkbox"> une chaîne</label>
-                            <label><input type="checkbox"> une chemise</label>
-                            <label><input type="checkbox"> un chemisier</label>
-                            <label><input type="checkbox"> un collant</label>
-                            <label><input type="checkbox"> un costume</label>
-                            <label><input type="checkbox"> une culotte</label>
-                            <label><input type="checkbox"> un diamant</label>
-                        </div>
-                        <div class="column">
-                            <label><input type="checkbox"> une écharpe</label>
-                            <label><input type="checkbox"> un ensemble</label>
-                            <label><input type="checkbox"> un haut</label>
-                            <label><input type="checkbox"> un jogging</label>
-                            <label><input type="checkbox"> une jupe</label>
-                            <label><input type="checkbox"> un manteau</label>
-                            <label><input type="checkbox"> un mode</label>
-                        </div>
-                        <div class="column">
-                            <label><input type="checkbox"> un modèle</label>
-                            <label><input type="checkbox"> une montre</label>
-                            <label><input type="checkbox"> un mouchoir</label>
-                            <label><input type="checkbox"> un pantalon</label>
-                            <label><input type="checkbox"> un pull</label>
-                            <label><input type="checkbox"> un pyjama</label>
-                            <label><input type="checkbox"> un sac</label>
+                        <div class="columns-container">
+                            <div class="column"></div>
+                            <div class="column"></div>
+                            <div class="column"></div>
+                            <div class="column"></div>
                         </div>
                     </div>
                         <div id="jaichoisi">
                             <button class="bouton"><strong>J'ai choisi mes mots</strong></button>
                         </div>
-            </div>
+            </form>
 
         </main>
 
@@ -131,10 +102,10 @@
 
         <footer>
             <div id="footer_all">
-                <a href="" class="footer_page1"> Mentions légales </a>
-                <a href="" class="footer_page2"> Contacts </a>
-                <a href="" class="footer_page3"> Plan du site </a>
-                <a href="" class="footer_page4"> Crédits et sources </a>
+                <a href="mentions_legales.html" class="footer_page1"> Mentions légales </a>
+                <a href="contacts.html" class="footer_page2"> Contacts </a>
+                <a href="plan_du_site.html" class="footer_page3"> Plan du site </a>
+                <a href="credits_et_sources.html" class="footer_page4"> Crédits et sources </a>
             </div>
         </footer>
 
@@ -143,10 +114,52 @@
 
 
         <script>
-            window.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('DOMContentLoaded', function() {                
                 showUser();            // Affiche l'utilisateur dans la fenêtre de debug
+                checkConnection();     // Vérifie si l'utilisateur est connecté
             });
         </script>
+
+
+<script>
+    function loadWordsByCategory() {
+        const categoryId = document.getElementById('categorie').value;
+        const columns = document.querySelectorAll('.column');
+
+        // Vider les colonnes avant d'ajouter de nouveaux mots
+        columns.forEach(column => column.innerHTML = '');
+
+        // Appel de l'API avec le bon `categorieId`
+        fetch(`http://127.0.0.1:8080/api/api/getWords.php?categorieId=${categoryId}`)
+            .then(response => response.json())
+            .then(data => {
+                const itemsPerColumn = Math.ceil(data.length / columns.length);  // Nb d'items par colonne
+
+                data.forEach((word, index) => {
+                    const label = document.createElement('label');
+                    const checkbox = document.createElement('input');
+
+                    checkbox.type = 'checkbox';
+                    checkbox.id = word.mot;
+
+                    // Ajoute l'article devant le mot
+                    label.innerHTML = `${word.article} ${word.mot}`;
+                    label.prepend(checkbox);
+
+                    // Répartit équitablement les mots dans les colonnes
+                    const columnIndex = Math.floor(index / itemsPerColumn);
+                    columns[columnIndex].appendChild(label);
+                });
+            })
+            .catch(error => console.error('Erreur lors de l\'appel API:', error));
+    }
+
+    // Charger les mots par défaut pour la première catégorie
+    document.addEventListener('DOMContentLoaded', loadWordsByCategory);
+</script>
+
+
+
     </body>
 </html>
       

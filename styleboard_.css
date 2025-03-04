@@ -160,7 +160,7 @@ select {
     display: block;
     margin: 0 auto; 
 }
-.word-list {
+.columns-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

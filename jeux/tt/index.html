@@ -3,13 +3,14 @@
     <head> 
         <title> TQuelGenre - Tableau de bord </title>
         <meta charset="utf-8">
-        <link href="../../_styleboard.css" rel="stylesheet">
+        <link href="../../styleboard_ok.css" rel="stylesheet">
         <link href="../../scores.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <script src="../../debug.js" defer></script>
         <script src="../../user.js" defer></script>
+        <script src="../../modal.js" defer></script>
     </head>
 
     <body>
@@ -18,8 +19,8 @@
                 <div class="tdb_header1">
                     <a href="../../index.html"> <img src="../../ressources/logo.png" alt="Logo TQG" title="Logo" class="tdb_logo"> </a>
                     <div>
-                        <a href="LIENPARAMETTRES"> Mon profil </a>
-                        <a href="LIENDECONNEXION"> Déconnexion </a>
+                        <a href="javascript:void(0);" onclick="openModal('popup_profile.html')">Mon profil</a>
+                        <a href="javascript:void(0);" onclick="resetUser()"> Déconnexion </a>
                     </div>
                 </div>
             </div>
@@ -48,7 +49,7 @@
                                     <li> La météo </li>
                                 </ul>
                             </div>
-                            <h1> Bienvenue sur ton tableau de bord ! </h1>
+                            <h1 id="affichage-categorie">Texte à trous : Non définie</h1>
                         </div>
                     </div>
 
@@ -116,18 +117,18 @@
 
         <footer>
             <div id="footer_all">
-                <a href="mentions_legales.html" class="footer_page1"> Mentions légales </a>
-                <a href="contacts.html" class="footer_page2"> Contacts </a>
-                <a href="plan_du_site.html" class="footer_page3"> Plan du site </a>
-                <a href="credits_et_sources.html" class="footer_page4"> Crédits et sources </a>
+                <a href="../../mentions_legales.html" class="footer_page1"> Mentions légales </a>
+                <a href="../../contacts.html" class="footer_page2"> Contacts </a>
+                <a href="../../plan_du_site.html" class="footer_page3"> Plan du site </a>
+                <a href="../../credits_et_sources.html" class="footer_page4"> Crédits et sources </a>
             </div>
         </footer>
 
-
-        <script src="scriptboard.js"></script>
         <script>
+            // 🔄 Appeler cette fonction automatiquement au chargement de la page
             window.addEventListener('DOMContentLoaded', function() {                
                 showUser();            // Affiche l'utilisateur dans la fenêtre de debug
+                afficherCategorie('Texte à trous'); // Affiche la catégorie actuelle
             });
         </script>
     </body>

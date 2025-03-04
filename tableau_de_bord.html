@@ -16,8 +16,8 @@
                 <div class="tdb_header1">
                     <a href="index.html"> <img src="ressources/logo.png" alt="Logo TQG" title="Logo" class="tdb_logo"> </a>
                     <div>
-                        <a href="#" onclick="openModal('popup_profile.html')">Mon profil</a>
-                        <a href="LIENDECONNEXION"> Déconnexion </a>
+                        <a href="javascript:void(0);" onclick="openModal('popup_profile.html')">Mon profil</a>
+                        <a href="javascript:void(0);" onclick="resetUser()"> Déconnexion </a>
                     </div>
                 </div>
             </div>
@@ -62,8 +62,14 @@
 
         <main>
             <section class="tdb_section_scores">
-                <h3> Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit <br> odio eu enim. Pellentesque 
-                sed dui ut augue blandit sodales. </h3>
+                <p>Ici, c'est ton espace personnel pour suivre tes progrès, collectionner des récompenses 
+                    et devenir imbattable sur les genres grammaticaux ! 🎉</br>
+                    Que tu cherches à analyser tes scores, admirer tes badges ou encore vaincre tes "ennemis jurés" 
+                    (ces mots qui te résistent encore), tout est réuni pour t'aider à progresser. 🚀</br></br>
+                    
+                    N'oublie pas de jeter un œil aux astuces personnalisées pour booster ton apprentissage 
+                    et faire exploser ton score. 🔥</br>
+                    Alors, prêt à relever de nouveaux défis ? C'est parti ! 😎</p>
 
                 <h2> Scores </h2>
 
@@ -102,45 +108,80 @@
 
             <section class="tdb_section_badges">
                 <h2> Tes badges obtenus ! </h2>
-                <div class="tdb_badges_container">
-                    <img src="image/badges/debutant_curieux_off.png" alt="Badge 'name'" title="Badge 1">
-                    <img src="image/badges/debutant_curieux_off.png" alt="Badge 'name'" title="Badge 2">
-                    <img src="image/badges/debutant_curieux_off.png" alt="Badge 'name'" title="Badge 3">
-                    <img src="image/badges/debutant_curieux_off.png" alt="Badge 'name'" title="Badge 4">
-                    <img src="image/badges/debutant_curieux_on.png" alt="Badge 'name'" title="Badge 5">
-                    <img src="image/badges/debutant_curieux_off.png" alt="Badge 'name'" title="Badge 6">
-                    <img src="image/badges/debutant_curieux_off.png" alt="Badge 'name'" title="Badge 7">
+                <div class="tdb_badges_container1">     
+                    <div>
+                        <img src="image/badges/debutant_curieux_on.png" alt="Badge 'name'" title="Badge 1">
+                        <h3> Débutant curieux </h3>
+                        <p> Tu as complété ta première catégorie. </p>
+                    </div>
+
+                    <div>
+                        <img src="image/badges/flash_learner_on.png" alt="Badge 'name'" title="Badge 2">
+                        <h3> Flash learner </h3>
+                        <p> Tu as rapidement terminé un jeu. </p>
+                    </div>
+
+                    <div>
+                        <img src="image/badges/streak_jour_2_off.png" alt="Badge 'name'" title="Badge 3">
+                        <h3> Streak +2 </h3>
+                        <p> Débloqué si tu joues pendant deux jours consécutifs. </p>
+                    </div>
+
+                    <div>
+                        <img src="image/badges/tetu_mais_vainqueur_off.png" alt="Badge 'name'" title="Badge 4">
+                        <h3> Têtu mais vanqueur </h3>
+                        <p> Débloqué une fois battus cinq de tes ennemis jurés. </p>
+                    </div>
+                </div>
+
+                <div class="tdb_badges_container2">
+                    <div>
+                        <img src="image/badges/streak_jour_7_off.png" alt="Badge 'name'" title="Badge 5">
+                        <h3> Streak +7 </h3>
+                        <p> Débloqué si tu joues pendant sept jours consécutifs. </p>
+                    </div>
+
+                    <div>
+                        <img src="image/badges/expert_du-genre_on.png" alt="Badge 'name'" title="Badge 6">
+                        <h3> Expert du genre - A1 </h3>
+                        <p> Tu as terminé toutes les catégories du niveau A1 et corrigé toutes tes erreurs.  </p>
+                    </div>
+
+                    <div>
+                        <img src="image/badges/streak_jour_14_off.png" alt="Badge 'name'" title="Badge 7">
+                        <h3> Streak +14 </h3>
+                        <p> Débloqué si tu joues pendant 14 jours consécutifs. </p>
+                    </div>
                 </div>
             </section>
 
 
 
             <section class="tdb_section_erreurs">
+                <h2> Tes ennemis jurés </h2>
                 <div class="tdb_erreurs_container">
-                    <h3> Vos ennemis jurés </h3>
-
                     <div>
-                        <img src="ressources/ej1.png" alt="Image 'personnage" title="Personnage 1">
+                        <img src="ressources/ennemies/demon.png" alt="Image 'personnage" title="Personnage 1">
                         <p class="tdb_ej_feminin"> Erreur </p>
                     </div>
 
                     <div>
-                        <img src="ressources/ej2.png" alt="Image 'personnage" title="Personnage 2">
+                        <img src="ressources/ennemies/cyclops.png" alt="Image 'personnage" title="Personnage 2">
                         <p class="tdb_ej_masculin"> Doute </p>
                     </div>
 
                     <div>
-                        <img src="ressources/ej3.png" alt="Image 'personnage" title="Personnage 3">
+                        <img src="ressources/ennemies/ghost.png" alt="Image 'personnage" title="Personnage 3">
                         <p class="tdb_ej_masculin"> Mexique </p>
                     </div>
 
                     <div>
-                        <img src="ressources/ej4.png" alt="Image 'personnage" title="Personnage 4">
+                        <img src="ressources/ennemies/evil_2.png" alt="Image 'personnage" title="Personnage 4">
                         <p class="tdb_ej_feminin"> Horloge </p>
                     </div>
 
                     <div>
-                        <img src="ressources/ej5.png" alt="Image 'personnage" title="Personnage 5">
+                        <img src="ressources/ennemies/evil_3.png" alt="Image 'personnage" title="Personnage 5">
                         <p class="tdb_ej_masculin"> Ecran </p>
                     </div>
                 </div>
@@ -149,11 +190,9 @@
 
 
             <section class="tdb_section_astuces">
-                <h2> Astuces pour vous </h2>
+                <h2> Astuce pour progresser </h2>
 
                 <div>
-                    <img src="ressources/attention.png" alt="Image danger" title="Attention" id="tdb_astuces_img_danger">
-
                     <p id="tdb_astuces_texte"> 
                         Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, 
                         enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper.
@@ -166,12 +205,21 @@
 
 
             <section class="tdb_section_jouer">
-                <div>
-                    <button class="bouton" type="submit" value="Continuer progrès"> <p> Continuer progrès </p> </button>
+                <div id="tdb_all_botons">
+                    <div class="tdb_container_boutons">
+                        <a href="" class="bouton"> Continuer progrès  </a>
+                        <img src="ressources/icones_bouton/continuer.png" alt="Bouton pour continuer" title="Continuer">
+                    </div>
                 
-                    <button  class="bouton" type="submit" value="Choisir une catégorie"> <p> Choisir catégorie </p> </button>
+                    <div class="tdb_container_boutons">
+                        <a href="" class="bouton"> Choisir catégorie </a>
+                        <img src="ressources/icones_bouton/choisir.png" alt="Bouton pour choisir catégorie" title="Choisir">
+                    </div>
                     
-                    <button  class="bouton" type="submit" value="Redémarrer"> <p> Redémarrer </p> </button>
+                    <div class="tdb_container_boutons">
+                        <a href=""  class="bouton"> Redémarrer </a>
+                        <img src="ressources/icones_bouton/redemarrer.png" id="tdb_image_redemarrer" alt="Bouton pour redémarrer" title="Redémarrer">
+                    </div>
                 </div>
             </section>
         </main>
@@ -190,11 +238,11 @@
         </footer>
 
 
-        <script src="scriptboard.js"></script>
 
         <script>
             window.addEventListener('DOMContentLoaded', function() {                
                 showUser();            // Affiche l'utilisateur dans la fenêtre de debug
+                checkConnection();     // Vérifie si l'utilisateur est connecté
             });
         </script>
     </body>

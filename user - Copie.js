@@ -1,17 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
-  
+  // Initialise l'objet utilisateur
+  let user = {
+      nom: '',
+      prenom: '',
+      email: '',
+      jeuCourant: '',
+      categorieCourante: '',
+      mots: []  // Tableau de tableau [id_mot, 'mot', 'genre', nb_correct, nb_incorrect]
+  };
+
   // 🔄 Fonction pour récupérer l'objet user depuis sessionStorage
-    function getUser() {
-        const storedUser = sessionStorage.getItem('user');
-        return storedUser ? JSON.parse(storedUser) : {
-            nom: '',
-            prenom: 'dd',
-            email: '',
-            jeuCourant: '',
-            categorieCourante: '',
-            mots: []  // Tableau de tableau [id_mot, 'mot', 'genre', nb_correct, nb_incorrect]
-        };
-    }
+function getUser() {
+    const storedUser = sessionStorage.getItem('user');
+    return storedUser ? JSON.parse(storedUser) : {
+        nom: '',
+        prenom: '',
+        email: '',
+        jeuCourant: '',
+        categorieCourante: '',
+        mots: []  // Tableau de tableau [id_mot, 'mot', 'genre', nb_correct, nb_incorrect]
+    };
+}
 
 // 🔄 Fonction pour vérifier si l'utilisateur est connecté
 function isConnected() {
@@ -34,12 +43,11 @@ function checkConnection() {
 
   // 🔄 Sauvegarde automatique dans sessionStorage
   function saveUser() {
-    const user = getUser();  // 🔄 Récupère l'utilisateur à jour depuis sessionStorage
-    sessionStorage.setItem('user', JSON.stringify(user));
+      sessionStorage.setItem('user', JSON.stringify(user));
   }
   function saveThisUser(thisuser) {
     sessionStorage.setItem('user', JSON.stringify(thisuser));  // 🔄 Sauvegarde l'objet complet dans sessionStorage
-    //alert('saveThisUser(thisuser)');
+    alert('saveThisUser(thisuser)');
   }
 
   // 🛠️ Fonctions pour gérer les informations utilisateur
@@ -54,19 +62,20 @@ function checkConnection() {
   }
 
   function updateUser(data) {
-    let user = getUser();  // 🔄 Récupère l'utilisateur à jour
-    user.prenom = data.prenom || user.prenom;
-    user.nom = data.nom || user.nom;
-    user.email = data.email || data.mail || user.email;
-    user.jeuCourant = data.jeuCourant || user.jeuCourant;
-    user.categorieCourante = data.categorieCourante || user.categorieCourante;
-    user.mots = data.mots || user.mots || [];
-    //  user.mots = data.mots || user.mots;
+    const user = getUser();  // Récupère l'objet user depuis sessionStorage
+    alert('Ok!');
+    setUserInfo('nom', data.nom);
+    setUserInfo('prenom', data.prenom);
+    setUserInfo('email', data.mail);
+    setUserInfo('jeuCourant', null);
+    setUserInfo('categorieCourante', null);
 
-    saveThisUser(user);  // 🔄 Sauvegarde l'objet mis à jour dans sessionStorage
-    debugLog('Utilisateur mis à jour dans sessionStorage.');
+    //user.jeuCourant = data.jeuCourant || user.jeuCourant;
+    //user.categorieCourante = data.categorieCourante || user.categorieCourante;
+    //user.mots = data.mots || user.mots;
+    saveThisUser(data);  // Sauvegarde dans sessionStorage
+    debugLog('Utilisateur mis à jour avec succès.');
 }
-
 
   // 🛠️ Fonctions pour gérer jeuCourant et categorieCourante
   function setJeu(jeu) {
@@ -124,7 +133,7 @@ function resetCategorie() {
 
   // 🛠️ Fonction pour tout réinitialiser
   function resetUser() {
-      let user = {
+      user = {
           nom: '',
           prenom: '',
           email: '',
@@ -132,11 +141,11 @@ function resetCategorie() {
           categorieCourante: '',
           mots: []
       };
-      saveThisUser(user);
+      saveUser();
       debugLog('Utilisateur réinitialisé.');
       // Ajoute un léger délai pour assurer le stockage avant la redirection
     setTimeout(() => {
-        window.location.href = '/index.html';
+        window.location.href = 'index.html';
     }, 500); // ⬅️ Délai de 100ms pour laisser le temps au stockage
   }
 
@@ -147,7 +156,6 @@ function resetCategorie() {
 
   // 🛠️ Fonction pour afficher l'objet utilisateur dans la fenêtre de debug
   function showUser() {
-    let user = getUser();
       debugLog('--- Détails de l\'utilisateur ---');
       debugLog(`Nom : ${user.nom}`);
       debugLog(`Prénom : ${user.prenom}`);
@@ -160,6 +168,7 @@ function resetCategorie() {
 
   function afficherCategorie(game) {
     user = getUser();
+    alert('GAME : ' + game);
     const categorieCourante = user.categorieCourante;
     const categorieElement = document.getElementById('affichage-categorie');
 
@@ -174,25 +183,18 @@ function resetCategorie() {
 
 
   function userLink(jeu = null, categorie = null) {
-    let user = getUser();
     // Vérifier si le jeu ou la catégorie est passé en paramètre
     if (jeu) {
         //sessionStorage.setItem('jeuCourant', jeu);
-        //setJeu(jeu);
-        
-        user.jeuCourant = jeu;
+        setJeu(jeu);
         debugLog(`Jeu courant mis à jour : ${jeu}`);
-        
-        console.log('jeu : ' + jeu);
     }
     if (categorie) {
+        alert('CATEGORIE : ' + categorie);
         //sessionStorage.setItem('categorieCourante', categorie);
-        //setCategorie(categorie);
-        user.categorieCourante = categorie;
+        setCategorie(categorie);
         debugLog(`Catégorie courante mise à jour : ${categorie}`);
-        console.log('categorie : ' + categorie);
     }
-    saveThisUser(user);
     
     // Ajoute un léger délai pour assurer le stockage avant la redirection
     setTimeout(() => {
@@ -227,13 +229,12 @@ function resetCategorie() {
             debugLog('Aucun paramètre défini, redirection vers l\'accueil...');
             window.location.href = 'index.html';
         }
-    }, 300); // ⬅️ Délai de 100ms pour laisser le temps au stockage
+    }, 500); // ⬅️ Délai de 100ms pour laisser le temps au stockage
 }
 
 
   // Message initial
   debugLog('Gestion des utilisateurs prête !');
-  
 
   // Expose les fonctions globalement si besoin
   window.setUserInfo = setUserInfo;

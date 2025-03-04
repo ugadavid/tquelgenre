@@ -9,22 +9,13 @@
 </div>
 <div id="main_pop_up">
   
-  <form action="#" method="POST">
-    <input class="input_modal" type="text" name="prenom" placeholder="Prénom" required autocomplete="given-name">
-    <input class="input_modal" type="text" name="nom" placeholder="Nom" required autocomplete="family-name">
-    <input class="input_modal" type="email" name="mail" placeholder="Adresse e-mail" required autocomplete="email">
-    <input class="input_modal" type="password" name="pwd" placeholder="Mot de passe" required autocomplete="new-password">
+  <form id="inscriptionForm" action="#" method="POST">
+    <input class="input_modal" type="text" name="prenom" id="prenom" placeholder="Prénom" required autocomplete="given-name">
+    <input class="input_modal" type="text" name="nom" id="nom" placeholder="Nom" required autocomplete="family-name">
+    <input class="input_modal" type="email" name="mail" id="mail" placeholder="Adresse e-mail" required autocomplete="email">
+    <input class="input_modal" type="password" name="pwd" id="pwd" placeholder="Mot de passe" required autocomplete="new-password">
 
-    <!--select name="niveau">
-        <option value="00">Niveau de langue (optionnel)</option>
-        <option value="A1">A1 - Débutant</option>
-        <option value="A2">A2 - Élémentaire</option>
-        <option value="B1">B1 - Intermédiaire</option>
-        <option value="B2">B2 - Avancé</option>
-        <option value="C1">C1 - Autonome</option>
-        <option value="C2">C2 - Maîtrise</option>
-    </select-->
-    <button type="submit" class="submit-btn">Créer mon compte</button>
+    <button type="submit" class="submit-btn">Créer Mon compte</button>
 </form>
 <p>Déjà un compte ? <a href="#" onclick="openModal('popup_connexion.html')">Se connecter</a></p>
 

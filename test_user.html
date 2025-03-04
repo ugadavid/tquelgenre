@@ -6,8 +6,7 @@
         <link href="styleboard_ok.css" rel="stylesheet">
         <script src="debug.js" defer></script>
         <script src="user.js" defer></script>
-
-        
+        <script src="modal.js" defer></script>
     </head>
 
     <body>
@@ -17,8 +16,8 @@
                 <div class="tdb_header1">
                     <a href="index.html"> <img src="ressources/logo.png" alt="Logo TQG" title="Logo" class="tdb_logo"> </a>
                     <div>
-                        <a href="LIENPARAMETTRES"> Mon profil </a>
-                        <a href="LIENDECONNEXION"> Déconnexion </a>
+                        <a href="javascript:void(0);" onclick="openModal('popup_profile.html')">Mon profil</a>
+                        <a href="javascript:void(0);" onclick="vireTout()"> Déconnexion </a>
                     </div>
                 </div>
             </div>
@@ -160,9 +159,6 @@
             </div>
         </footer>
     </div>
-
-
-        <script src="scriptboard.js"></script>
 
 
         <script>

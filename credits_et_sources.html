@@ -5,7 +5,9 @@
         <meta charset="utf-8">
         <link href="styleboard_ok.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        
+        <script src="debug.js" defer></script>
+        <script src="user.js" defer></script>
+        <script src="modal.js" defer></script>
     </head>
 
     <body>
@@ -15,8 +17,8 @@
                 <div class="tdb_header1">
                     <a href="index.html"> <img src="ressources/logo.png" alt="Logo TQG" title="Logo" class="tdb_logo"> </a>
                     <div>
-                        <a href="LIENPARAMETTRES"> Mon profil </a>
-                        <a href="LIENDECONNEXION"> Déconnexion </a>
+                        <a href="javascript:void(0);" onclick="openModal('popup_profile.html')">Mon profil</a>
+                        <a href="javascript:void(0);" onclick="resetUser()"> Déconnexion </a>
                     </div>
                 </div>
             </div>
@@ -45,7 +47,7 @@
                                     <li> La météo </li>
                                 </ul>
                             </div>
-                            <h1> Les catégories </h1>
+                            <h1> Crédits et source </h1>
                         </div>
                     </div>
 
@@ -61,7 +63,7 @@
 
         <main>
             
-            <h1 class="accueil-jeux">Crédits et source</h1>
+            
     
     <div>
       <p>Crédits et sources à venir, une fois le site terminé</p>
@@ -72,10 +74,10 @@
 
         <footer>
             <div id="footer_all">
-                <a href="" class="footer_page1"> Mentions légales </a>
-                <a href="" class="footer_page2"> Contacts </a>
-                <a href="" class="footer_page3"> Plan du site </a>
-                <a href="" class="footer_page4"> Crédits et sources </a>
+                <a href="mentions_legales.html" class="footer_page1"> Mentions légales </a>
+                <a href="contacts.html" class="footer_page2"> Contacts </a>
+                <a href="plan_du_site.html" class="footer_page3"> Plan du site </a>
+                <a href="credits_et_sources.html" class="footer_page4"> Crédits et sources </a>
             </div>
         </footer>
     </div>

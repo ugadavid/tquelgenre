@@ -51,7 +51,7 @@ export class WordManager {
     // Charger les mots depuis l'API
     async loadWordsFromAPI(id_categorie) {
         try {
-            alert("Appel de l'API->loadWordsFromAPI("+id_categorie+")")
+            //alert("Appel de l'API->loadWordsFromAPI("+id_categorie+")")
             const response = await fetch(`https://tqgapi.skys.fr/api/getWords.php?categorieId=${encodeURIComponent(id_categorie)}`);
             const wordsData = await response.json();
         

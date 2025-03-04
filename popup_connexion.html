@@ -12,13 +12,13 @@
 
   <div><img src="image/logo.png" alt="Logo TQuelGenre"></div>
   <h2>Connexion</h2>
-  <form action="index.php" method="POST">
-      <input class="input_modal" type="email" name="mail" placeholder="Adresse e-mail" required autocomplete="email">
-      <input class="input_modal" type="password" name="pwd" placeholder="Mot de passe" required autocomplete="new-password">
+  <form id="loginForm" action="plan_du_site.html" method="POST" >
+      <input class="input_modal" type="email" id="email" name="mail" placeholder="Adresse e-mail" required autocomplete="email">
+      <input class="input_modal" type="password" id="password" name="pwd" placeholder="Mot de passe" required autocomplete="new-password">
       <button type="submit" class="submit-btn">Se connecter</button>
   </form>
   <p>Pas encore de compte ? <a href="#" onclick="closeOpenModal('popup_inscription.html')">Créer un compte</a></p>
   <p><a href="#" onclick="closeOpenModal('popup_password.html')">Mot de passe oublié</a> ?</p>
 
-
+  
 </div>
