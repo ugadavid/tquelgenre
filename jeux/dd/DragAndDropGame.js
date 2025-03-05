@@ -1,6 +1,5 @@
 // DragAndDropGame.js
-import { WordManager } from '../COMMON/WordManager.js';
-
+import { WordManager } from '../common/WordManager.js';
 export class DragAndDropGame {
   constructor(apiCategoryId) {
     // Gestionnaire de mots qui utilisera l'API
