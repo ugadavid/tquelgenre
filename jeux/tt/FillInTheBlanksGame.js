@@ -1,6 +1,6 @@
 // FillInTheBlanksGame.js
-import { Word } from '../COMMON/Word.js';
-import { WordManager } from '../COMMON/WordManager.js';
+import { Word } from '../common/Word.js';
+import { WordManager } from '../common/WordManager.js';
 
 // Fonction utilitaire pour mélanger un tableau
 function shuffleArray(array) {
