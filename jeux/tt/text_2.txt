@@ -1,0 +1,26 @@
+Category : La famille, les périodes de la vie
+CategoryId : 2
+
+Texte 1 : Une réunion de famille
+Louise : Est-ce que *ta/ton* _maman_ sera là ce soir ?
+Patric : Oui, et *mon/ma* _papa_ aussi. Ils viennent avec mes *chers/chères* _grands-parents_.
+Louise : Génial ! *Ton/ta* _grand-père_ raconte toujours des histoires intéressantes.
+Patric : Oui, et *ma/mon* _grand-mère_ adore parler de *sa/son* belle _enfance_.
+Louis : Et *ta/ton* _tante_ ?
+Patric : *Elle/Il* vient avec *mon/ma* _oncle_ et *mon/ma* _cousin_.
+
+Texte 2 : Une naissance
+Caroline : As-tu entendu la nouvelle ? *La/Le* _belle-fille_ de Marc a eu *un/une* _bébé_.
+Paul : Oui, c’est un garçon ! *Sa/son* _naissance_ a été annoncée hier.
+Caroline : Super ! Et ses _parents_ sont sûrement très *heureux/heureuses*.
+Paul : Les _beaux-parents_ de Marc doivent être *impatients/impatientes* de rencontrer leur *cher/chère* _petit-fils_.
+Caroline : Oui, et je crois que *sa/son* _soeur_ va lui offrir une jolie couverture pour *le/la* _bébé_.
+
+Texte 3 : Un anniversaire
+Marie : Aujourd’hui, c’est l’anniversaire de *ma/mon* _nièce_.
+Mathieu : Quel âge a-t-elle ?
+Marie : Elle a six ans. Ses _parents_ *extravertis/extraverties* organisent une fête.
+Mathieu : Est-ce que *ton/ta* _frère_ vient ?
+Marie : Oui, il apporte un gâteau pour *la/le* _petite fille_.
+Mathieu : Et toi, qu’est-ce que tu vas offrir ?
+Marie : Moi, je vais acheter un jouet pour *son/sa* _fils_ et un livre pour *sa/son* _fille_.

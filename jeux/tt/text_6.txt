@@ -1,0 +1,37 @@
+Category : Le corps et les mouvements
+CategoryId : 6
+
+Texte 1 : Chez le médecin
+Patient : Bonjour, docteur. J’ai mal *à la/au* _cheville_ gauche.
+Docteur : D’accord, laissez-moi examiner votre cheville. *Elle/Il* vous fait mal ici ? 
+Patient : Oui, et *mon/ma* _pied_ est un peu gonflé.
+Docteur : Vous devez éviter de trop bouger *la/le* _jambe_. Mettez de la glace dessus et reposez-vous.
+Patient : J’ai aussi mal *au/à la* _dos_. C’est peut-être à cause du sport.
+Docteur : Oui, il faut faire attention *à la/au* _posture_ pendant les exercices. Sinon, on peut blesser *un/une* _muscle_.
+
+Texte 2 : Une promenade au parc
+Marie : Regarde ce chien avec *sa/son* _patte_ bandée. Qu’est-ce qu’il lui est arrivé ?
+Eric : Peut-être qu’il s’est blessé en courant. *_sa/son* _peau_ a l’air sensible aussi.
+Marie : Oui, et il a *une/un* _oreille_ plus grande que l’autre !
+Eric : Moi, j’adore ses _yeux_. *Ils/Elles* sont très expressifs.
+Marie : Hier, je me suis coupé *un/une* _doigt_ en jardinant. J’ai encore du mal à bouger *ma/mon* _main_.
+Eric : Fais attention ! Et ton _ongle_, *il/elle* est cassé ?
+Marie : Non, mais *mon/ma* _bras_ est fatigué à force de tout porter.
+
+Texte 3 : Une séance de sport
+Andrew : Est-ce que tu as encore mal *à la/au* _tête_ ?  
+Sophie : Non, mais *mon/ma* _cœur_ bat vite à cause des exercices.
+Andrew : C’est normal. Bois de l’eau pour hydrater *ton/ta* _corps_.
+Sophie : Oui, mais je dois aussi boire un remède que le docteur m’a recommandé pour soigner *mon/ma* _estomac_. 
+Andrew : D’accord, mais attends un peu. On continue avec des exercices pour renforcer tes _bras_ *forts/fortes*.
+Sophie : Oui, je veux d’abord finir. N’oublies pas pourtant que je veux des exercices pour mettre en valeur *ma/mon* _poitrine_.
+Andrew : Fais attention à tes _jambes_. *Elles/Ils* doivent rester droites pendant l’exercice. Et n’oublie pas non plus les _fesses_. *Elles/Ils* sont là pour bien nous stabiliser.
+
+Texte 4 : Chez le médecin
+Docteur : Bonjour ! Est-ce que tu as encore mal *à la/au* _tête_ ?
+Emma : Non, mais *mon/ma* _cœur_ bat très vite aujourd’hui.
+Docteur : Tu dois bien respirer. Bois de l’eau pour aider *ton/ta* _corps_ à se détendre.
+Emma : D’accord, mais j’ai aussi mal à *mon/ma* _estomac_ après avoir mangé.
+Docteur : Je vais te donner un médicament. Et pour ton _bras_ *droit/droite*, est-ce que tu ressens encore  une douleur ?
+Emma : Un peu, mais surtout au niveau de *ma/mon* _poitrine_ quand je respire profondément.
+Docteur : D’accord, je vais vérifier. Fais attention à tes _jambes_. *Elles/Ils* doivent être bien posées au sol quand tu es assise. Et n’oublie pas non plus tes _fesses_. *Elles/Ils* doivent être bien positionnées pour une bonne posture.

@@ -16,9 +16,16 @@ export class EnemyManager {
 
     // Méthode d'initialisation de la classe EnemyManager
     async init() {
+        //  Récupérer le categorieId depuis sessionManager
+        let user = sessionStorage.getItem('user');
+        if (user) {
+            user = JSON.parse(user);
+        }
+        let categorieId = user.categorieCouranteId || 2;
+
         // Charger les mots de façon asynchrone
         //this.wordList = await this.wm.loadWordsFromFile();
-        this.wordList = await this.wm.loadWordsFromAPI(1);
+        this.wordList = await this.wm.loadWordsFromAPI(categorieId);
         if (!this.wordList || this.wordList.length === 0) {
             console.warn("Aucun mot n'a été chargé.");
         }

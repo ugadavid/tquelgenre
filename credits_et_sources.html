@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head> 
-        <title> TQuelGenre - Tableau de bord </title>
+        <title> TQuelGenre - Crédits et source </title>
         <meta charset="utf-8">
         <link href="styleboard_ok.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <script src="debug.js" defer></script>
+        <script src="debug_off.js" defer></script>
         <script src="user.js" defer></script>
         <script src="modal.js" defer></script>
+        <script src="search.js" defer></script>
     </head>
 
     <body>
@@ -34,19 +35,11 @@
                         </nav>
 
                         <div class="tdb_header2-B">
-                            <div class="tdb_chercheur-container">
-                                <input type="text" id="tdb_chercheur" placeholder="🔍 Rechercher..." oninput="tdb_functionne_recherche()"> <!-- Quand on clique dessus la fonctionne s'active -->
-                                <ul id="tdb_resultats_chercheur">
-                                    <li> Santé </li>
-                                    <li> Amour </li>
-                                    <li> Le corps </li>
-                                    <li> Les vêtements </li>
-                                    <li> La famille </li>
-                                    <li> Le tourisme     </li>
-                                    <li> Les repas </li>
-                                    <li> La météo </li>
-                                </ul>
-                            </div>
+                            <form id="search_form" action="recherche.html">
+                                <div class="tdb_chercheur-container">
+                                    <input name="search" type="text" id="tdb_chercheur" placeholder=" 🔍 Rechercher...">
+                                </div>
+                            </form>
                             <h1> Crédits et source </h1>
                         </div>
                     </div>
@@ -62,13 +55,112 @@
 
 
         <main>
-            
-            
-    
-    <div>
-      <p>Crédits et sources à venir, une fois le site terminé</p>
-    </div>
-        
+            <section>
+                <div>
+                    <h2> Ressources pédagogiques </h2>
+                    <p class="text-left text-black"> 
+                        Vocabulaire progressif du français avec 250 exercices, niveau débutant de Claire Miquel. <br>
+
+                        Grevisse, M. (2008). Le Bon Usage (14ª ed.). De Boeck Supérieur. <br>
+
+                        Dubois, J., & Lagane, R. (2009). Grammaire - Les indispensables Larousse (2009 ed.). Larousse.
+                    </p>
+                </div>
+
+                <div>
+                    <h2> Sources des exemples de phrases </h2>
+                    <p class="text-left text-black">
+                        Enquête Sociolinguistique à Orléans (Corpus ESLO), Laboratoire Ligérien de Linguistique (UMR7270), Université d'Orléans. <br>
+
+                        Outils et Recherches sur le Français Écrit et Oral (Corpus ORFEO), laboratoires LATTICE (U. Paris 3/Ens.-UMR 8094), MoDyCo 
+                        (Université Paris Ouest Nanterre La Défense - UMR 7114), ATILF (U. de Lorraine-UMR 7118), LORIA (CNRS -UMR 750), LIF 
+                        (Université Aix-Marseille-UMR 7279), ICAR (U. Lyon 2-UMR5191), CLLE-ERSS (U. Toulouse-UMR 5263). <br>
+
+                        Siréjols, É. (2008). Vocabulaire en dialogues. <br>
+
+                        Butzbach, M., Nolla, C. M., Pastor, D., Zaldivar, I. S., Fache, R., & Castain, R. N. (2012). Essentiel et plus...: 
+                        méthode de français, livre du professeur. Cle international. <br>
+
+                        BC Open Textbook Project, & BCcampus. (2011). Français Interactif (University of Texas at Austin. Department of French 
+                        and Italian). Department of French and Italian, University of Texas at Austin. <br>
+
+                        Braud, C. (2022). Guide pédagogique Édito A1. Didier. <br><br>
+
+
+                        Sauf indication contraire, les exemples de phrases dans la section de correction d'erreurs sont générés par l'IA et relus 
+                        par des experts linguistiques de langue maternelle française.
+                    </p>
+                </div>
+
+
+
+                <div>
+                    <h2> Sources artistiques </h2>
+                        <h3 class="text-left"> Avatars - Flaticon : </h3>
+                            <p class="text-left text-black">
+                                max.icons <br>
+                                Park Jisun <br>
+                                Freepik <br>
+                                max.icons <br>
+                                Eucalyp <br>
+                                Good ware <br>
+                            </p>
+
+
+
+                        <h3 class="text-left"> Page tableau de bord - Flaticon : </h3>
+                            <p class="text-left text-black">
+                                Smashicons <br>
+                                photo3idea_studio <br>
+                                Wanicon <br>
+                                Smashicons <br>
+                                Freepik <br>
+                                AmethystDesign <br>
+                                AbtoCreative <br>
+                                Eucalyp <br>
+                                amonrat rungreangfangsai <br>
+                                juicy_fish <br>
+                            </p>
+
+
+
+                        
+
+                            <h3 class="text-left"> Freepik : </h4>
+                                <p class="text-left text-black">
+                                    stockgiu <br>
+                                    lesyaskripak <br>
+                                    gstudioimagen <br>
+                                    pch.vector <br>
+                                    logturnal <br>
+                                </p>
+
+
+
+                            <h3 class="text-left"> Flaticon : </h4>
+                                <p class="text-left text-black">
+                                    azmianshori <br>
+                                    Flat icons <br>
+                                    monkik <br>
+                                    Smashicons <br>
+                                    Icon home <br>
+                                    noomnitah <br>
+                                    monkik <br>
+                                    amonrat rungreangfangsai <br>
+                                    iconixar <br>
+                                    mikan933 <br>
+                                    Three musketeers <br>
+                                    pojok d <br>
+                                    Cuputo <br>
+                                    smashingstocks <br>
+                                    KSan Wapiti <br>
+                                    Tempo_doloe <br>
+                                    Uniconlabs <br>
+                                    Kalashnyk <br>
+                                    photo3idea_studio <br>
+                                </p>
+                </div>
+            </section>
         </main>
 
 
@@ -86,10 +178,3 @@
         <script src="scriptboard.js"></script>
     </body>
 </html>
-
-
-
-
-
-
-

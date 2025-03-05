@@ -8,19 +8,20 @@
   <button onclick="closeModal()"> &times; </button>
 </div>
 <div id="main_pop_up">
+
   
-  <form action="#" method="POST">
-    <input class="input_modal" type="text" name="prenom" placeholder="Prénom" required autocomplete="given-name">
-    <input class="input_modal" type="text" name="nom" placeholder="Nom" required autocomplete="family-name">
-    <input class="input_modal" type="password" name="pwd" placeholder="Mot de passe" required autocomplete="new-password"><br/><br/>
+  <form action="#" method="POST" id="modifProfilForm">
+    <input type="hidden" name ="email" value="">
+    <input class="input_modal" type="text" name="prenom" placeholder="Prénom" required autocomplete="given-name" value="">
+    <input class="input_modal" type="text" name="nom" placeholder="Nom" required autocomplete="family-name" value="">
+    <input class="input_modal" type="password" name="pwd" placeholder="Mot de passe" required autocomplete="new-password" value=""><br/><br/>
     Avatar :
     <label for="femme">Femme</label>
-    <input type="radio" id="femme" name="genre" value="femme">
+    <input type="radio" id="femme" name="genre" value="2">
     <label for="homme">Homme</label>
-    <input type="radio" id="homme" name="genre" value="homme">
+    <input type="radio" id="homme" name="genre" value="1">
     
 
     <button type="submit" class="submit-btn">Modifier mon profile</button>
 </form>
 </div>
-

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head> 
-        <title> TQuelGenre - Tableau de bord </title>
+        <title> TQuelGenre - Plan du site </title>
         <meta charset="utf-8">
         <link href="styleboard_ok.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <script src="debug.js" defer></script>
+        <script src="debug_off.js" defer></script>
         <script src="user.js" defer></script>
         <script src="modal.js" defer></script>
+        <script src="search.js" defer></script>
     </head>
 
     <body>
@@ -34,19 +35,11 @@
                         </nav>
 
                         <div class="tdb_header2-B">
-                            <div class="tdb_chercheur-container">
-                                <input type="text" id="tdb_chercheur" placeholder="🔍 Rechercher..." oninput="tdb_functionne_recherche()"> <!-- Quand on clique dessus la fonctionne s'active -->
-                                <ul id="tdb_resultats_chercheur">
-                                    <li> Santé </li>
-                                    <li> Amour </li>
-                                    <li> Le corps </li>
-                                    <li> Les vêtements </li>
-                                    <li> La famille </li>
-                                    <li> Le tourisme     </li>
-                                    <li> Les repas </li>
-                                    <li> La météo </li>
-                                </ul>
-                            </div>
+                            <form id="search_form" action="recherche.html">
+                                <div class="tdb_chercheur-container">
+                                    <input name="search" type="text" id="tdb_chercheur" placeholder=" 🔍 Rechercher...">
+                                </div>
+                            </form>
 
                             <h1> Plan du site </h1>
                         </div>
@@ -63,13 +56,34 @@
 
 
         <main>
-            
-            
-    
-    <div>
-        <p>Plan à venir, une fois le site terminé</p>
-    </div>
-        
+            <section>
+                <div>
+                    <!--h3> Ressources pédagogiques </h3-->
+                    <p class="text-left text-black"> 
+                        <a href="index.html">Page d'accueil</a><br/>
+                        <a href="javascript:void(0);" onclick="openModal('popup_inscription.html')">Inscription</a><br/>
+                        <a href="javascript:void(0);" onclick="openModal('popup_connexion.html')">Connexion</a><br/>
+                        <a href="javascript:void(0);" onclick="openModal('popup_profile.html')">Modifier mon profile</a><br/>
+                        <a href="categorie.html">Choix de la catégorie</a><br/>
+                        <a href="jeux.html">Choix du jeu</a><br/>
+                        <a href="jeux/dd/index.html">Drag & Drop</a><br/>
+                        <a href="jeux/si/index.html">Space Invader</a><br/>
+                        <a href="jeux/tt/index.html">Textes à trous</a><br/>
+                        <a href="regles.html">Ressources</a><br/>
+                        <a href="feedback.html">Feedback différé</a><br/>
+                        <a href="tableau_de_bord.html">Tableau de bord</a><br/>
+                        <a href="choixdemots.html">Création de ma liste personnelle</a><br/>
+                        <a href="mentions_legales.html">Mentions légales</a><br/>
+                        <a href="contacts.html">Conacts</a><br/>
+                        <a href="plan_du_site.html">Plan du site</a><br/>
+                        <a href="credits_et_sources.html">Crédits et sources</a><br/>
+                    </p>
+                </div>
+
+                
+
+                
+            </section>
         </main>
 
 
@@ -85,10 +99,3 @@
 
     </body>
 </html>
-
-
-
-
-
-
-

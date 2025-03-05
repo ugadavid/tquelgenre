@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head> 
-        <title> TQuelGenre - Tableau de bord </title>
+        <title> TQuelGenre - Feedback </title>
         <meta charset="utf-8">
         <link href="styleboard_ok.css" rel="stylesheet">
         <link rel="stylesheet" href="stylefeedback.css">
-        <script src="debug.js" defer></script>
+        <script src="debug_off.js" defer></script>
         <script src="user.js" defer></script>
         <script src="modal.js" defer></script>
+        <script src="search.js" defer></script>
     </head>
 
     <body>
@@ -33,19 +34,11 @@
                         </nav>
 
                         <div class="tdb_header2-B">
-                            <div class="tdb_chercheur-container">
-                                <input type="text" id="tdb_chercheur" placeholder="🔍 Rechercher..." oninput="tdb_functionne_recherche()"> <!-- Quand on clique dessus la fonctionne s'active -->
-                                <ul id="tdb_resultats_chercheur">
-                                    <li> Santé </li>
-                                    <li> Amour </li>
-                                    <li> Le corps </li>
-                                    <li> Les vêtements </li>
-                                    <li> La famille </li>
-                                    <li> Le tourisme     </li>
-                                    <li> Les repas </li>
-                                    <li> La météo </li>
-                                </ul>
-                            </div>
+                            <form id="search_form" action="recherche.html">
+                                <div class="tdb_chercheur-container">
+                                    <input name="search" type="text" id="tdb_chercheur" placeholder=" 🔍 Rechercher...">
+                                </div>
+                            </form>
                         <h1> Bienvenue sur ton tableau de bord ! </h1>
                         </div>
                     </div>
@@ -65,69 +58,7 @@
                 <h1>Zut… tu as fait quelques erreurs.</h1>
                 <p class="centered-texte">Voici les mots avec leur genre et des exemples :</p>
             
-                <div class="feedback-grid">
-                    <!-- Première ligne -->
-                    <div class="feedback-word">
-                        <strong>Une fièvre</strong>
-                        <em class="feedback-example">La fièvre est une réaction normale de l’organisme.</em>
-                        <button class="bouton">+ Plus d'exemples</button>
-                        <div class="feedback-additional-examples" style="display: none;">
-                            <em>Exemple supplémentaire 1</em>
-                            <em>Exemple supplémentaire 2</em>
-                        </div>
-                    </div>
-            
-                    <div class="feedback-word">
-                        <strong>Une maladie</strong>
-                        <em class="feedback-example">Mon fils a une maladie grave.</em>
-                        <button class="bouton">+ Plus d'exemples</button>
-                        <div class="feedback-additional-examples" style="display: none;">
-                            <em>Exemple supplémentaire 1</em>
-                            <em>Exemple supplémentaire 2</em>
-                        </div>
-                    </div>
-            
-                    <div class="feedback-word">
-                        <strong>Un handicap</strong>
-                        <em class="feedback-example">Le handicap est la 1ère cause de discrimination.</em>
-                        <button class="bouton">+ Plus d'exemples</button>
-                        <div class="feedback-additional-examples" style="display: none;">
-                            <em>Exemple supplémentaire 1</em>
-                            <em>Exemple supplémentaire 2</em>
-                        </div>
-                    </div>
-            
-                    <!-- Deuxième ligne -->
-                    <div class="feedback-word">
-                        <strong>Une opération</strong>
-                        <em class="feedback-example">Avant une opération, il est obligatoire d'arrêter de manger pendant 6 heures.</em>
-                        <button class="bouton">+ Plus d'exemples</button>
-                        <div class="feedback-additional-examples" style="display: none;">
-                            <em>Exemple supplémentaire 1</em>
-                            <em>Exemple supplémentaire 2</em>
-                        </div>
-                    </div>
-            
-                    <div class="feedback-word">
-                        <strong>Un contact</strong>
-                        <em class="feedback-example">La diarrhée se transmet facilement par le contact avec d'autres personnes.</em>
-                        <button class="bouton">+ Plus d'exemples</button>
-                        <div class="feedback-additional-examples" style="display: none;">
-                            <em>Exemple supplémentaire 1</em>
-                            <em>Exemple supplémentaire 2</em>
-                        </div>
-                    </div>
-            
-                    <div class="feedback-word">
-                        <strong>Une urgence</strong>
-                        <em class="feedback-example">Pour une urgence médicale, appelez le Service d'aide médicale urgente (SAMU).</em>
-                        <button class="bouton">+ Plus d'exemples</button>
-                        <div class="feedback-additional-examples" style="display: none;">
-                            <em>Exemple supplémentaire 1</em>
-                            <em>Exemple supplémentaire 2</em>
-                        </div>
-                    </div>
-                </div>
+                <div class="feedback-grid"></div>
         
                 <p class="centered-text1"><strong>Mais ne t'inquiètes pas, 
                     tu peux toujours rejouer jusqu'à ce que tu maîtrises bien les genres !</strong></p>
@@ -154,7 +85,14 @@
                 checkConnection();     // Vérifie si l'utilisateur est connecté
             });
         </script>
-    </body>
-    <script src="jsstylefeedback.js"></script>
-</html>
+        <script src="jsstylefeedback.js"></script>
 
+
+        <script src="feedback.js"></script>
+
+        <script>
+            const list = ['391','661','781','947','1099','1631', '88'];
+            document.addEventListener('DOMContentLoaded', loadFeedbackWords(list));
+        </script>
+    </body>
+</html>

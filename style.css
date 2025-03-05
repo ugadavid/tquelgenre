@@ -83,13 +83,15 @@ h1 {
     margin-top: 10px; 
 }
 .accueil_paragraphe {
-    line-height: 1.5; 
+    line-height: 1.5;
+    text-align: left;
+    color: #eeeeee;
 }
 .accueil_boton {
     display: inline-block;
     margin: 30px 0; 
     padding: 10px 20px;
-    color: #eeeeee; 
+    color: #eeeeee;
     background-color: transparent; 
     border: 2px solid #eeeeee; 
     border-radius: 20px; 
@@ -134,7 +136,7 @@ h2{
 }
 h3{
     text-align: center; 
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: #3d458f;
 }
 
@@ -154,6 +156,12 @@ h3{
 .accueil-text {
     flex: 1;
     margin: 20px;
+}
+
+.accueil-text-top p {
+    flex: 1;
+    margin: 20px;
+    text-align: left;
 }
 
 .accueil-text h2 {

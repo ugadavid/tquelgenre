@@ -250,6 +250,7 @@ main {
                     color: #3d458f;
                     border: 2px solid #3d458f; 
                     border-radius: 20px;
+                    padding: 0 1em ;
                 }
 
                 #tdb_resultats_chercheur {
@@ -578,9 +579,10 @@ main {
         }
 
         #tdb_astuces_texte {
-            font-size: 1.5em;
-            font-style: italic;
+            font-size: 1em;
+            font-style: normal;
             width: 30em;
+            text-align: left;
         }
 
         #tdb_astuces_img_declic {
@@ -640,7 +642,7 @@ main {
 
             #tdb_image_redemarrer {     /*BOUTON BIZARRE QUI NE FONTIONNE PAS COMME LES AUTRES*/
                 position: relative;
-                left: 20px; 
+                left: -20px; 
             }
 
 
@@ -841,4 +843,12 @@ footer {
 a {
     text-decoration: underline;
     color: #3d458f;
+}
+
+
+.text-left {
+    text-align: left;
+}
+.text-black {
+    color: #111;
 }

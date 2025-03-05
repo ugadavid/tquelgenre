@@ -8,6 +8,7 @@
         <script src="debug.js" defer></script>
         <script src="user.js" defer></script>
         <script src="modal.js" defer></script>
+        <script src="search.js" defer></script>
     </head>
 
     <body>
@@ -33,19 +34,11 @@
                         </nav>
 
                         <div class="tdb_header2-B">
-                            <div class="tdb_chercheur-container">
-                                <input type="text" id="tdb_chercheur" placeholder="🔍 Rechercher..." oninput="tdb_functionne_recherche()"> <!-- Quand on clique dessus la fonctionne s'active -->
-                                <ul id="tdb_resultats_chercheur">
-                                    <li> Santé </li>
-                                    <li> Amour </li>
-                                    <li> Le corps </li>
-                                    <li> Les vêtements </li>
-                                    <li> La famille </li>
-                                    <li> Le tourisme     </li>
-                                    <li> Les repas </li>
-                                    <li> La météo </li>
-                                </ul>
-                            </div>
+                            <form id="search_form" action="recherche.html">
+                                <div class="tdb_chercheur-container">
+                                    <input name="search" type="text" id="tdb_chercheur" placeholder=" 🔍 Rechercher...">
+                                </div>
+                            </form>
                             <h1> Bienvenue sur ton tableau de bord ! </h1>
                         </div>
                     </div>
@@ -62,14 +55,23 @@
 
         <main>
             <section class="tdb_section_scores">
-                <p>Ici, c'est ton espace personnel pour suivre tes progrès, collectionner des récompenses 
-                    et devenir imbattable sur les genres grammaticaux ! 🎉</br>
-                    Que tu cherches à analyser tes scores, admirer tes badges ou encore vaincre tes "ennemis jurés" 
-                    (ces mots qui te résistent encore), tout est réuni pour t'aider à progresser. 🚀</br></br>
+                <p>Bienvenue sur ton tableau de bord ! 🎮
+
+                    Ici, c'est ton espace personnel pour suivre tes progrès, développer ton avatar et devenir le maître 
+                    des genres grammaticaux ! 🎉<br/>
                     
-                    N'oublie pas de jeter un œil aux astuces personnalisées pour booster ton apprentissage 
-                    et faire exploser ton score. 🔥</br>
-                    Alors, prêt à relever de nouveaux défis ? C'est parti ! 😎</p>
+                    En haut, tu vois ton personnage : un reflet de ton parcours. Chaque mot que tu maîtrises le rend plus 
+                    puissant. Plus tu avances, plus ton avatar évolue, et à chaque étape, tu débloques de nouvelles 
+                    transformations impressionnantes. 🚀<br/>
+                    
+                    Alors, prêt à faire grandir ton héros ? Découvre toutes ses transformations et atteins son niveau maximal !  💥<br/>
+                    
+                    Dans cette aventure, tu vas aussi pouvoir suivre tes scores, admirer tes badges et, bien sûr, affronter 
+                    tes "ennemis jurés" (ces mots qui te résistent encore !). Tout est conçu pour t'aider à progresser et à atteindre des sommets. 🔥<br/>
+                    
+                    N'oublie pas de consulter les astuces personnalisées pour propulser ton apprentissage et exploser tes records ! 😎<br/>
+                    
+                    Prêt pour un nouveau défi ? C'est parti ! </p>
 
                 <h2> Scores </h2>
 
@@ -159,6 +161,7 @@
 
             <section class="tdb_section_erreurs">
                 <h2> Tes ennemis jurés </h2>
+                <p>Voici le top 5 des mots qui te résistent le plus, ceux avec lesquels tu as des difficultés. 🤺</br></p>
                 <div class="tdb_erreurs_container">
                     <div>
                         <img src="ressources/ennemies/demon.png" alt="Image 'personnage" title="Personnage 1">
@@ -194,8 +197,19 @@
 
                 <div>
                     <p id="tdb_astuces_texte"> 
-                        Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, 
-                        enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper.
+                        
+                        🧠 Pour progresser efficacement, nous te conseillons de suivre l'ordre des catégories qui a été pensé pour un apprentissage progressif :<br/><br/>
+
+1. La famille<br/>
+2. L'amour<br/>
+3. Le corps<br/>
+4. La santé<br/>
+5. Les vêtements<br/>
+6. La cuisine<br/>
+7. La météo<br/>
+8. Le tourisme<br/><br/>
+Chaque catégorie te permet d'approfondir progressivement ton vocabulaire 
+tout en t'appuyant sur les acquis précédents. Bonne exploration ! 🚀
                     </p>
 
                     <img src="ressources/declic.png" alt="Image déclic" title="Idée pour vous" id="tdb_astuces_img_declic">

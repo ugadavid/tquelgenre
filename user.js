@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
             email: '',
             jeuCourant: '',
             categorieCourante: '',
+            categorieCouranteId: '',
+            avatar: '',
             mots: []  // Tableau de tableau [id_mot, 'mot', 'genre', nb_correct, nb_incorrect]
         };
     }
@@ -60,6 +62,8 @@ function checkConnection() {
     user.email = data.email || data.mail || user.email;
     user.jeuCourant = data.jeuCourant || user.jeuCourant;
     user.categorieCourante = data.categorieCourante || user.categorieCourante;
+    user.categorieCouranteId = data.categorieCouranteId || user.categorieCouranteId;
+    user.avatar = data.avatar || user.avatar;
     user.mots = data.mots || user.mots || [];
     //  user.mots = data.mots || user.mots;
 
@@ -130,6 +134,8 @@ function resetCategorie() {
           email: '',
           jeuCourant: '',
           categorieCourante: '',
+          categorieCouranteId: '',
+          avatar: '',
           mots: []
       };
       saveThisUser(user);
@@ -154,13 +160,19 @@ function resetCategorie() {
       debugLog(`Email : ${user.email}`);
       debugLog(`Jeu courant : ${user.jeuCourant}`);
       debugLog(`Catégorie courante : ${user.categorieCourante}`);
+      debugLog(`Catégorie courante id : ${user.categorieCouranteId}`);
+      debugLog(`Avatar : ${user.avatar}`);
       debugLog(`Mots : ${user.mots.length} mots enregistrés`);
       user.mots.forEach(m => debugLog(`Mot: ${m[1]}, Genre: ${m[2]}, Correct: ${m[3]}, Incorrect: ${m[4]}`));
   }
 
+  
+  
+
   function afficherCategorie(game) {
     user = getUser();
     const categorieCourante = user.categorieCourante;
+    
     const categorieElement = document.getElementById('affichage-categorie');
 
     if (categorieCourante) {
@@ -172,8 +184,19 @@ function resetCategorie() {
     }
 }
 
+function getCategorieId() {
+    user = getUser();
+    const categorieId = user.categorieCouranteId;
 
-  function userLink(jeu = null, categorie = null) {
+    if (categorieId > 0) {
+        return categorieId;
+    } else {
+        return 3;
+    }
+}
+
+
+  function userLink(jeu = null, categorie = null, categorieId = null) {
     let user = getUser();
     // Vérifier si le jeu ou la catégorie est passé en paramètre
     if (jeu) {
@@ -189,6 +212,7 @@ function resetCategorie() {
         //sessionStorage.setItem('categorieCourante', categorie);
         //setCategorie(categorie);
         user.categorieCourante = categorie;
+        user.categorieCouranteId = categorieId;
         debugLog(`Catégorie courante mise à jour : ${categorie}`);
         console.log('categorie : ' + categorie);
     }
@@ -200,7 +224,7 @@ function resetCategorie() {
         // Récupérer les valeurs depuis le sessionStorage
         const jeuCourant = user.jeuCourant;
         const categorieCourante = user.categorieCourante;
-
+        //const categorieCouranteId = user.categorieCouranteId;
         // Log des valeurs récupérées
         debugLog(`Jeu courant dans le stockage : ${jeuCourant}`);
         debugLog(`Catégorie courante dans le stockage : ${categorieCourante}`);
@@ -255,4 +279,5 @@ function resetCategorie() {
   window.saveThisUser = saveThisUser;
   window.saveUser = saveUser;
   window.vireTout = vireTout;
+  window.getCategorieId = getCategorieId;
 });

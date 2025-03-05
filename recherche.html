@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head> 
-        <title> TQuelGenre - Contacte-nous </title>
+        <title> TQuelGenre - Moteur de recherche </title>
         <meta charset="utf-8">
         <link href="styleboard_ok.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
@@ -19,7 +19,7 @@
                     <a href="index.html"> <img src="ressources/logo.png" alt="Logo TQG" title="Logo" class="tdb_logo"> </a>
                     <div>
                         <a href="javascript:void(0);" onclick="openModal('popup_profile.html')">Mon profil</a>
-                        <a href="javascript:void(0);" onclick="vireTout()"> Déconnexion </a>
+                        <a href="javascript:void(0);" onclick="resetUser()"> Déconnexion </a>
                     </div>
                 </div>
             </div>
@@ -35,12 +35,13 @@
                         </nav>
 
                         <div class="tdb_header2-B">
-                            <form id="search_form" action="recherche.html">
-                                <div class="tdb_chercheur-container">
-                                    <input name="search" type="text" id="tdb_chercheur" placeholder=" 🔍 Rechercher...">
-                                </div>
-                            </form>
-                            <h1> Contacte-nous ! 📩 </h1>
+                        <form id="search_form">
+                            <div class="tdb_chercheur-container">
+                                <input name="search" type="text" id="tdb_chercheur" placeholder=" 🔍 Rechercher...">
+                            </div>
+                        </form>
+
+                            <h1> Résultat de la recherche </h1>
                         </div>
                     </div>
 
@@ -58,18 +59,8 @@
             
             
     
-    <div>
-        <p>Vous avez une question, une suggestion ou simplement envie de nous laisser un message ?<br/>
-          Nous serions ravis de vous lire ! 💖<br/><br/>
-          
-          N'hésitez pas à nous écrire à l'adresse suivante :<br/>
-          📧 contact@tquelgenre.org<br/><br/>
-          
-          Nous faisons de notre mieux pour répondre rapidement à toutes vos demandes.<br/>
-          Votre avis compte beaucoup pour nous et nous aide à améliorer continuellement le site et les jeux proposés. 🤗<br/><br/>
-          
-          Merci pour votre intérêt et à très bientôt !<br/>
-          L'équipe de tquelgenre.org 🎉</p>
+    <div id="search_result">
+        <p>Moteur de recherche..</p>
     </div>
         
         </main>
@@ -84,11 +75,6 @@
             </div>
         </footer>
     </div>
-
-    <script>
-        window.addEventListener('DOMContentLoaded', function() {                
-            showUser();            // Affiche l'utilisateur dans la fenêtre de debug
-        });
-    </script>
+    
     </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TQuelGenre</title>
+    <title>TQuelGenre - Rendre l'apprentissage des genres grammaticaux amusant et efficace</title>
     <link rel="stylesheet" href="style.css">
     <link href="styleboard_ok.css" rel="stylesheet">
     <script src="modal.js" defer></script>
-    <script src="debug.js" defer></script>
+    <script src="debug_off.js" defer></script>
     <script src="user.js" defer></script>
 </head>
 <body>
@@ -18,9 +18,11 @@
             <div class="menu">
                 <a href="javascript:void(0);" onclick="openModal('popup_inscription.html')">S'inscrire</a>
                 <a href="javascript:void(0);" onclick="openModal('popup_connexion.html')">S'identifier</a>
-                <a href="javascript:void(0);" onclick="openModal('popupup.html')">Toto</a>
+                <!--a href="javascript:void(0);" onclick="openModal('popupup.html')">Popup</a>
                 <a href="test_user.html">Quick</a>
                 <a href="jeux.html">Jeux</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="choixdemots.html">Mots</a-->
             </div>
         </div>
     </div>
@@ -47,11 +49,12 @@
         
         <h2>Pourquoi apprendre les genres avec TQuelGenre ?</h1>
         <div class="accueil-row">
-            <div class="accueil-text">
-                <p>Bienvenue sur <b>TQuelGenre.org</b> !<br/>
+            <div class="accueil-text-top">
+                <p>Bienvenue sur <b>TQuelGenre</b> !<br/>
                     Ici, notre mission est simple : rendre l'apprentissage des genres grammaticaux amusant et efficace. 🎉<br/>
-                    Que tu sois tout juste débutant en français ou que tu cherches à renforcer tes bases, tu trouveras des jeux interactifs conçus pour t’aider à progresser tout en t’amusant.<br/>
-                    Alors, prêt à maîtriser les genres grammaticaux sans t’ennuyer ? C’est parti ! 🚀</p>
+                    Que tu sois tout juste débutant en français ou que tu cherches à renforcer tes bases, 
+                    tu trouveras des jeux interactifs conçus pour t'aider à progresser tout en t'amusant.<br/>
+                    Alors, prêt à maîtriser les genres grammaticaux sans t'ennuyer ? C'est parti ! 🚀</p>
             </div>
         </div>
         <div class="accueil-row">
@@ -61,8 +64,10 @@
                 <!--p>Que tu sois débutant, intermédiaire ou expert, les jeux s’ajustent à ton niveau !</p-->
                 <p class="justify">Chez TQuelGenre, l'apprentissage s'adapte à ton propre rythme. 😎<br/><br/>
 
-                    <b>Difficulté progressive</b> : les jeux ajustent automatiquement leur niveau selon tes résultats : plus tu réussis, plus les mots deviennent intéressants et variés.<br/>
-                    <b>Liberté totale</b> : tu peux explorer librement des catégories plus complexes sans contrainte, que ce soit les mots du quotidien ou des thèmes plus spécifiques.</p>
+                    <b>Difficulté progressive</b> : les jeux ajustent automatiquement leur niveau selon tes résultats : 
+                    plus tu réussis, plus les mots deviennent intéressants et variés.<br/>
+                    <b>Liberté totale</b> : tu peux explorer librement des catégories plus complexes sans contrainte, 
+                    que ce soit les mots du quotidien ou des thèmes plus spécifiques.</p>
             </div>
         </div>
         <div class="accueil-row">
@@ -72,9 +77,12 @@
                 <p class="justify">Nous croyons que chaque apprenant est unique. 
                     C'est pourquoi TQuelGenre te propose un apprentissage 100% personnalisé. 🎯<br/><br/>
 
-                <b>Choisis tes catégories préférées</b> : amour, corps, cuisine, famille, météo, santé, tourisme, vêtements… Il y en a pour tous les goûts ! 🍴🌦️👗<br/>
-                <b>Crée tes propres listes de révision</b> : pioche dans nos catégories et compose tes listes personnalisées pour travailler spécifiquement sur tes points faibles.<br/>
-                <b>Tableau de bord</b> : garde un œil sur ta progression avec des statistiques détaillées et des graphiques motivants. 📊</p>
+                <b>Choisis tes catégories préférées</b> : amour, corps, cuisine, famille, météo, santé, tourisme, 
+                vêtements… Il y en a pour tous les goûts ! 🍴🌦️👗<br/>
+                <b>Crée tes propres listes de révision</b> : pioche dans nos catégories et compose tes listes 
+                personnalisées pour travailler spécifiquement sur tes points faibles.<br/>
+                <b>Tableau de bord</b> : garde un œil sur ta progression avec des statistiques détaillées 
+                et des graphiques motivants. 📊</p>
             </div>
             <img src="image/apprentissage_sur_mesure.png" alt="Descripción de la imagen" class="image-margin-sides">
         </div>
@@ -90,10 +98,7 @@
                     <b>Drag & Drop</b> : associe les mots à leur genre comme un pro du glisser-déposer. 🖱️<br/>
                     <b>Texte à trous</b> : complète les phrases avec les mots justes et perfectionne ton instinct grammatical. ✍️<br/>
                     <b>Récompenses et motivation</b> :<br/>
-                    Des badges amusants à débloquer (jouer 2 jours d'affilée, 7 jours, résoudre des catégories difficiles…).<br/>
-                    Des avatars personnalisés pour chaque catégorie maîtrisée. 🏅<br/><br/>
-                    <b>Ils en parlent</b> :<br/>
-                    "Grâce à TQuelGenre, je ne vois même plus le temps passer… et les genres non plus !" - Un utilisateur ravi 😉</p>
+                    Des badges amusants à débloquer et des avatars personnalisés pour chaque catégorie maîtrisée. 🏅</p>
             </div>
         </div>
         <div class="accueil-row">
@@ -105,16 +110,23 @@
                     <b>Feedback personnalisé</b> :<br/>
                     Reçois des conseils et astuces adaptés à chaque erreur.<br/>
                     Découvre des exemples d'utilisation concrets pour chaque mot. 📚<br/>
-                    <b>Page des règles</b> :<br/>
-                    Une <a href="regles.html">section dédiée</a> rassemble toutes les règles essentielles sur les genres grammaticaux.<br/>
+                    <b>Page des ressources</b> :<br/>
+                    Une <a href="regles.html">section dédiée</a> rassemble toutes les règles générales 
+                    sur les genres grammaticaux.<br/>
                     Idéal pour revoir rapidement une règle entre deux parties. 🏷️<br/>
                     <b>Statistiques motivantes</b> :<br/>
                     Suis ton avancée et identifie rapidement les genres qui te posent le plus de problèmes.<br/>
-                    Plus tu joues, plus tu progresses… alors, joue sans compter et laisse les automatismes se créer naturellement ! 🔥</p>
+                    Plus tu joues, plus tu progresses… alors, joue sans compter et laisse les automatismes 
+                    se créer naturellement ! 🔥</p>
             </div>
             <img src="image/feedback.png" alt="Descripción de la imagen" class="image-margin-sides">
         </div>
-
+        <div class="accueil-text">
+            <h3>💪 Ils en parlent</h3>
+            <p class="justify">"Grâce à TQuelGenre, je ne vois même plus le temps passer… et les genres non plus !" - Un utilisateur ravi 😉</p>
+            <p class="justify">"I can't believe how much fun learning genders can be! TQuelGenre makes it so easy!" - An enthusiastic player</p>
+            <p class="justify">"¡Es increíble lo rápido que aprendo con TQuelGenre! ¡Es como un juego!" - Un jugador feliz</p>
+        </div>
         <h2>🚀 Rendre l'apprentissage du français plus fluide et naturel<br/>avec notre outil innovant et engageant !</h1>
         <div class="accueil_containerboton">
             <a href="#" class="accueil_button_bas" onclick="openModal('popup_inscription.html')">Commence maintenant !</a>

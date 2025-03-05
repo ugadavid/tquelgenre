@@ -1,0 +1,27 @@
+Category : Météo
+CategoryId : 22
+
+Text 1 : Une randonnée en montagne
+Max et Clara décident de faire une randonnée malgré le mauvais temps.
+Max : Regarde, il y a *un/une*  _brouillard_ très épais ce matin.
+Clara : Oui, mais avec *la/le*   _météo _ qu’ils ont annoncée, il devrait disparaître bientôt.
+Max : Regarde ! Je crois qu’il y a aussi *un/une*  _nuage _ noir qui arrive.
+Clara : C’est peut-être *un/une*  _orage _ qui se prépare.
+Max : On devrait marcher rapidement avant *la/le*   _pluie _.
+Clara : J’ai emporté *un/une* imperméable, au cas où.
+
+Text 2 : Une soirée mouvementée
+Hier soir, Emma et sa famille ont vécu une soirée agitée à cause du mauvais temps.
+Emma : Pendant *la/le*  _ tempête _, *un/une*  _éclair _ a frappé près de notre maison.
+Maman : Heureusement, *le/la*  _tonnerre _ n’était pas trop fort, les enfants ont bien dormi.
+Emma : Mais ce matin, on a vu *le/la*  _torrent _ qui descendait très vite la colline.
+Papa : Oui, et *le/la*  _vent _ a cassé une branche de l’arbre du jardin.
+Emma : J’espère que *la/le*  _température _ sera plus agréable aujourd’hui.
+
+Text 3 : Une balade en hiver
+Pauline et Julien décident de sortir malgré le froid.
+Julien : Ce matin, il y avait *du/de la*  _verglas_ sur la route, mais maintenant tout est dégagé.
+Pauline : Oui, et *la/le*  _neige _ a fondu avec le soleil.
+Julien : Regarde, *un/une*  _brouillard _ commence à se former près des montagnes.
+Pauline : J’aime bien *le/la*  _vent_ frais de l’hiver, ça réveille.
+Julien : Mais prends ton écharpe, sinon tu vas attraper froid.

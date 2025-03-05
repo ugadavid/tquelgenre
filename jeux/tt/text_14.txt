@@ -1,0 +1,29 @@
+Category : la cuisine et les repas
+CategoryId : 14
+
+Texte 1 : un dîner entre amis
+Marc et Julie, deux amis de longue date, ont décidé d'organiser un dîner chez Julie. Ils veulent préparer un délicieux repas ensemble.
+Marc : J'ai apporté *une/un* _bouteille_de vin pour ce soir. 
+Julie : Super ! On va commencer par *une/un* _salade_ en entrée. 
+Marc : Parfait ! Je m'occupe *du/de la* _fromage_ pendant que tu fais *la/le* _sauce_. 
+Julie : D'accord. Tu peux me passer l'huile d'olive et *le/la* _citron_ ? 
+Marc : Bien sûr, je vais aussi sortir *une/un* _nappe_ et *un/une* _plateau_.
+Julie : Merci ! N'oublie pas *un/une* _cendrier_ et *un/une* _bol_. 
+
+Texte 2 : Paul entre dans une cafétéria et s'assied à une table. Marie, la serveuse, vient prendre sa commande.
+Marie : Bonjour, monsieur ! Que désirez-vous ?
+Paul : Salut, je voudrais *un/une* _café_, s'il vous plaît.
+Marie : Vous souhaitez quelque chose à manger ?
+Paul : Oui, je veux bien *une/un* _tartine_ avec de *la/le* _confiture_. Vous avez aussi des desserts ?
+Marie : Oui, nous avons de *la/le* _crème brûlée_ et de *la/le* _mousse au chocolat_.
+Paul : Je vais prendre *une/un* _crème brûlée_, alors. Et aussi, pourriez-vous m'apporter *une/un* _bouteille_ d'eau, s'il vous plaît ?
+Marie : Bien sûr, je vous apporte ça tout de suite. Souhaitez-vous autre chose ?
+Paul : Non, c'est tout pour l'instant. Merci beaucoup !
+
+Texte 3 Émilie et son ami Thomas ont décidé de déjeuner au restaurant pour discuter de leurs projets. Ils s'installent à une table et consultent le menu.
+Émilie : Je vais prendre *un/une* _plat_ de poisson et une salade.
+Thomas : Moi, je vais essayer *le/la* _lapin_ avec *une/un* _sauce_ au vin.
+Émilie : Ça a l'air délicieux ! Que penses-tu de partager *une/un* _assiette_ de fromage ?
+Thomas : Bonne idée. J'aimerais aussi *un/une* _verre_ de vin rouge pour accompagner *le/la* _repas_.
+Émilie : Parfait ! Et pour *le/la* _dessert_, tu veux essayer *la/le* _tarte_ aux pommes?
+Thomas : Je préfère *la/le* _mousse au chocolat_.

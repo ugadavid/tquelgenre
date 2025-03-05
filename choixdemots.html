@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head> 
-        <title> TQuelGenre - Tableau de bord </title>
+        <title> TQuelGenre - Choix des mots pour ta liste personnalisée </title>
         <meta charset="utf-8">
         <link href="styleboard_ok.css" rel="stylesheet">
         <link href="styleboard_.css" rel="stylesheet">
-        <script src="debug.js" defer></script>
+        <script src="debug_off.js" defer></script>
         <script src="user.js" defer></script>
         <script src="modal.js" defer></script>
+        <script src="choixdesmots.js"></script>
+        <script src="search.js" defer></script>
     </head>
 
     <body>
@@ -34,19 +36,11 @@
                         </nav>
 
                         <div class="tdb_header2-B">
-                            <div class="tdb_chercheur-container">
-                                <input type="text" id="tdb_chercheur" placeholder="🔍 Rechercher..." oninput="tdb_functionne_recherche()"> <!-- Quand on clique dessus la fonctionne s'active -->
-                                <ul id="tdb_resultats_chercheur">
-                                    <li> Santé </li>
-                                    <li> Amour </li>
-                                    <li> Le corps </li>
-                                    <li> Les vêtements </li>
-                                    <li> La famille </li>
-                                    <li> Le tourisme     </li>
-                                    <li> Les repas </li>
-                                    <li> La météo </li>
-                                </ul>
-                            </div>
+                            <form id="search_form" action="recherche.html">
+                                <div class="tdb_chercheur-container">
+                                    <input name="search" type="text" id="tdb_chercheur" placeholder=" 🔍 Rechercher...">
+                                </div>
+                            </form>
                             <h1>Liste des mots par catégorie</h1>
                         </div>
                     </div>
@@ -122,38 +116,6 @@
 
 
 <script>
-    function loadWordsByCategory() {
-        const categoryId = document.getElementById('categorie').value;
-        const columns = document.querySelectorAll('.column');
-
-        // Vider les colonnes avant d'ajouter de nouveaux mots
-        columns.forEach(column => column.innerHTML = '');
-
-        // Appel de l'API avec le bon `categorieId`
-        fetch(`http://127.0.0.1:8080/api/api/getWords.php?categorieId=${categoryId}`)
-            .then(response => response.json())
-            .then(data => {
-                const itemsPerColumn = Math.ceil(data.length / columns.length);  // Nb d'items par colonne
-
-                data.forEach((word, index) => {
-                    const label = document.createElement('label');
-                    const checkbox = document.createElement('input');
-
-                    checkbox.type = 'checkbox';
-                    checkbox.id = word.mot;
-
-                    // Ajoute l'article devant le mot
-                    label.innerHTML = `${word.article} ${word.mot}`;
-                    label.prepend(checkbox);
-
-                    // Répartit équitablement les mots dans les colonnes
-                    const columnIndex = Math.floor(index / itemsPerColumn);
-                    columns[columnIndex].appendChild(label);
-                });
-            })
-            .catch(error => console.error('Erreur lors de l\'appel API:', error));
-    }
-
     // Charger les mots par défaut pour la première catégorie
     document.addEventListener('DOMContentLoaded', loadWordsByCategory);
 </script>
