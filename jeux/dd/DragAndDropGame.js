@@ -32,6 +32,7 @@ export class DragAndDropGame {
       // On charge les mots depuis l'API en utilisant WordManager.
       // La méthode loadWordsFromAPI doit renvoyer un tableau de Word.
       this.wordManager.mots = await this.wordManager.loadWordsFromAPI(this.apiCategoryId);
+      console.log(this.wordManager.mots);
       // Vous pouvez aussi prévoir un fallback sur loadWordsFromFile() en cas d'erreur API
       // if (this.wordManager.mots.length === 0) {
       //   this.wordManager.mots = await this.wordManager.loadWordsFromFile();
@@ -48,14 +49,21 @@ export class DragAndDropGame {
       // Réinitialiser les styles des zones de dépôt
       this.masculin.classList.remove('selected', 'incorrect');
       this.feminin.classList.remove('selected', 'incorrect');
+      console.log(this.errors)
     } else {
-      this.wordBox.textContent = "Fini !";
+      this.wordBox.innerHTML = "<a href='/feedback.html'>Voir mes erreurs</a>";
       this.wordBox.setAttribute('draggable', 'false');
       this.showResults();
     }
   }
 
   showResults() {
+    sessionStorage.setItem('score', this.score);
+    sessionStorage.setItem('errors', JSON.stringify(this.errors));
+
+  }
+
+  showResultsOld() {
     // Effacer d'éventuels résultats précédents
     this.errorTable.innerHTML = '';
     if (this.errors.length > 0) {

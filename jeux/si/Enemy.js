@@ -10,9 +10,9 @@ export class Enemy {
       this.element.style.left = `${Math.random() * 560}px`;
       this.element.style.top = '0px';
 
-      if (this.article === 'le') {
+      if (this.article === 'un') {
           this.element.classList.add('male');
-      } else if (this.article === 'la') {
+      } else if (this.article === 'une') {
           this.element.classList.add('female');
       }
 

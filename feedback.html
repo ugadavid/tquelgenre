@@ -39,12 +39,12 @@
                                     <input name="search" type="text" id="tdb_chercheur" placeholder=" 🔍 Rechercher...">
                                 </div>
                             </form>
-                        <h1> Bienvenue sur ton tableau de bord ! </h1>
+                        <h1> Résultats </h1>
                         </div>
                     </div>
 
                     <div id="tdb_container_avatar"> 
-                        <img src="ressources/avatars_edit/woman_7.png" alt="Avatar apprenant" title="avatar">
+                        <img src="ressources/avatars_edit/woman_1.png" alt="Avatar apprenant" title="avatar">
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
 
         <main>
             <div class="feedback-page">
-                <h1>Zut… tu as fait quelques erreurs.</h1>
+                <h3 class="text-center">Zut… tu as fait quelques erreurs.</h3>
                 <p class="centered-texte">Voici les mots avec leur genre et des exemples :</p>
             
                 <div class="feedback-grid"></div>
@@ -91,8 +91,25 @@
         <script src="feedback.js"></script>
 
         <script>
-            const list = ['391','661','781','947','1099','1631', '88'];
+            //const list = ['391','661','781','947','1099','1631', '88'];
+            const errors = JSON.parse(sessionStorage.getItem('errors'));
+            let list = [];
+            for (let i = 0; i < errors.length; i++) {
+                list.push(parseInt(errors[i].id_mot));
+            }
+
+            //const list = [391,661,781,947,1099,1631, 88];
             document.addEventListener('DOMContentLoaded', loadFeedbackWords(list));
+
+            
+            const nbErrors = errors.length;
+            if (nbErrors === 0) {
+                document.querySelector('.text-center').innerHTML = `Bravo ! Tu n'as fait aucune erreur.`;
+            } else if (nbErrors === 1) {
+                document.querySelector('.text-center').innerHTML = `Zut… tu as fait une erreur.`;
+            } else {
+                document.querySelector('.text-center').innerHTML = `Zut… tu as fait ${errors.length} erreurs.`;
+            }
         </script>
     </body>
 </html>
