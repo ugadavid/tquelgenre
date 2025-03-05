@@ -62,7 +62,7 @@ export class DragAndDropGame {
       this.errors.forEach(word => {
         const row = document.createElement('tr');
         // On calcule le genre en fonction de l'article (par exemple "le" => "masculin", "la" => "féminin")
-        const genre = word.article === 'le' ? 'masculin' : 'feminin';
+        const genre = word.article === 'un' ? 'masculin' : 'feminin';
         row.innerHTML = `<td>${word.texte}</td><td>${genre}</td>`;
         this.errorTable.appendChild(row);
       });
@@ -79,7 +79,7 @@ export class DragAndDropGame {
    */
   validateDrop(targetId) {
     const currentWord = this.wordManager.mots[this.currentIndex];
-    const correctGenre = currentWord.article === 'le' ? 'masculin' : 'feminin';
+    const correctGenre = currentWord.article === 'un' ? 'masculin' : 'feminin';
     return targetId === correctGenre;
   }
 
