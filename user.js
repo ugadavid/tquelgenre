@@ -11,6 +11,17 @@ document.addEventListener('DOMContentLoaded', function() {
             categorieCourante: '',
             categorieCouranteId: '',
             avatar: '',
+            prog: '',
+            enem: '',
+            badg: '',
+            scr1: '',
+            scr2: '',
+            scr3: '',
+            scr4: '',
+            scr5: '',
+            scr6: '',
+            scr7: '',
+            scr8: '',
             mots: []  // Tableau de tableau [id_mot, 'mot', 'genre', nb_correct, nb_incorrect]
         };
     }
@@ -64,6 +75,18 @@ function checkConnection() {
     user.categorieCourante = data.categorieCourante || user.categorieCourante;
     user.categorieCouranteId = data.categorieCouranteId || user.categorieCouranteId;
     user.avatar = data.avatar || user.avatar;
+    user.prog = data.prog || user.prog;
+    user.enem = data.enem || user.enem;
+    user.badg = data.badg || user.badg;
+    user.scr1 = data.scr1 || user.scr1;
+    user.scr2 = data.scr2 || user.scr2;
+    user.scr3 = data.scr3 || user.scr3;
+    user.scr4 = data.scr4 || user.scr4;
+    user.scr5 = data.scr5 || user.scr5;
+    user.scr6 = data.scr6 || user.scr6;
+    user.scr7 = data.scr7 || user.scr7;
+    user.scr8 = data.scr8 || user.scr8;
+    
     user.mots = data.mots || user.mots || [];
     //  user.mots = data.mots || user.mots;
 
@@ -136,6 +159,17 @@ function resetCategorie() {
           categorieCourante: '',
           categorieCouranteId: '',
           avatar: '',
+          prog: '',
+          enem: '',
+          badg: '',
+          scr1: '',
+          scr2: '',
+          scr3: '',
+          scr4: '',
+          scr5: '',
+          scr6: '',
+          scr7: '',
+          scr8: '',
           mots: []
       };
       saveThisUser(user);
@@ -162,6 +196,19 @@ function resetCategorie() {
       debugLog(`Catégorie courante : ${user.categorieCourante}`);
       debugLog(`Catégorie courante id : ${user.categorieCouranteId}`);
       debugLog(`Avatar : ${user.avatar}`);
+      debugLog(`prog : ${user.prog}`);
+      debugLog(`enem : ${user.enem}`);
+      debugLog(`badg : ${user.badg}`);
+      debugLog(`scr1 : ${user.scr1}`);
+      debugLog(`scr2 : ${user.scr2}`);
+      debugLog(`scr3 : ${user.scr3}`);
+      debugLog(`scr4 : ${user.scr4}`);
+      debugLog(`scr5 : ${user.scr5}`);
+      debugLog(`scr6 : ${user.scr6}`);
+      debugLog(`scr7 : ${user.scr7}`);
+      debugLog(`scr8 : ${user.scr8}`);
+      debugLog(`getZeroScoresCount(): ${getZeroScoresCount()}`)
+
       debugLog(`Mots : ${user.mots.length} mots enregistrés`);
       user.mots.forEach(m => debugLog(`Mot: ${m[1]}, Genre: ${m[2]}, Correct: ${m[3]}, Incorrect: ${m[4]}`));
   }
@@ -255,6 +302,148 @@ function getCategorieId() {
 }
 
 
+
+
+function getZeroScoresCount() {
+    const user = getUser();  // Récupère l'utilisateur depuis sessionStorage ou valeurs par défaut
+    let count = 0;  // Compteur pour le nombre de 'scr' contenant "0|0|0"
+
+    // Parcourt toutes les propriétés de l'utilisateur dynamiquement
+    for (const key in user) {
+        // Vérifie si la clé commence par 'scr' et contient exactement '0|0|0'
+        if (key.startsWith('scr') && user[key] === "0|0|0") {
+            count++;  // Incrémente le compteur si la condition est remplie
+        }
+    }
+
+    return count;  // Renvoie le nombre de propriétés correspondant à "0|0|0"
+}
+
+
+
+function getEnemArray() {
+    const user = getUser();  // Récupère l'objet utilisateur
+    const enem = user.enem;   // Récupère la chaîne enem
+
+    // 🛠 Convertit en tableau (enlève les espaces inutiles)
+    const enemArray = enem.split('|').map(e => e.trim());
+
+    return enemArray;  // Renvoie le tableau d'enem
+}
+
+
+function getScorePercentage(src) {
+    if (!src) return 0;  // Sécurité si src est null ou vide
+
+    const parts = src.split('|');  // Divise la chaîne en parties
+    let score = 0;  // Initialise le score
+
+    // 🛠 Parcourt chaque partie du src
+    parts.forEach(part => {
+        if (part !== 'n') {
+            score += 33;  // Chaque chiffre (même 0) vaut 33%
+        }
+    });
+
+    // 🛠 Corrige le score à 100% max (au cas où)
+    return Math.min(score, 100);
+}
+
+
+
+function getScoreErrorsAverage(src) {
+    if (!src) return 0;  // Sécurité si src est null ou vide
+
+    const parts = src.split('|');  // Divise la chaîne en parties
+    let score = 0;  // Initialise le score
+    let i = 0;
+    // 🛠 Parcourt chaque partie du src
+
+    parts.forEach(part => {
+        if (part !== 'n') {
+            i++;
+            score += parseInt(part, 10);
+        }
+    });
+
+    // 🛠 Corrige le score à 100% max (au cas où)
+    if (i>0) {
+        return score/i;
+    }
+    return -1;
+}
+
+
+
+function getScoreMasterClass(scr, nbWordCat) {
+    if (scr === null || scr === undefined || scr === '' || scr === -1) return 'low-section';  // Sécurité si scr est null ou vide
+
+    const errorCount = parseInt(scr, 10) || 0;  // Convertit scr en nombre entier
+    const average = 1 - (errorCount / nbWordCat);  // Calcule l'inverse du ratio d'erreurs
+
+    console.log(`Erreurs: ${errorCount}, Moyenne: ${average}`);
+    if (average)
+
+    // 🛠 Classer selon la moyenne
+    if (average === 1) {
+        return 'high-section';          // 0 erreur → high-section
+    } else if (average >= 0.6) {
+        return 'medium-section';        // Entre 60% et 99% → medium-section
+    } else {
+        return 'low-section';           // Moins de 60% → low-section
+    }
+}
+
+
+function getScrArray() {
+    const user = getUser();  // Récupère l'objet utilisateur
+    return [user.scr1, user.scr2, user.scr3, user.scr4, user.scr5, user.scr6, user.scr7, user.scr8];
+}
+
+function getBadges() {
+    return getUser().badg;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // Message initial
   debugLog('Gestion des utilisateurs prête !');
   
@@ -280,4 +469,11 @@ function getCategorieId() {
   window.saveUser = saveUser;
   window.vireTout = vireTout;
   window.getCategorieId = getCategorieId;
+  window.getZeroScoresCount = getZeroScoresCount;
+  window.getEnemArray = getEnemArray;
+  window.getScorePercentage = getScorePercentage;
+  window.getScrArray = getScrArray;
+  window.getScoreErrorsAverage = getScoreErrorsAverage;
+  window.getScoreMasterClass = getScoreMasterClass;
+  window.getBadges = getBadges;
 });

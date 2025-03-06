@@ -76,25 +76,32 @@
                 <h2> Scores </h2>
 
                 <div class="tdb_graphique_scores">
-                    <div class="container">
+                    <div class="container-score">
                         <div class="legend">
                             <div><span class="low"></span>A retravailler</div>
                             <div><span class="medium"></span>Moyenne</div>
                             <div><span class="high"></span>Maîtrise</div>
                         </div>
                         <div class="bars-wrapper">
-                            <div class="bar-container"><div class="label">Les vêtements</div>
-                            <div class="bar"><div class="section high-section" style="width: 10%;"></div></div></div>
                             <div class="bar-container"><div class="label">La famille</div>
-                            <div class="bar"><div class="section medium-section" style="width: 60%;"></div></div></div>
-                            <div class="bar-container"><div class="label">Les courses</div>
-                            <div class="bar"><div class="section low-section" style="width: 40%;"></div></div></div>
-                            <div class="bar-container"><div class="label">Les sentiments</div>
-                            <div class="bar"><div class="section high-section" style="width: 80%;"></div></div></div>
-                            <div class="bar-container"><div class="label">La technologie</div>
-                            <div class="bar"><div class="section medium-section" style="width: 70%;"></div></div></div>
+                            <div class="bar"><div class="section" style="width: 60%;"></div></div></div>
+                            <div class="bar-container"><div class="label">L'amour</div>
+                            <div class="bar"><div class="section" style="width: 60%;"></div></div></div>
+                            <div class="bar-container"><div class="label">Le corps</div>
+                            <div class="bar"><div class="section" style="width: 60%;"></div></div></div>
+                            <div class="bar-container"><div class="label">La santé</div>
+                            <div class="bar"><div class="section" style="width: 60%;"></div></div></div>
+                            <div class="bar-container"><div class="label">Les vêtements</div>
+                            <div class="bar"><div class="section" style="width: 10%;"></div></div></div>
+                            <div class="bar-container"><div class="label">la cuisine</div>
+                            <div class="bar"><div class="section" style="width: 40%;"></div></div></div>
+                            <div class="bar-container"><div class="label">La météo</div>
+                            <div class="bar"><div class="section" style="width: 100%;"></div></div></div>
+                            <div class="bar-container"><div class="label">Le tourisme</div>
+                            <div class="bar"><div class="section" style="width: 70%;"></div></div></div>
                         </div>
                         <div class="pourcent">
+                          
                           <div>0</div>
                           <div>20</div>
                           <div>40</div>
@@ -163,30 +170,7 @@
                 <h2> Tes ennemis jurés </h2>
                 <p>Voici le top 5 des mots qui te résistent le plus, ceux avec lesquels tu as des difficultés. 🤺</br></p>
                 <div class="tdb_erreurs_container">
-                    <div>
-                        <img src="ressources/ennemies/demon.png" alt="Image 'personnage" title="Personnage 1">
-                        <p class="tdb_ej_feminin"> Erreur </p>
-                    </div>
-
-                    <div>
-                        <img src="ressources/ennemies/cyclops.png" alt="Image 'personnage" title="Personnage 2">
-                        <p class="tdb_ej_masculin"> Doute </p>
-                    </div>
-
-                    <div>
-                        <img src="ressources/ennemies/ghost.png" alt="Image 'personnage" title="Personnage 3">
-                        <p class="tdb_ej_masculin"> Mexique </p>
-                    </div>
-
-                    <div>
-                        <img src="ressources/ennemies/evil_2.png" alt="Image 'personnage" title="Personnage 4">
-                        <p class="tdb_ej_feminin"> Horloge </p>
-                    </div>
-
-                    <div>
-                        <img src="ressources/ennemies/evil_3.png" alt="Image 'personnage" title="Personnage 5">
-                        <p class="tdb_ej_masculin"> Ecran </p>
-                    </div>
+                    
                 </div>
             </section>
 
@@ -257,6 +241,101 @@ tout en t'appuyant sur les acquis précédents. Bonne exploration ! 🚀
             window.addEventListener('DOMContentLoaded', function() {                
                 showUser();            // Affiche l'utilisateur dans la fenêtre de debug
                 checkConnection();     // Vérifie si l'utilisateur est connecté
+
+
+                let zuser = getUser();
+                
+                const scoreCount = getZeroScoresCount();  // Récupère le nombre de '0|0|0'
+                const avatarImg = document.querySelector('#tdb_container_avatar img');  // Sélectionne l'image de l'avatar
+
+                // 🛠 Détermine le numéro d'avatar selon le score
+                const avatarIndex = Math.min(scoreCount, 5);  // Limite l'index max à 5
+                avatarImg.src = `ressources/avatars_edit/woman_${avatarIndex}.png`;  // Concatène dynamiquement
+
+                // 🛠 Exemple d'utilisation :
+                const enemArray = getEnemArray();
+                console.log(enemArray);
+                
+
+
+                
+                const enemContainer = document.querySelector('.tdb_erreurs_container');  // Sélectionne le conteneur vide
+
+                // Vider le conteneur au cas où
+                enemContainer.innerHTML = '';
+
+                // 🛠 Remplir le conteneur dynamiquement
+                enemArray.forEach((enem, index) => {
+                    const enemDiv = document.createElement('div');  // Crée un <div> pour chaque ennemi
+                    const img = document.createElement('img');      // Crée l'image
+                    const p = document.createElement('p');          // Crée le <p> pour le nom
+
+                    // 🛠 Configurer l'image dynamiquement
+                    img.src = `ressources/ennemies/evil_${index + 1}.png`;  // Images nommées evil_1.png, evil_2.png, ...
+                    img.alt = `Image 'personnage ${index + 1}'`;
+                    img.title = `Personnage ${index + 1}`;
+
+                    // 🛠 Configurer le texte
+                    p.textContent = enem;
+                    p.className = 'tdb_ej_masculin';
+
+                    // 🛠 Ajouter l'image et le <p> dans le <div>
+                    enemDiv.appendChild(img);
+                    enemDiv.appendChild(p);
+
+                    // 🛠 Ajouter le <div> dans le conteneur
+                    enemContainer.appendChild(enemDiv);
+                });
+
+                // 🛠 Mettre à jour le texte du <p> d'intro avec le nombre d'ennemis
+                const introParagraph = document.querySelector('.tdb_section_erreurs p');
+                introParagraph.innerHTML = `Voici le top ${enemArray.length} des mots qui te résistent le plus, ceux avec lesquels tu as des difficultés. 🤺</br>`;
+
+
+
+                
+                
+
+
+
+                //  Srcs
+                const scrArray = getScrArray();  // Récupère tous les scrs dans un tableau
+                const bars = document.querySelectorAll('.bar .section');  // Sélectionne toutes les sections des barres
+                const totalWords = [45, 31, 28, 29, 52, 80, 12, 47];
+                let y = 0;
+
+                // 🛠 Parcourt chaque score et chaque barre
+                scrArray.forEach((scr, index) => {
+                    if (bars[index]) {  // Vérifie qu'il y a bien une barre correspondante
+                        const percentage = getScorePercentage(scr);  // Calcule le pourcentage pour chaque scr
+                        bars[index].style.width = `${percentage}%`;  // Met à jour la largeur de la barre
+                        bars[index].classList.add(getScoreMasterClass(scr, totalWords[y]));
+                    }
+                    //console.log(`yop:  ${getScoreErrorsAverage(scr)}`);
+                    //console.log(`yip: ${getScoreMasterClass(scr, totalWords[y])}`);
+                    y++;
+                });
+
+
+
+
+                //  Badges
+                //console.log(getBadges());
+                const badges = document.querySelectorAll('.tdb_badges_container1 img, .tdb_badges_container2 img');  // Sélectionne toutes les images de badges
+                const bitfield = getBadges();
+
+                badges.forEach((badge, index) => {
+                    const badgeBit = 1 << index;  // Calcule la valeur du bit pour ce badge (2^index)
+                    
+                    if ((bitfield & badgeBit) !== 0) {  // Vérifie si le bit est activé
+                        badge.src = badge.src.replace('_off', '_on');  // Active le badge
+                    } else {
+                        badge.src = badge.src.replace('_on', '_off');  // Désactive le badge
+                    }
+                });
+
+                
+                            
             });
         </script>
     </body>
