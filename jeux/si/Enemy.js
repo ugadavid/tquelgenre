@@ -1,6 +1,7 @@
 export class Enemy {
-  constructor(texte, article, gameContainer) {
+  constructor(texte, id_mot, article, gameContainer) {
       this.texte = texte;
+      this.id_mot = id_mot;
       this.article = article;
       this.element = document.createElement('div');
       this.element.classList.add('enemy');

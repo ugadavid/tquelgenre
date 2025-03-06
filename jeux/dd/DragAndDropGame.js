@@ -49,7 +49,7 @@ export class DragAndDropGame {
       // Réinitialiser les styles des zones de dépôt
       this.masculin.classList.remove('selected', 'incorrect');
       this.feminin.classList.remove('selected', 'incorrect');
-      console.log(this.errors)
+      console.log(this.errors);
     } else {
       this.wordBox.innerHTML = "<a href='/feedback.html'>Voir mes erreurs</a>";
       this.wordBox.setAttribute('draggable', 'false');

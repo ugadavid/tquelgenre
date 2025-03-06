@@ -7,9 +7,11 @@ let user = sessionStorage.getItem('user');
 if (user) {
     user = JSON.parse(user);
 }
-let categorieId = user.categorieCouranteId;
+//let categorieId = user.categorieCouranteId;
+let categorieId = parseInt(user.categorieCouranteId, 10);  // Le 10 précise qu'on est en base décimale
 
-console.log('TOTO');
+
+//console.log(categorieId)
 
 let file = 'text.txt';
 switch (categorieId) {

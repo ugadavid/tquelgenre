@@ -32,6 +32,7 @@ export class Game {
 
         this.enemyManager.init().then(() => {
             console.log("Mots chargés, démarrage du spawn.");
+            //console.log(this.enemyManager.wordList);
             this.enemyManager.startSpawning();
             this.loop();
         }).catch((error) => {
@@ -70,6 +71,62 @@ export class Game {
         document.getElementById('level').textContent = `Level: 1`;
         document.getElementById('pause-overlay').style.display = 'none';
     }
+
+    // Méthode pour gérer la fin du jeu
+    endGame() {
+        this.running = false;
+        this.paused = false;
+    
+        // Arrêter le spawn des ennemis
+        this.enemyManager.reset();
+    
+        // Sauvegarder les erreurs dans sessionStorage s'il y en a
+        if (this.enemyManager.errors.length > 0) {
+            sessionStorage.setItem('errors', JSON.stringify(this.enemyManager.errors));
+        } else {
+            sessionStorage.removeItem('errors');  // Nettoyer les erreurs précédentes s'il n'y en a plus
+        }
+    
+        // Créer le message de fin
+        const endMessage = document.createElement("div");
+        endMessage.textContent = `Ton score est de ${this.score}`;
+        endMessage.style.position = "absolute";
+        endMessage.style.top = "50%";
+        endMessage.style.left = "50%";
+        endMessage.style.transform = "translate(-50%, -50%)";
+        endMessage.style.backgroundColor = "#fff";
+        endMessage.style.padding = "20px";
+        endMessage.style.border = "2px solid #000";
+        endMessage.style.zIndex = "100";
+        endMessage.setAttribute("id", "end-message");
+    
+        // Bouton pour rejouer
+        const replayButton = document.createElement("button");
+        replayButton.textContent = "Rejouer";
+        replayButton.style.marginTop = "10px";
+        replayButton.onclick = () => {
+            endMessage.remove();
+            this.stop(); // Réinitialiser le jeu
+            this.start(); // Redémarrer le jeu
+        };
+        endMessage.appendChild(replayButton);
+    
+        // Ajouter un lien vers la page feedback s'il y a des erreurs
+        if (this.enemyManager.errors.length > 0) {
+            const feedbackLink = document.createElement("a");
+            feedbackLink.textContent = "Voir le feedback";
+            feedbackLink.href = "/feedback.html";
+            feedbackLink.style.display = "block";
+            feedbackLink.style.marginTop = "10px";
+            feedbackLink.style.textAlign = "center";
+            endMessage.appendChild(feedbackLink);
+        }
+    
+        document.body.appendChild(endMessage);
+        console.log("Le jeu est terminé !");
+    }
+    
+
 
     // Méthode de boucle de jeu
     loop() {

@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <link href="styleboard_ok.css" rel="stylesheet">
         <link rel="stylesheet" href="stylefeedback.css">
-        <script src="debug_off.js" defer></script>
+        <script src="debug.js" defer></script>
         <script src="user.js" defer></script>
         <script src="modal.js" defer></script>
         <script src="search.js" defer></script>
@@ -93,14 +93,30 @@
         <script>
             //const list = ['391','661','781','947','1099','1631', '88'];
             const errors = JSON.parse(sessionStorage.getItem('errors'));
+            //console.log("==Errors==");
+            //console.log(errors);
+            //console.log("=/Errors==");
+            
             let list = [];
-            for (let i = 0; i < errors.length; i++) {
-                list.push(parseInt(errors[i].id_mot));
+            if (errors[0].articleCorrect) {
+                //console.log("cas TT");
+                for (let i = 0; i < errors.length; i++) {
+                    list.push(errors[i].texte);
+                }
+                //console.log(list);
+                document.addEventListener('DOMContentLoaded', loadFeedbackWords2(list));
+            } else {
+                //console.log("Cas DD & SI");
+                for (let i = 0; i < errors.length; i++) {
+                    list.push(parseInt(errors[i].id_mot));
+                }
+                //const list = [391,661,781,947,1099,1631, 88];
+                document.addEventListener('DOMContentLoaded', loadFeedbackWords(list));
+
             }
+            
 
-            //const list = [391,661,781,947,1099,1631, 88];
-            document.addEventListener('DOMContentLoaded', loadFeedbackWords(list));
-
+            
             
             const nbErrors = errors.length;
             if (nbErrors === 0) {

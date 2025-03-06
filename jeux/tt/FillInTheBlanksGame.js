@@ -244,25 +244,28 @@ export class FillInTheBlanksGame {
 
   // Affiche les résultats dans une overlay en listant les erreurs (les réponses incorrectes)
   showResults() {
-    // Supposons que dans le HTML, une overlay avec l'id "result-overlay"
-    // et un tableau (ex. <tbody>) avec l'id "error-table" soient présents
-    const overlay = document.getElementById('result-overlay');
-    const errorTable = document.getElementById('error-table');
-    errorTable.innerHTML = '';
-
-    // Récupérer les mots pour lesquels la réponse de l'utilisateur est incorrecte
+    // 🟢 1. Enregistrer les erreurs dans sessionStorage
     const errors = this.allWords.filter(word => word.userResponse !== word.article);
-    errors.forEach(word => {
-      const row = document.createElement('tr');
-      // Affichage du mot, de la bonne réponse et de la réponse donnée (ou "-" si aucune réponse)
-      row.innerHTML = `<td>${word.texte}</td>
-                       <td>${word.article}</td>
-                       <td>${word.userResponse ? word.userResponse : '-'}</td>`;
-      errorTable.appendChild(row);
-    });
-    if (errors.length === 0) {
-      errorTable.innerHTML = '<tr><td colspan="3">Aucune erreur !</td></tr>';
-    }
+    const errorsToStore = errors.map(word => ({
+        texte: word.texte,
+        articleCorrect: word.article,
+        articleUtilisateur: word.userResponse || '-'
+    }));
+    sessionStorage.removeItem('errors');
+    sessionStorage.setItem('errors', JSON.stringify(errorsToStore));
+
+    // 🟢 2. Afficher l'overlay
+    const overlay = document.getElementById('result-overlay');
     overlay.style.display = 'flex';
-  }
+    
+    // 🟢 3. Remplacer le contenu de l'overlay par un lien vers /feedback.html
+    overlay.innerHTML = `
+        <div style="text-align: center;">
+            <h2>Résultats</h2>
+            <p>Vous pouvez consulter vos erreurs en détail.</p>
+            <a href="/feedback.html" style="text-decoration: none; color: #fff; background-color: #4A90E2; padding: 10px 20px; border-radius: 5px;">Voir le feedback</a>
+        </div>
+    `;
+}
+
 }

@@ -7,10 +7,13 @@ export class EnemyManager {
         this.game = game;
         this.enemies = [];
         this.wordList = [];
+        this.errors = [];
         this.wm = new WordManager();
         this.enemySpeed = 1;
         this.sound = new Sound();
         this.gameContainer = document.getElementById("game-container")
+        this.usedWordsCount = 0;  // Compteur de mots utilisés
+        this.usedWords = new Set();  // Un Set pour éviter les doublons automatiquement
         //alert(this.gameContainer);
     }
 
@@ -28,6 +31,9 @@ export class EnemyManager {
         this.wordList = await this.wm.loadWordsFromAPI(categorieId);
         if (!this.wordList || this.wordList.length === 0) {
             console.warn("Aucun mot n'a été chargé.");
+            //  For debug only
+        } else {
+            console.log(this.wordList);
         }
     }
 
@@ -44,14 +50,36 @@ export class EnemyManager {
             console.warn('Liste de mots vide. Aucun ennemi ne sera généré.');
             return;
         }
-
-        const randomIndex = Math.floor(Math.random() * this.wordList.length);
-        const { texte, article } = this.wordList[randomIndex];
-
+    
+        if (this.usedWords.size >= this.wordList.length) {
+            console.log("Tous les mots ont été utilisés !");
+            this.game.endGame();
+            return;
+        }
+    
+        let randomIndex;
+        let selectedWord;
+    
+        // Tirer un mot non utilisé
+        do {
+            randomIndex = Math.floor(Math.random() * this.wordList.length);
+            selectedWord = this.wordList[randomIndex];
+        } while (this.usedWords.has(selectedWord.id_mot));
+    
+        const { texte, id_mot, article } = selectedWord;
+    
+        // Marquer le mot comme utilisé
+        this.usedWords.add(id_mot);
+        this.usedWordsCount = this.usedWords.size;  // Mettre à jour le compteur
+    
         // Créer un nouvel ennemi
-        const newEnemy = new Enemy(texte, article, document.getElementById('game-container'));
+        const newEnemy = new Enemy(texte, id_mot, article, document.getElementById('game-container'));
         this.enemies.push(newEnemy);
     }
+    
+
+    
+    
 
     // Méthode pour mettre à jour la position des ennemis
     update() {
@@ -111,7 +139,22 @@ export class EnemyManager {
                         this.enemies.splice(enemyIndex, 1);
                         bullets.splice(bulletIndex, 1);
                         this.sound.play(3);
+                    } else {
+                        //  Ici je gère les erreurs :D
+                        // Récupérer l'objet mot complet depuis this.wordList
+                        const motErreur = this.wordList.find(mot => mot.id_mot === enemy.id_mot);
+
+                        if (motErreur && !this.errors.some(mot => mot.id_mot === motErreur.id_mot)) {
+                            this.errors.push(motErreur);  // Sauvegarder l'objet complet
+                        }
+                        
+                        console.log(this.errors)
+                        updateScoreCallback(-5);
+                        bullet.remove();
+                        bullets.splice(bulletIndex, 1);
+                        this.sound.play(4);
                     }
+
                 }
             });
         });

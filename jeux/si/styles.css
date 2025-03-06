@@ -126,7 +126,7 @@
 #pause-overlay {
   display: none;
   position: absolute;
-  top: 25%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -142,7 +142,7 @@
 #controls-config {
   display: none;
   position: absolute;
-  top: 10%;
+  top: 42%;
   left: 40%;
   background: rgba(0, 0, 0, 0.8);
   color: white;
