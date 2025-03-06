@@ -85,7 +85,7 @@ function loadFeedbackWords(list) {
 function loadFeedbackWords2(list) {
 
     // Appel à l'API en `POST` avec un JSON
-    fetch('http://127.0.0.1:8080/api/api/api.php?action=sentencesWord', {
+    fetch('https://tqgapi.skys.fr/api/api/api.php?action=sentencesWord', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ list })
