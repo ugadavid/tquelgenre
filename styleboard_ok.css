@@ -607,7 +607,7 @@ main {
     }
 
     .tdb_container_boutons {
-        width: 211px;       /*Un cinquième de 1366*/
+        width: 221px;       /*Un cinquième de 1366*/
         height: 28px;
 
         display: flex;
@@ -616,7 +616,6 @@ main {
         gap: 2em;
 
         position: relative;
-
         border-radius: 8px;
         cursor: pointer;
         background-color: #F4A633;
@@ -642,7 +641,7 @@ main {
 
             #tdb_image_redemarrer {     /*BOUTON BIZARRE QUI NE FONTIONNE PAS COMME LES AUTRES*/
                 position: relative;
-                left: -20px; 
+                left: 18px; 
             }
 
 
