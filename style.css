@@ -64,6 +64,7 @@ body {
 .main .content {
     width: 60%; 
     margin-top: -40px;
+    margin-left: 20px;
 }
 .main .image {
     display: flex;
