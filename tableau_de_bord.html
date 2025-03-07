@@ -5,10 +5,11 @@
         <meta charset="utf-8">
         <link href="styleboard_ok.css" rel="stylesheet">
         <link href="scores.css" rel="stylesheet">
-        <script src="debug.js" defer></script>
+        <script src="debug_off.js" defer></script>
         <script src="user.js" defer></script>
         <script src="modal.js" defer></script>
         <script src="search.js" defer></script>
+        <script src="hardcode.js"></script>
     </head>
 
     <body>
@@ -205,18 +206,18 @@ tout en t'appuyant sur les acquis précédents. Bonne exploration ! 🚀
             <section class="tdb_section_jouer">
                 <div id="tdb_all_botons">
                     <div class="tdb_container_boutons">
-                        <a href="" class="bouton"> Continuer progrès  </a>
-                        <img src="ressources/icones_bouton/continuer.png" alt="Bouton pour continuer" title="Continuer">
+                        <a href="jeux.html" class="bouton"> Continuer progrès  </a>
+                        <img src="ressources/icones_bouton/continuer.png" alt="continuer" title="Continuer">
                     </div>
                 
                     <div class="tdb_container_boutons">
-                        <a href="" class="bouton"> Choisir catégorie </a>
-                        <img src="ressources/icones_bouton/choisir.png" alt="Bouton pour choisir catégorie" title="Choisir">
+                        <a href="categorie.html" class="bouton"> Choisir catégorie </a>
+                        <img src="ressources/icones_bouton/choisir.png" alt="choisir catégorie" title="Choisir">
                     </div>
                     
                     <div class="tdb_container_boutons">
-                        <a href=""  class="bouton"> Redémarrer </a>
-                        <img src="ressources/icones_bouton/redemarrer.png" id="tdb_image_redemarrer" alt="Bouton pour redémarrer" title="Redémarrer">
+                        <a href="jeux.html" class="bouton"> Redémarrer </a>
+                        <img src="ressources/icones_bouton/redemarrer.png" id="tdb_image_redemarrer" alt="redémarrer" title="Redémarrer">
                     </div>
                 </div>
             </section>
@@ -318,10 +319,15 @@ tout en t'appuyant sur les acquis précédents. Bonne exploration ! 🚀
 
 
 
+                //  A appeler à chaque obtention d'un badge !!TODO!!
+                //UserHardCode.addBadgeToUser('david@uga.fr', 'streak_2');
+                
 
                 //  Badges
                 //console.log(getBadges());
                 const badges = document.querySelectorAll('.tdb_badges_container1 img, .tdb_badges_container2 img');  // Sélectionne toutes les images de badges
+
+            setTimeout(() => {
                 const bitfield = getBadges();
 
                 badges.forEach((badge, index) => {
@@ -333,6 +339,9 @@ tout en t'appuyant sur les acquis précédents. Bonne exploration ! 🚀
                         badge.src = badge.src.replace('_on', '_off');  // Désactive le badge
                     }
                 });
+            }, 300);
+
+                
 
                 
                             

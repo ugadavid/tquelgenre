@@ -404,6 +404,34 @@ function getBadges() {
     return getUser().badg;
 }
 
+function addBadge(badgeName) {
+    let user = getUser();
+    let badgeNum = getBadgeNum(badgeName);
+    user.badg = user.badg | (1 << (badgeNum - 1));
+    saveThisUser(user);
+}
+
+function getBadgeNum(badgeName) {
+    switch(badgeName) {
+        case 'debutant_curieux':
+            return 1;
+        case 'flash_learner':
+            return 2;
+        case 'streak_2':
+            return 3;
+        case 'tetu_vanqueur':
+            return 4;
+        case 'streak_7':
+            return 5;
+        case 'expert_a1':
+            return 6;
+        case 'streak_14':
+            return 7;
+        default:
+            return 0;
+    }
+}
+
 
 
 
@@ -476,4 +504,5 @@ function getBadges() {
   window.getScoreErrorsAverage = getScoreErrorsAverage;
   window.getScoreMasterClass = getScoreMasterClass;
   window.getBadges = getBadges;
+  window.addBadge = addBadge;
 });
