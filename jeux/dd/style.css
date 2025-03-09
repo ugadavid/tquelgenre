@@ -7,6 +7,20 @@
   background-color: #f4f4f4;
   flex-direction: column;
 }*/
+
+html, body{
+  justify-content: center; /* Centre verticalement les enfants */
+  min-height: 100vh;      /* Prend toute la hauteur de la page */
+}
+
+
+main {
+  display: flex;
+  flex-direction: column; /* Organise les enfants en colonne */
+  align-items: center;    /* Centre horizontalement les enfants */
+  background-color: #f0f0f0; /* Optionnel : couleur de fond légère */
+  padding: 20px;          /* Optionnel : espace autour du contenu */
+}
 .counter {
   font-size: 1.5em;
   margin-bottom: 20px;
