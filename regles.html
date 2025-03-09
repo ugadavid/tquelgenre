@@ -519,6 +519,14 @@
         window.addEventListener('DOMContentLoaded', function() {                
             showUser();            // Affiche l'utilisateur dans la fenêtre de debug
             checkConnection();     // Vérifie si l'utilisateur est connecté
+
+            //  Avatar
+            const scoreCount = getZeroScoresCount();  // Récupère le nombre de '0|0|0'
+            const avatarImg = document.querySelector('#tdb_container_avatar img');  // Sélectionne l'image de l'avatar
+
+            // 🛠 Détermine le numéro d'avatar selon le score
+            const avatarIndex = Math.min(scoreCount, 5);  // Limite l'index max à 5
+            avatarImg.src = `ressources/avatars_edit/woman_${avatarIndex}.png`;  // Concatène dynamiquement
         });
     </script>
     </body>

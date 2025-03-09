@@ -1,9 +1,12 @@
+import { Sound } from './Sound.js';
+
 let currentTextIndex = 0;
 let texts = [];
 let totalAnswers = 0;
 let correctAnswers = 0;
 let categoryTitle = '';
 const userResponses = {};
+let sound = new Sound();
 
 // Fonction pour charger le fichier texte
 async function loadTexts() {

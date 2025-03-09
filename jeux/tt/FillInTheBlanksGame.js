@@ -1,6 +1,7 @@
 // FillInTheBlanksGame.js
 import { Word } from '../common/Word.js';
 import { WordManager } from '../common/WordManager.js';
+import { Sound } from './Sound.js';
 
 // Fonction utilitaire pour mélanger un tableau
 function shuffleArray(array) {
@@ -21,6 +22,7 @@ export class FillInTheBlanksGame {
     this.correctAnswers = 0;
     this.categoryTitle = '';
     this.userResponses = {}; // Enregistrement des réponses de l'utilisateur
+    this.sound = new Sound();
 
     // Pour accumuler les objets Word de tous les textes
     this.allWords = [];
@@ -181,6 +183,7 @@ export class FillInTheBlanksGame {
         if (target.value === correctAnswer) {
           if (!target.classList.contains('correct')) {
             this.correctAnswers++;
+            this.sound.play(1);
           }
           target.classList.remove('incorrect');
           target.classList.add('correct');
@@ -190,6 +193,7 @@ export class FillInTheBlanksGame {
           }
           target.classList.remove('correct');
           target.classList.add('incorrect');
+          this.sound.play(2);
         }
         this.updateScore();
       });

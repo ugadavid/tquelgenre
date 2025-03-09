@@ -17,38 +17,14 @@
             <div id="tdb_header1_all">
                 <div class="tdb_header1">
                     <a href="index.html"> <img src="ressources/logo.png" alt="Logo TQG" title="Logo" class="tdb_logo"> </a>
-                    <div>
-                        <a href="javascript:void(0);" onclick="openModal('popup_profile.html')">Mon profil</a>
-                        <a href="javascript:void(0);" onclick="resetUser()"> Déconnexion </a>
+                    <div class="menu" id="menu">
+                        <a href="javascript:void(0);" onclick="openModal('popup_inscription.html')">S'inscrire</a>
+                        <a href="javascript:void(0);" onclick="openModal('popup_connexion.html')">S'identifier</a>
                     </div>
                 </div>
             </div>
 
-            <div id="tdb_header_anderson_all">
-                <div id="tdb_header_anderson">
-                    <div class="tdb_header2">
-                        <nav>
-                            <a href="tableau_de_bord.html"> 📊Tableau de bord </a>
-                            <a href="categorie.html"> 🧮Catégories </a>
-                            <a href="jeux.html"> 🕹️Jeux </a>
-                            <a href="regles.html"> 📚Ressources </a>
-                        </nav>
-
-                        <div class="tdb_header2-B">
-                            <form id="search_form" action="recherche.html">
-                                <div class="tdb_chercheur-container">
-                                    <input name="search" type="text" id="tdb_chercheur" placeholder=" 🔍 Rechercher...">
-                                </div>
-                            </form>
-                            <h1> Mentions légales </h1>
-                        </div>
-                    </div>
-
-                    <div id="tdb_container_avatar"> 
-                        <img src="ressources/avatars_edit/woman_7.png" alt="Avatar apprenant" title="avatar">
-                    </div>
-                </div>
-            </div>
+            
         </header>
 
 
@@ -60,13 +36,13 @@
     
     <div>
         <h2 class="h2-left">1. Présentation du site</h2>
-        <p>Nom du site : tquelgenre.org<br/>
+        <p class="text-left">Nom du site : tquelgenre.org<br/>
           Responsable de la publication : Anderson Carillo<br/>
           Contact : contact@tquelgenre.org<br/>
           Hébergeur : GitHub Pages</p>
           
           <h2 class="h2-left">2. Conditions générales d'utilisation</h2>
-          <p><b>Public cible</b> : Le site s'adresse principalement aux élèves souhaitant améliorer leur maîtrise du genre grammatical en français.<br/>
+          <p class="text-left"><b>Public cible</b> : Le site s'adresse principalement aux élèves souhaitant améliorer leur maîtrise du genre grammatical en français.<br/>
           <u>Inscription et accès</u> :<br/>
           
           L'inscription est obligatoire mais gratuite pour accéder à l'ensemble des fonctionnalités du site.<br/>
@@ -80,15 +56,14 @@
           En cas de non-respect, le compte utilisateur pourra être suspendu ou supprimé sans préavis.</p>
           
           <h2 class="h2-left">3. Description des services fournis</h2>
-          <u>Le site tquelgenre.org propose</u> :
-          
-          <p>Trois jeux interactifs pour apprendre le genre grammatical des mots de la langue française.<br/>
+          <p class="text-left"><u>Le site tquelgenre.org propose</u> :<br/>
+          Trois jeux interactifs pour apprendre le genre grammatical des mots de la langue française.<br/>
           Un suivi de progression personnalisé permettant d'adapter les exercices.<br/>
           Des fonctionnalités de personnalisation pour un apprentissage optimisé.<br/>
           Une page dédiée aux feedbacks pour améliorer continuellement les services.</p>
           
           <h2 class="h2-left">4. Limitations contractuelles sur les données techniques</h2>
-          <p><u>Technologies utilisées</u> :<br/>
+          <p class="h2-left"><u>Technologies utilisées</u> :<br/>
           
           Frontend : HTML, CSS, JavaScript.<br/>
           Backend : PHP et MySQL.<br/>
@@ -97,14 +72,14 @@
           L'utilisation de versions obsolètes peut entraîner des dysfonctionnements partiels ou complets.</p>
           
           <h2 class="h2-left">5. Propriété intellectuelle et contrefaçons</h2>
-          <p><u>Contenus protégés</u> :<br/>
+          <p class="h2-left"><u>Contenus protégés</u> :<br/>
           Tous les textes, images, logos, et ressources disponibles sur le site sont protégés par le droit d'auteur. Les références et crédits des ressources externes sont listés sur la page "Crédits et sources".<br/>
           
           Licence du site :<br/>
           Le contenu du site n'est pas encore sous licence libre. Toute reproduction ou exploitation non autorisée est interdite.</p>
           
           <h2 class="h2-left">6. Limitations de responsabilité</h2>
-          <p><u>Services tiers</u> :<br/>
+          <p class="h2-left"><u>Services tiers</u> :<br/>
           Le site n'inclut aucun lien vers des services tiers externes susceptibles d'influencer les données ou le contenu affiché.<br/>
           
           <u>Utilisation pédagogique</u> :<br/>
@@ -114,7 +89,7 @@
           Le site peut être temporairement inaccessible pour des raisons de maintenance technique. L'administrateur s'efforcera de communiquer à l'avance les périodes d'indisponibilité.</p>
           
           <h2 class="h2-left">7. Gestion des données personnelles</h2>
-          <p><u>Données collectées</u> :<br/>
+          <p class="h2-left"><u>Données collectées</u> :<br/>
           
           Prénom<br/>
           Adresse e-mail<br/>
@@ -131,7 +106,7 @@
           Conformément à la loi “Informatique et Libertés”, tout utilisateur peut exercer son droit d'accès, de rectification ou de suppression de ses données en envoyant une demande à l'adresse e-mail indiquée ci-dessus.</p>
           
           <h2 class="h2-left">8. Liens hypertextes et cookies</h2>
-          <p><u>Liens externes</u> :<br/>
+          <p class="h2-left"><u>Liens externes</u> :<br/>
           Le site peut contenir des liens vers des ressources pédagogiques externes pertinentes. Cependant, tquelgenre.org ne saurait être tenu responsable du contenu de ces sites tiers.<br/>
           
           Cookies :<br/>
@@ -141,11 +116,11 @@
           Ces sessions sont supprimées automatiquement à la fermeture du navigateur.</p>
           
           <h2 class="h2-left">9. Droit applicable et attribution de juridiction</h2>
-          <p>Les présentes mentions légales sont régies par le droit français.<br/>
+          <p class="h2-left">Les présentes mentions légales sont régies par le droit français.<br/>
           En cas de litige, et à défaut de résolution amiable, les tribunaux compétents de Grenoble seront seuls habilités à juger.</p>
           
           <h2 class="h2-left">10. Lexique</h2>
-          <p>Frontend : Ensemble des technologies utilisées pour afficher les pages web (HTML, CSS, JavaScript).<br/>
+          <p class="h2-left">Frontend : Ensemble des technologies utilisées pour afficher les pages web (HTML, CSS, JavaScript).<br/>
           Backend : Partie du site qui traite les données sur le serveur (PHP, MySQL).<br/>
           Session : Fichier temporaire stocké sur le serveur permettant de conserver des informations sur l'utilisateur durant sa visite.<br/>
           RGPD (Règlement Général sur la Protection des Données) : Règlement européen visant à protéger les données personnelles des utilisateurs.</p>
@@ -165,6 +140,24 @@
     </div>
 
 
-        <script src="scriptboard.js"></script>
+
+        <script>
+            window.addEventListener('DOMContentLoaded', function() {                
+                showUser();            // Affiche l'utilisateur dans la fenêtre de debug
+                
+                //  Menu principal
+                const menu = document.getElementById("menu");
+                if (isConnected()) {
+                    menu.innerHTML = `
+                        <a href="tableau_de_bord.html">Tableau de bord</a>
+                        <a href="categorie.html">Catégories</a>
+                        <a href="jeux.html">Jeux</a>
+                        <a href="regles.html">Ressources</a>
+                        <a href="javascript:void(0);" onclick="openModal('popup_profile.html')">Mon profil</a>
+                        <a href="javascript:void(0);" onclick="resetUser()">Déconnexion</a>
+                    `;
+                }
+            });
+        </script>
     </body>
 </html>

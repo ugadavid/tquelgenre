@@ -1,5 +1,7 @@
 // DragAndDropGame.js
 import { WordManager } from '../common/WordManager.js';
+import { Sound } from './Sound.js';
+
 export class DragAndDropGame {
   constructor(apiCategoryId) {
     // Gestionnaire de mots qui utilisera l'API
@@ -11,6 +13,7 @@ export class DragAndDropGame {
     this.currentIndex = 0;
     this.score = 0;
     this.errors = [];
+    this.sound = new Sound();
 
     // Récupération des éléments du DOM
     this.wordBox = document.getElementById('word');
@@ -51,7 +54,15 @@ export class DragAndDropGame {
       this.feminin.classList.remove('selected', 'incorrect');
       console.log(this.errors);
     } else {
-      this.wordBox.innerHTML = "<a href='/feedback.html'>Voir mes erreurs</a>";
+
+      if (this.errors && this.errors.length > 0) {
+          // S'il y a des erreurs, afficher le lien vers les erreurs
+          this.wordBox.innerHTML = "<a href='/feedback.html'>Voir mes erreurs</a>";
+      } else {
+          // S'il n'y a pas d'erreur, afficher le message de félicitation
+          this.wordBox.innerHTML = "<a href='javascript:void(0);' onclick='history.back()'>Félicitations, tu gères !</a>";
+      }
+
       this.wordBox.setAttribute('draggable', 'false');
       this.showResults();
     }
@@ -141,11 +152,13 @@ export class DragAndDropGame {
       }
       this.score++;
       this.scoreDisplay.textContent = this.score;
+      this.sound.play(1);
     } else {
       // Marquer l'erreur
       const zone = targetId === 'masculin' ? this.masculin : this.feminin;
       zone.classList.add('incorrect');
       this.errors.push(this.wordManager.mots[this.currentIndex]);
+      this.sound.play(2);
     }
     // Nettoyer la classe de survol
     this.masculin.classList.remove('drag-over');

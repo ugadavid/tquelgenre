@@ -17,39 +17,14 @@
             <div id="tdb_header1_all">
                 <div class="tdb_header1">
                     <a href="index.html"> <img src="ressources/logo.png" alt="Logo TQG" title="Logo" class="tdb_logo"> </a>
-                    <div>
-                        <a href="javascript:void(0);" onclick="openModal('popup_profile.html')">Mon profil</a>
-                        <a href="javascript:void(0);" onclick="resetUser()"> Déconnexion </a>
+                    <div class="menu" id="menu">
+                        <a href="javascript:void(0);" onclick="openModal('popup_inscription.html')">S'inscrire</a>
+                        <a href="javascript:void(0);" onclick="openModal('popup_connexion.html')">S'identifier</a>
                     </div>
                 </div>
             </div>
 
-            <div id="tdb_header_anderson_all">
-                <div id="tdb_header_anderson">
-                    <div class="tdb_header2">
-                        <nav>
-                            <a href="tableau_de_bord.html"> 📊Tableau de bord </a>
-                            <a href="categorie.html"> 🧮Catégories </a>
-                            <a href="jeux.html"> 🕹️Jeux </a>
-                            <a href="regles.html"> 📚Ressources </a>
-                        </nav>
-
-                        <div class="tdb_header2-B">
-                            <form id="search_form" action="recherche.html">
-                                <div class="tdb_chercheur-container">
-                                    <input name="search" type="text" id="tdb_chercheur" placeholder=" 🔍 Rechercher...">
-                                </div>
-                            </form>
-
-                            <h1> Plan du site </h1>
-                        </div>
-                    </div>
-
-                    <div id="tdb_container_avatar"> 
-                        <img src="ressources/avatars_edit/woman_7.png" alt="Avatar apprenant" title="avatar">
-                    </div>
-                </div>
-            </div>
+            
         </header>
 
 
@@ -96,6 +71,23 @@
             </div>
         </footer>
     </div>
-
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {                
+            showUser();            // Affiche l'utilisateur dans la fenêtre de debug
+            
+            //  Menu principal
+            const menu = document.getElementById("menu");
+                if (isConnected()) {
+                    menu.innerHTML = `
+                        <a href="tableau_de_bord.html">Tableau de bord</a>
+                        <a href="categorie.html">Catégories</a>
+                        <a href="jeux.html">Jeux</a>
+                        <a href="regles.html">Ressources</a>
+                        <a href="javascript:void(0);" onclick="openModal('popup_profile.html')">Mon profil</a>
+                        <a href="javascript:void(0);" onclick="resetUser()">Déconnexion</a>
+                    `;
+                }
+        });
+    </script>
     </body>
 </html>
