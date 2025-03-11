@@ -44,7 +44,9 @@ export class FillInTheBlanksGame {
     try {
       const response = await fetch(this.textFileUrl);
       const rawText = await response.text();
+      //console.log(rawText);  //  La regex est bien appliquée à tout le texte ? Oui
       this.parseTexts(rawText);
+      //console.log(this.texts);  //  Le parsing fonctionne correctement ? BUG
     } catch (error) {
       console.error('Erreur lors du chargement du fichier texte :', error);
     }
@@ -82,7 +84,11 @@ export class FillInTheBlanksGame {
   // Compte le nombre total de zones interactives dans tous les textes
   countTotalAnswers() {
     // On recherche les occurences du schéma *...* _..._
-    const regex = /\*(.*?)\*\s*_(.*?)_/g;
+    //const regex = /\*(.*?)\*\s*_(.*?)_/g;
+    //const regex = /\*(.*?)\*(?:\s*)?_(.*?)_/g;
+    //const regex = /\*(.*?)\*\s+([\wÀ-ÿ-]+(?:\s+[\wÀ-ÿ-]+)*)?\s*_(.*?)_/g;
+    const regex = /\*(.*?)\*\s*((?:[\wÀ-ÿ-]+\s+)*?)?_(.*?)_/g;
+
     this.texts.forEach(text => {
       let match;
       while ((match = regex.exec(text.content)) !== null) {
@@ -121,38 +127,25 @@ export class FillInTheBlanksGame {
     textData.words = [];
 
     // Remplacement de chaque occurence du schéma *options* _mot_ par une liste déroulante
-    const newContent = contentText.replace(/\*(.*?)\*\s*_(.*?)_/g, (match, articleOptions, wordText) => {
+    const newContent = contentText.replace(/\*(.*?)\*\s*((?:[\wÀ-ÿ-]+\s+)*?)?_(.*?)_/g, (match, articleOptions, adjText, wordText) => {
       const options = articleOptions.split('/').map(opt => opt.trim());
-      // Par convention, la première option est la bonne réponse
       const correctArticle = options[0];
       const dropdownId = `${index}-${dropdownCounter++}`;
-
-      // Création d'un objet Word et ajout dans le tableau global
-      const word = new Word(wordText, correctArticle);
-      word.id_mot = dropdownId;
-      // Ajout dans le WordManager si nécessaire
-      this.wordManager.ajouterMot(word);
-      // Stockage dans le tableau global allWords
-      this.allWords.push(word);
-      // Et dans le texte courant (pour d'éventuelles récupérations spécifiques)
-      textData.words.push(word);
-
-      // Optionnel : mélanger les options
-      if (Math.random() > 0.5) {
-        shuffleArray(options);
-      }
-
-      // Construction de la liste déroulante
+  
+      // Création du dropdown
       let selectHTML = `<select id="${dropdownId}" class="form-select dropdown" data-answer="${correctArticle}">`;
       selectHTML += '<option value="">-- Choisir --</option>';
       options.forEach(option => {
-        // Si l'utilisateur a déjà répondu, pré-sélectionner la réponse
-        const selected = this.userResponses[dropdownId] === option ? 'selected' : '';
-        selectHTML += `<option value="${option}" ${selected}>${option}</option>`;
+          const selected = this.userResponses[dropdownId] === option ? 'selected' : '';
+          selectHTML += `<option value="${option}" ${selected}>${option}</option>`;
       });
       selectHTML += '</select>';
-      return selectHTML + ` <span class="word-text">${wordText}</span>`;
-    });
+  
+      // Construction finale : dropdown + adjectif (si présent) + mot principal
+      return selectHTML + (adjText ? ` ${adjText.trim()}` : '') + ` <span class="word-text">${wordText}</span>`;
+  });
+  
+  
 
     console.log('currentTextIndex: ' + this.currentTextIndex +', this.texts.length: '+ this.texts.length);
     // Affichage dans une balise <pre> pour conserver la mise en forme

@@ -3,7 +3,7 @@ CategoryId : 14
 
 Texte 1 : un dîner entre amis
 Marc et Julie, deux amis de longue date, ont décidé d'organiser un dîner chez Julie. Ils veulent préparer un délicieux repas ensemble.
-Marc : J'ai apporté *une/un* _bouteille_de vin pour ce soir. 
+Marc : J'ai apporté *une/un* _bouteille_ de vin pour ce soir. 
 Julie : Super ! On va commencer par *une/un* _salade_ en entrée. 
 Marc : Parfait ! Je m'occupe *du/de la* _fromage_ pendant que tu fais *la/le* _sauce_. 
 Julie : D'accord. Tu peux me passer l'huile d'olive et *le/la* _citron_ ? 

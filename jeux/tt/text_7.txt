@@ -5,21 +5,21 @@ Text 1 : Chez le médecin
 Anne et sa fille Lisa consultent un médecin pour un problème à la gorge.
 Médecin : Bonjour, où avez-vous mal ?
 Lisa : J’ai mal à la gorge depuis hier soir.
-Médecin : Je vais vous prescrire *une/un*  _pastille _ et *une/un*  _ aspirine _.
-Anne : Avez-vous aussi *un/une*  _médicament _ contre *la/le*  _fièvre _ ?
-Médecin : Bien sûr, mais il faudra surveiller *la/le*  _température _ de Lisa.
+Médecin : Je vais vous prescrire *une/un* _pastille_ et *une/un*  _aspirine_.
+Anne : Avez-vous aussi *un/une* _médicament_ contre *la/le*  _fièvre_ ?
+Médecin : Bien sûr, mais il faudra surveiller *la/le*  _température_ de Lisa.
 
 Text 2 : À l’hôpital
 Martin a dû aller à l’hôpital après un accident.
-Martin : J’ai eu *un/une*  _accident _ hier avec mon vélo.
+Martin : J’ai eu *un/une*  _accident_ hier avec mon vélo.
 Infirmière : Où avez-vous mal ?
-Martin : Je pense que je me suis cassé *la/le*  _jambe _ et j’ai *un/une* douleur à *la/le*  _tête _.
-Infirmière : Je vais nettoyer la plaie avec *du/de la*  _coton _ et mettre *un/une*  _pansement _.
+Martin : Je pense que je me suis cassé *la/le*  _jambe_ et j’ai *un/une* douleur à *la/le*  _tête_.
+Infirmière : Je vais nettoyer la plaie avec *du/de la*  _coton_ et mettre *un/une*  _pansement_.
 
 Text 3 : Une journée difficile
 Claire a attrapé une grippe pendant l’hiver.
-Claire : Ce matin, j’ai pris *une/un*  _vitamine _ C pour me sentir mieux.
+Claire : Ce matin, j’ai pris *une/un*  _vitamine_ C pour me sentir mieux.
 Amie : Tu devrais voir *un/une*  _médecin_ si ça ne s’arrange pas.
-Claire : J’ai déjà pris *une/un*   _pastille _ et *un/une*  _comprimé _ pour calmer *la/le*   _fièvre _.
-Amie : N’oublie pas de rester au chaud pour ne pas aggraver *la/le*  _grippe _.
+Claire : J’ai déjà pris *une/un*   _pastille_ et *un/une*  _comprimé_ pour calmer *la/le*   _fièvre_.
+Amie : N’oublie pas de rester au chaud pour ne pas aggraver *la/le*  _grippe_.
 Claire : Oui, je vais surveiller *ma/mon*  _santé_ et me reposer.

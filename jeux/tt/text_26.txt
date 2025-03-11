@@ -8,7 +8,7 @@ Agent : Bien sûr ! Vous souhaitez plutôt *un/une* _séjour_ à *la/le* _montag
 Client : Je préfère *la/le* _plage_, mais j’aimerais aussi visiter des monuments historiques.      
 Agent : Très bien ! On vous propose de visiter des villes historiques comme Rome et Florence. Il y a beaucoup d’hôtels près de *la/le* _mer_. Vous pouvez aussi profiter *du/de la* _soleil_.
 Client : Bonne idée ! En fait, j'ai toujours rêvé de voir Florence. Est-ce que je dois prévoir *un/une* _visa_ ?      
-Agent : Oui, et on va acheter *le/la* billet d’avion pour vous. Pensez à prendre *une/un* petite _valise_.      
+Agent : Oui, et on va acheter *le/la* _billet_ d’avion pour vous. Pensez à prendre *une/un* petite _valise_.      
 Client : Merci ! Je vais aussi emporter *mon/ma* _appareil photo_ pour garder des souvenirs.      
 
 Texte 2 : Une journée à la montagne**  
