@@ -132,6 +132,10 @@ export class FillInTheBlanksGame {
       const correctArticle = options[0];
       const dropdownId = `${index}-${dropdownCounter++}`;
   
+      // Stocker dans allWords
+      this.allWords.push(new Word(wordText, correctArticle));
+      console.log(this.allWords);
+  
       // Création du dropdown
       let selectHTML = `<select id="${dropdownId}" class="form-select dropdown" data-answer="${correctArticle}">`;
       selectHTML += '<option value="">-- Choisir --</option>';
@@ -141,9 +145,10 @@ export class FillInTheBlanksGame {
       });
       selectHTML += '</select>';
   
-      // Construction finale : dropdown + adjectif (si présent) + mot principal
+      // Construction finale
       return selectHTML + (adjText ? ` ${adjText.trim()}` : '') + ` <span class="word-text">${wordText}</span>`;
   });
+  
   
   
 
@@ -242,7 +247,7 @@ export class FillInTheBlanksGame {
   // Affiche les résultats dans une overlay en listant les erreurs (les réponses incorrectes)
   showResults() {
     // 🟢 1. Enregistrer les erreurs dans sessionStorage
-    const errors = this.allWords.filter(word => word.userResponse !== word.article);
+    const errors = this.allWords.filter(word => word.userResponse && word.userResponse !== word.article);
     const errorsToStore = errors.map(word => ({
         texte: word.texte,
         articleCorrect: word.article,

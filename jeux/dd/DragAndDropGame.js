@@ -99,6 +99,11 @@ export class DragAndDropGame {
   validateDrop(targetId) {
     const currentWord = this.wordManager.mots[this.currentIndex];
     const correctGenre = currentWord.article === 'un' ? 'masculin' : 'feminin';
+    //  Chopper le mot éclair pour l'easter egg
+    if (currentWord.texte == 'éclair') {
+      showMinecraftAchievement();
+    }
+
     return targetId === correctGenre;
   }
 
